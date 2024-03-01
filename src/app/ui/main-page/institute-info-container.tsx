@@ -2,6 +2,7 @@ import { InstituteStatusInfo } from "@/app/lib/definitions";
 import InfoCard from "./info-card";
 import { UserGroupIcon } from "@heroicons/react/16/solid";
 import { AcademicCapIcon } from "@heroicons/react/16/solid";
+import SectionHeader from "../section-header";
 
 const statusList: InstituteStatusInfo[] = [
   {
@@ -17,8 +18,6 @@ const statusList: InstituteStatusInfo[] = [
     description: "طالب",
   },
 ];
-// <AcademicCapIcon className="h-24 w-24 text-white" />
-// <UserGroupIcon className="h-24 w-24 text-white" />
 
 export default function InstituteInfoContainer() {
   return (
@@ -32,7 +31,7 @@ export default function InstituteInfoContainer() {
         gap-8 lg:gap-0
     `}
     >
-      <div className=" w-full mb-4 sm:mb-8">
+      {/* <div className=" w-full mb-4 sm:mb-8">
         <h2
           className={`
             w-fit mx-auto px-8 py-4 bg-slate-400 text-2xl sm:text-3xl rounded-[10px]
@@ -40,7 +39,11 @@ export default function InstituteInfoContainer() {
         >
           معهد الدلتا بالأرقام
         </h2>
+      </div> */}
+      <div className=" w-full mb-2 sm:mb-14">
+      <SectionHeader text={"معهد الدلتا بالأرقام"} />
       </div>
+
 
       {statusList.map(({ statusName, statusNumber, icon, description }) => (
         <InfoCard

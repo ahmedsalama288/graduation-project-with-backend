@@ -16,15 +16,20 @@ export default function MobileNavbar() {
     setIsMenuOpen(false);
   };
 
+  const closeMenuWhenNavigateHandler = () => {
+    setTimeout(closeMenuHandler, 100);
+  };
+
   return (
     <>
-      <div >
+      <div>
         <Bars3Icon
           onClick={openMenuHandler}
           className="h-8 w-8 xl:hidden cursor-pointer"
         />
 
-        <ul onClick={closeMenuHandler}
+        <ul
+          onClick={closeMenuWhenNavigateHandler}
           className={`
           ${isMenuOpen ? "flex" : "hidden"}
         bg-slate-200 absolute  flex-col
@@ -38,7 +43,7 @@ export default function MobileNavbar() {
               onClick={closeMenuHandler}
             />
           </li>
-          
+
           {navbarLinks.map(({ name, nestedLinks }, index) => (
             <MobileNavLinks
               href={""}
