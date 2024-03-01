@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #ebf4ff;
+  padding: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #a3aebc;
+  border-radius: 6px;
+  padding: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #94979b; 
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  color: white;
+}
+
+.hero-img-hight {
+  height: calc(100vh - 138px);
+}
+
+.width-minus-300px {
+  width: calc(100% - 300px);
+}

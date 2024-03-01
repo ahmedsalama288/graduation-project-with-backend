@@ -1,0 +1,63 @@
+"use client";
+
+import { useState } from "react";
+import { Bars3Icon } from "@heroicons/react/20/solid";
+import { navbarLinks } from "../lib/constants";
+import MobileNavLinks from "./mobile-nav-links";
+import { XMarkIcon } from "@heroicons/react/24/solid";
+
+export default function MobileNavbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const openMenuHandler = () => {
+    setIsMenuOpen(true);
+  };
+  const closeMenuHandler = () => {
+    setIsMenuOpen(false);
+  };
+
+  return (
+    <>
+      <div >
+        <Bars3Icon
+          onClick={openMenuHandler}
+          className="h-8 w-8 xl:hidden cursor-pointer"
+        />
+
+        <ul onClick={closeMenuHandler}
+          className={`
+          ${isMenuOpen ? "flex" : "hidden"}
+        bg-slate-200 absolute  flex-col
+          top-0 right-0 p-8 w-[300px] 
+          gap-4
+      `}
+        >
+          <li>
+            <XMarkIcon
+              className="h-8 w-8 text-gray-500 cursor-pointer mb-3"
+              onClick={closeMenuHandler}
+            />
+          </li>
+          
+          {navbarLinks.map(({ name, nestedLinks }, index) => (
+            <MobileNavLinks
+              href={""}
+              name={name}
+              nestedLinks={nestedLinks}
+              key={index}
+            />
+          ))}
+        </ul>
+      </div>
+      <div
+        className={`
+          ${isMenuOpen ? "block" : "hidden"}
+          cursor-pointer
+          fixed top-0 left-0 bg-gray-700 opacity-20 width-minus-300px z-40
+            h-[2133px]
+        `}
+        onClick={closeMenuHandler}
+      ></div>
+    </>
+  );
+}
