@@ -1,11 +1,11 @@
-import MainPageHeader from "../ui/main-page-header";
+import MainPageHeader from "../ui/main-page/main-page-header";
 import CommonQuestionsSection from "../ui/main-page/common-questions-section/common-questions-section";
-import InstituteInfoContainer from "../ui/main-page/institute-info-container";
-import LandingImage from "../ui/main-page/landing-image";
+import InstituteInfoContainer from "../ui/main-page/institute-info-section/institute-info-container";
+import LandingImage from "../ui/main-page/landing-image-section/landing-image";
 
 export default function Home() {
   return (
-    <section className=" bg-slate-100 pb-20 ">
+    <section className=" bg-slate-100 pb-">
       <MainPageHeader text="الصفحة الرئيسية" />
       <article className="w-full mx-auto relative z-0 ">
         <LandingImage />

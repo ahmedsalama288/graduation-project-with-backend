@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { cairo } from "./ui/fonts";
-import Navbar from "./ui/navbar";
+import Navbar from "./ui/root-layout/navbar";
 import "./ui/globals.css";
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export default function RootLayout({
         <header className=" relative xl:fixed top-0 w-full z-[100000] bg-light-blue drop-shadow-lg ">
           <Navbar />
         </header>
-        <main className="xl:mt-[70px]">{children}</main>
+        <main className="xl:mt-[70px] overflow-y-hidden">{children}</main>
       </body>
     </html>
   );

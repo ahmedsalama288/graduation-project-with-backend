@@ -1,11 +1,9 @@
-import { navbarLinks } from "../lib/constants";
+import { navbarLinks } from "../../lib/constants";
 import Logo from "./logo";
 import MobileNavbar from "./mobile-navbar";
 import NavLink from "./nav-link";
-import { useState } from "react";
 
 export default function Navbar() {
-
   return (
     <nav
       className={`

@@ -2,7 +2,7 @@ import { InstituteStatusInfo } from "@/app/lib/definitions";
 import InfoCard from "./info-card";
 import { UserGroupIcon } from "@heroicons/react/16/solid";
 import { AcademicCapIcon } from "@heroicons/react/16/solid";
-import SectionHeader from "../section-header";
+import SectionHeader from "../../shared-ui/page-section-title";
 
 const statusList: InstituteStatusInfo[] = [
   {

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { NavbarNestedLinks } from "../lib/definitions";
+import { NavbarNestedLinks } from "../../lib/definitions";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
 interface props {

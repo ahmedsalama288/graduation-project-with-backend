@@ -2,7 +2,7 @@ interface props {
   text: string;
 }
 
-export default function SectionHeader({ text }: props) {
+export default function PageSectionTitle({ text }: props) {
   return (
     <div
       className={` container p-5 mx-auto text-white rounded-lg bg-slate-400`}

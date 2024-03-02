@@ -1,4 +1,4 @@
-import SectionHeader from "../../section-header";
+import SectionHeader from "../../shared-ui/page-section-title";
 import QuestionsList from "./questions-list";
 
 export default function CommonQuestionsSection() {
@@ -6,13 +6,15 @@ export default function CommonQuestionsSection() {
     <section className="p-2 md:p-0">
       <div
         className="
-        container sm:mx-auto mb-[600px] p-0 sm:p-6 md:p-8
+        container sm:mx-auto p-0 sm:p-6 md:p-8
         border-[1px] border-slate-400 border-solid
         rounded-xl md:rounded-2xl
       "
       >
         <div className=" p-4">
-          <SectionHeader text={"الأسئلة الشائعة"} />
+          <div className=" mb-14">
+            <SectionHeader text={"الأسئلة الشائعة"} />
+          </div>
           <QuestionsList />
         </div>
       </div>
