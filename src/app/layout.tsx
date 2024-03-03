@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { cairo } from "./ui/fonts";
 import Navbar from "./ui/root-layout/navbar";
 import "./ui/globals.css";
+import FooterSection from "./ui/root-layout/footer-section/footer-section";
 
 export const metadata: Metadata = {
   title: "معهد الدلتا العالي",
@@ -15,11 +16,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="rtl">
-      <body className={`${cairo.className} antialiased`}>
+      <body className={`${cairo.className} antialiased bg-slate-100`}>
         <header className=" relative xl:fixed top-0 w-full z-[100000] bg-light-blue drop-shadow-lg ">
           <Navbar />
         </header>
         <main className="xl:mt-[70px] overflow-y-hidden">{children}</main>
+        <FooterSection/>
       </body>
     </html>
   );
