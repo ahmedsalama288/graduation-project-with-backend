@@ -7,7 +7,7 @@ export default function PageSectionTitle({ text }: props) {
     <div
       className={` container p-5 mx-auto text-white rounded-lg bg-slate-400`}
     >
-      <h4 className=" text-xl">{text}</h4>
+      <h2 className=" text-xl">{text}</h2>
     </div>
   );
 }

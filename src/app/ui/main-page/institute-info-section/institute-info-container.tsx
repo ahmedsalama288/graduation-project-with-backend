@@ -31,19 +31,9 @@ export default function InstituteInfoContainer() {
         gap-8 lg:gap-0
     `}
     >
-      {/* <div className=" w-full mb-4 sm:mb-8">
-        <h2
-          className={`
-            w-fit mx-auto px-8 py-4 bg-slate-400 text-2xl sm:text-3xl rounded-[10px]
-          `}
-        >
-          معهد الدلتا بالأرقام
-        </h2>
-      </div> */}
       <div className=" w-full mb-2 sm:mb-14">
-      <SectionHeader text={"معهد الدلتا بالأرقام"} />
+        <SectionHeader text={"معهد الدلتا بالأرقام"} />
       </div>
-
 
       {statusList.map(({ statusName, statusNumber, icon, description }) => (
         <InfoCard

@@ -20,7 +20,7 @@ export default function InfoCard({
       `}
     >
       <div>
-        <h5 className=" px-2 pt-4 pb-2 text-2xl mb-4">{statusName}</h5>
+        <h3 className=" px-2 pt-4 pb-2 text-2xl mb-4">{statusName}</h3>
       </div>
       <div
         className={`
