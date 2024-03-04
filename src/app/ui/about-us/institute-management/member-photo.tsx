@@ -7,7 +7,7 @@ interface props {
 
 export default function MemberPhoto({ imageSrc, alt }: props) {
   return (
-    <div>
+    <div className=" drop-shadow-xl">
       <Image
         className=" w-[200px] h-[247.321px] rounded-lg"
         src={imageSrc}
