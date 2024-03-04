@@ -6,7 +6,7 @@ export default function QuestionsList() {
         rounded-lg flex flex-col justify-between gap-y-10 flex-wrap mt-6
       "
     >
-      <li className=" bg-slate-400 p-4 sm:p-6 rounded-lg w-full max-w-full">
+      <li className=" bg-slate-400 p-4 sm:p-6 rounded-lg w-full max-w-full drop-shadow-md">
         <div className=" mb-4">
           <p className=" text-lg sm:text-xl font-semibold bg-slate-500 w-fit p-4 rounded-lg">
             ما الدرجة العلمية التي يمنحها المعهد؟
@@ -24,7 +24,7 @@ export default function QuestionsList() {
         </div>
       </li>
 
-      <li className=" bg-slate-400 p-4 sm:p-6 rounded-lg w-full max-w-full">
+      <li className=" bg-slate-400 p-4 sm:p-6 rounded-lg w-full max-w-full drop-shadow-md">
         <div className=" mb-4">
           <p className=" text-lg sm:text-xl font-semibold bg-slate-500 w-fit p-4 rounded-lg">
             شروط القبول بالمعهد؟
@@ -46,7 +46,7 @@ export default function QuestionsList() {
         </div>
       </li>
 
-      <li className=" bg-slate-400 p-4 sm:p-6 rounded-lg w-full max-w-full">
+      <li className=" bg-slate-400 p-4 sm:p-6 rounded-lg w-full max-w-full drop-shadow-md">
         <div className=" mb-4">
           <p className=" text-lg sm:text-xl font-semibold bg-slate-500 w-fit p-4 rounded-lg">
             ما هو الحد الأدنى للقبول في المعهد؟
@@ -64,7 +64,7 @@ export default function QuestionsList() {
         </div>
       </li>
 
-      <li className=" bg-slate-400 p-4 sm:p-6 rounded-lg w-full max-w-full">
+      <li className=" bg-slate-400 p-4 sm:p-6 rounded-lg w-full max-w-full drop-shadow-md">
         <div className=" mb-4">
           <p className=" text-lg sm:text-xl font-semibold bg-slate-500 w-fit p-4 rounded-lg">
             ما هي الأوراق المطلوبة للتقديم في المعهد؟

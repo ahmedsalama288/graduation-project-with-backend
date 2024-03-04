@@ -12,7 +12,7 @@ export default function CommonQuestionsSection() {
       "
       >
         <div className=" p-4">
-          <div className=" mb-14">
+          <div className=" mb-14 ">
             <SectionHeader text={"الأسئلة الشائعة"} />
           </div>
           <QuestionsList />

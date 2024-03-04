@@ -16,7 +16,7 @@ export default function InfoCard({
       className={`
         flex flex-col justify-center items-center
         w-[350px]  max-w-full bg-slate-400 text-white 
-        rounded-[10px] sm:rounded-2xl p-6
+        rounded-[10px] sm:rounded-2xl p-6 drop-shadow-md
       `}
     >
       <div>
