@@ -37,12 +37,12 @@ export default function FooterConnectUs() {
           <li className=" flex flex-col gap-1 rounded-lg p-4 bg-[#014e79] max-h-[60.43px]">
             <ul className=" flex items-center gap-3 pr-2">
               <li>
-                <Link href={"/"} className=" flex">
+                <Link href={"/"}>
                   <FaceBookIcon className=" w-6 h-fit fill-[#f2f2f2] rounded-sm" />
                 </Link>
               </li>
               <li>
-                <Link href={"/"} className=" flex">
+                <Link href={"/"}>
                   <YoutubeIcon className="w-8 h-fit fill-[#f2f2f2] " />
                 </Link>
               </li>
