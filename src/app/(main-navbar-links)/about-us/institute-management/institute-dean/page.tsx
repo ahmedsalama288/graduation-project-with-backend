@@ -1,16 +1,16 @@
-import MainPageHeader from "@/app/ui/main-page/main-page-header";
-import Image from "next/image";
+import MainPageHeader from "@/app/ui/shared-ui/pages-components/main-page-header";
 import imageSrc from "@/../../public/about-us/institute-management-images/institute-dean.jpg";
 import MemberPhoto from "@/app/ui/about-us/institute-management/member-photo";
 import MemberName from "@/app/ui/about-us/institute-management/member-name";
 import MemberWord from "@/app/ui/about-us/institute-management/member-word";
+import PageContentContainer from "@/app/ui/shared-ui/pages-components/page-content-container";
 
 export default function Page() {
   return (
     <section>
       <MainPageHeader text="عميد المعهد" />
       <div className="p-2">
-        <div className=" container mx-auto p-4 sm:p-8 bg-slate-400 mt-8 rounded-lg">
+        <PageContentContainer>
           <MemberPhoto imageSrc={imageSrc} alt="رئيس مجلس الإدارة" />
           <MemberName memberName="كلمة السيد الدكتور أحمد أبو الفتوح" />
           <MemberWord
@@ -45,7 +45,7 @@ export default function Page() {
             الشركات لأبنائنا الخريجين. وأخيرا أتمنى لجميع طالب المعهد  
             التوفيق والسداد وأن يوفقنا الله جميعا الى ما يحبه ويرضها. "
           />
-        </div>
+        </PageContentContainer>
       </div>
     </section>
   );

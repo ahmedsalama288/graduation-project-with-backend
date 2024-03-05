@@ -1,5 +1,5 @@
-import MainPageHeader from "@/app/ui/main-page/main-page-header";
-import Image from "next/image";
+import MainPageHeader from "@/app/ui/shared-ui/pages-components/main-page-header";
+import PageContentContainer from "@/app/ui/shared-ui/pages-components/page-content-container";
 import imageSrc from "@/../../public/about-us/institute-management-images/chairman-of-board-of-directors.jpeg";
 import MemberPhoto from "@/app/ui/about-us/institute-management/member-photo";
 import MemberName from "@/app/ui/about-us/institute-management/member-name";
@@ -10,7 +10,7 @@ export default function Page() {
     <section>
       <MainPageHeader text="رئيس مجلس الإدارة" />
       <div className="p-2">
-        <div className=" container mx-auto p-4 sm:p-8 bg-slate-400 mt-8 rounded-lg">
+        <PageContentContainer>
           <MemberPhoto imageSrc={imageSrc} alt="رئيس مجلس الإدارة" />
           <MemberName memberName="كلمة السيد الدكتور محمد ربيع ناصر" />
           <MemberWord
@@ -36,7 +36,7 @@ export default function Page() {
                   الدعم للوصول الي المكانة المرموقة الي يستحقها معهد الدلتا
                   العالي لنظم المعلومات الإدارية والمحاسبية."
           />
-        </div>
+        </PageContentContainer>
       </div>
     </section>
   );
