@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { NavbarNestedLinks } from "../../lib/definitions";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import { ignoredLinks } from "@/app/lib/constants";
 
 interface props {
   href: string;
@@ -15,6 +16,12 @@ export default function MobileNavLinks({
   nestedLinks,
   pathname,
 }: props) {
+  const hrefAfterFilteringIgnoredLinks = ignoredLinks.find(
+    (link) => link === href
+  )
+    ? ""
+    : href;
+
   const isTheLinkHaveNestedLinks = !!nestedLinks.length;
 
   const renderedNestedLinks =
@@ -77,7 +84,7 @@ export default function MobileNavLinks({
   return (
     <li>
       <Link
-        href={href || ""}
+        href={hrefAfterFilteringIgnoredLinks}
         className=" text-black-gray font-bold mb-4 inline-block"
       >
         {name}

@@ -16,7 +16,7 @@ interface props {
 }
 
 export default function NavLink({ href, name, nestedLinks, pathname }: props) {
-  const hrefAfterFiltering = ignoredLinks.find((link) => link === href) ? "" : href;
+  const hrefAfterFilteringIgnoredLinks = ignoredLinks.find((link) => link === href) ? "" : href;
 
   const parentSegmentInUrl = getFirstSegment(pathname);
 
@@ -99,7 +99,7 @@ export default function NavLink({ href, name, nestedLinks, pathname }: props) {
     `}
     >
       <Link
-        href={hrefAfterFiltering}
+        href={hrefAfterFilteringIgnoredLinks}
         className=" flex items-center gap-[2px] group"
       >
         {name}

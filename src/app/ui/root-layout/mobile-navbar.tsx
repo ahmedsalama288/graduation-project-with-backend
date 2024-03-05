@@ -7,6 +7,8 @@ import MobileNavLinks from "./mobile-nav-links";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 
 export default function MobileNavbar({ pathname }: { pathname: string }) {
+
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const openMenuHandler = () => {
@@ -46,9 +48,9 @@ export default function MobileNavbar({ pathname }: { pathname: string }) {
           </li>
 
           {/* nav-bar-links */}
-          {navbarLinks.map(({ name, nestedLinks }, index) => (
+          {navbarLinks.map(({ href, name, nestedLinks }, index) => (
             <MobileNavLinks
-              href={""}
+              href={href || ""}
               name={name}
               nestedLinks={nestedLinks}
               pathname={pathname}
