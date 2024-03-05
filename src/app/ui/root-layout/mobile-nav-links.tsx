@@ -6,9 +6,15 @@ interface props {
   href: string;
   name: string;
   nestedLinks: NavbarNestedLinks;
+  pathname: string;
 }
 
-export default function MobileNavLinks({ href, name, nestedLinks }: props) {
+export default function MobileNavLinks({
+  href,
+  name,
+  nestedLinks,
+  pathname,
+}: props) {
   const isTheLinkHaveNestedLinks = !!nestedLinks.length;
 
   const renderedNestedLinks =
@@ -21,38 +27,22 @@ export default function MobileNavLinks({ href, name, nestedLinks }: props) {
         relative inline-block
     `}
       >
-        {!!href ? (
-          <Link
-            href={href || ""}
-            className={`
+        <Link
+          href={href || ""}
+          className={`
           transition-all
           py-3 px-4 rounded-md
           hover:pr-5 hover:bg-slate-300
+          ${href === pathname ? "bg-slate-300 pr-5" : ""}
           w-fit flex gap-2 items-center
           peer
         `}
-          >
-            {name}
-            {!!nestedLinks?.length && (
-              <ChevronDownIcon className="h-4 w-4 text-gray-500 mt-1" />
-            )}
-          </Link>
-        ) : (
-          <span
-            className={`
-          transition-all
-          py-3 px-4 rounded-md
-          hover:pr-5 hover:bg-slate-300
-          w-fit flex gap-2 items-center
-          peer
-        `}
-          >
-            {name}
-            {!!nestedLinks?.length && (
-              <ChevronDownIcon className="h-4 w-4 text-gray-500 mt-1" />
-            )}
-          </span>
-        )}
+        >
+          {name}
+          {!!nestedLinks?.length && (
+            <ChevronDownIcon className="h-4 w-4 text-gray-500 mt-1" />
+          )}
+        </Link>
 
         {!!nestedLinks?.length && (
           <ul
@@ -71,6 +61,7 @@ export default function MobileNavLinks({ href, name, nestedLinks }: props) {
                   transition-all
                   py-3 px-4 rounded-md
                   hover:pr-5 hover:bg-slate-300
+                  ${href === pathname ? "bg-slate-300 pr-5" : ""}
                   w-full inline-block
                 `}
                 >

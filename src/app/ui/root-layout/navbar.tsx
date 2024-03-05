@@ -1,9 +1,14 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import { navbarLinks } from "../../lib/constants";
 import Logo from "./logo";
 import MobileNavbar from "./mobile-navbar";
 import NavLink from "./nav-link";
 
 export default function Navbar() {
+  const pathname = usePathname();
+
   return (
     <nav
       className={`
@@ -14,15 +19,16 @@ export default function Navbar() {
     `}
     >
       <Logo />
-      <MobileNavbar/>
+      <MobileNavbar pathname={pathname} />
       <ul
         className={`
           hidden xl:flex gap-1 text-white h-full max-h-full
       `}
       >
-        {navbarLinks.map(({ name, nestedLinks }, index) => (
+        {navbarLinks.map(({ name, nestedLinks, href }, index) => (
           <NavLink
-            href={""}
+            pathname={pathname}
+            href={href || ""}
             name={name}
             nestedLinks={nestedLinks}
             key={index}

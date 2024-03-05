@@ -3,6 +3,7 @@ import { NavbarLinks } from "./definitions";
 export const navbarLinks: NavbarLinks = [
   {
     name: "عن المعهد",
+    href: "/about-us",
     nestedLinks: [
       {
         name: "إدارة المعهد",
@@ -86,7 +87,10 @@ export const navbarLinks: NavbarLinks = [
         name: "جداول الامتحانات",
         href: "",
         nestedLinks: [
-          { name: "الفرقة الاولي", href: "/student-services/exam-schedules/year-one" },
+          {
+            name: "الفرقة الاولي",
+            href: "/student-services/exam-schedules/year-one",
+          },
           {
             name: "الفرقة الثانية",
             href: "/student-services/exam-schedules/year-two",
@@ -141,3 +145,5 @@ export const navbarLinks: NavbarLinks = [
   { name: "الوسائط المتعددة", nestedLinks: [] },
   { name: "تواصل معنا", nestedLinks: [] },
 ];
+
+export const ignoredLinks: string[] = ["/about-us"];

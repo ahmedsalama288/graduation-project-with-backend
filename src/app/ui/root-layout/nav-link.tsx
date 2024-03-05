@@ -1,23 +1,32 @@
-"use client";
-
 import Link from "next/link";
 import { NavbarNestedLinks } from "../../lib/definitions";
-import { ChevronDownIcon, ChevronLeftIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import {
+  ChevronDownIcon,
+  ChevronLeftIcon,
+  XMarkIcon,
+} from "@heroicons/react/24/outline";
+import { getFirstSegment } from "@/app/lib/utils";
+import { ignoredLinks } from "@/app/lib/constants";
 
 interface props {
   href: string;
   name: string;
   nestedLinks: NavbarNestedLinks;
+  pathname: string;
 }
 
-export default function NavLink({ href, name, nestedLinks }: props) {
-  const hasMainNestedLinks = !!nestedLinks.length;
+export default function NavLink({ href, name, nestedLinks, pathname }: props) {
+  const hrefAfterFiltering = ignoredLinks.find((link) => link === href) ? "" : href;
+
+  const parentSegmentInUrl = getFirstSegment(pathname);
+
+  const hasNestedLinks = !!nestedLinks.length;
   // li have a list of links
   // and every link inside of the links
   // have a nested links inside of it.
 
   const renderedNestedLinks =
-    hasMainNestedLinks &&
+    hasNestedLinks &&
     nestedLinks.map(({ name, href, nestedLinks }, index) => (
       <li
         key={index}
@@ -29,6 +38,7 @@ export default function NavLink({ href, name, nestedLinks }: props) {
         <Link
           href={href || ""}
           className={`
+            ${href == pathname ? "bg-slate-300 pr-5" : ""}
             transition-all
             py-3 px-4 rounded-md
             hover:pr-5 hover:bg-slate-300
@@ -57,6 +67,7 @@ export default function NavLink({ href, name, nestedLinks }: props) {
                 <Link
                   href={href}
                   className={` 
+                    ${href == pathname ? "bg-slate-300 pr-5" : ""}
                     transition-all
                     py-3 px-4 rounded-md
                     hover:pr-5 hover:bg-slate-300
@@ -83,11 +94,16 @@ export default function NavLink({ href, name, nestedLinks }: props) {
       relative px-4 py-3 rounded-md cursor-pointer
       transition-colors hover:bg-sky-700
       group
+
+      ${href === parentSegmentInUrl ? "bg-sky-700" : ""}
     `}
     >
-      <Link href={href} className=" flex items-center gap-[2px] group:">
+      <Link
+        href={hrefAfterFiltering}
+        className=" flex items-center gap-[2px] group"
+      >
         {name}
-        {hasMainNestedLinks && (
+        {hasNestedLinks && (
           <>
             <ChevronDownIcon className="h-3 w-3 mt-[2px] group-hover:hidden" />
             <XMarkIcon className="h-3 w-3 mt-[2px] hidden group-hover:block" />

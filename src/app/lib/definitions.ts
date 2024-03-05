@@ -6,6 +6,7 @@ export type NavbarNestedLinks = {
 
 export type NavbarLinks = {
   name: string;
+  href?: string;
   nestedLinks: NavbarNestedLinks;
 }[];
 

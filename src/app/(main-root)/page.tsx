@@ -5,7 +5,7 @@ import LandingImage from "../ui/main-page/landing-image-section/landing-image";
 
 export default function Home() {
   return (
-    <section className=" bg-slate-100 pb-">
+    <section className=" bg-slate-100">
       <MainPageHeader text="الصفحة الرئيسية" />
       <article className="w-full mx-auto relative z-0 ">
         <LandingImage />

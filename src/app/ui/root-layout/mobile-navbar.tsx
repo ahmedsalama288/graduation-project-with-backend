@@ -6,7 +6,7 @@ import { navbarLinks } from "../../lib/constants";
 import MobileNavLinks from "./mobile-nav-links";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 
-export default function MobileNavbar() {
+export default function MobileNavbar({ pathname }: { pathname: string }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const openMenuHandler = () => {
@@ -15,7 +15,6 @@ export default function MobileNavbar() {
   const closeMenuHandler = () => {
     setIsMenuOpen(false);
   };
-
   const closeMenuWhenNavigateHandler = () => {
     setTimeout(closeMenuHandler, 100);
   };
@@ -38,6 +37,7 @@ export default function MobileNavbar() {
           gap-4
       `}
         >
+          {/* close Icon */}
           <li>
             <XMarkIcon
               className="h-8 w-8 text-gray-500 cursor-pointer mb-3"
@@ -45,16 +45,20 @@ export default function MobileNavbar() {
             />
           </li>
 
+          {/* nav-bar-links */}
           {navbarLinks.map(({ name, nestedLinks }, index) => (
             <MobileNavLinks
               href={""}
               name={name}
               nestedLinks={nestedLinks}
+              pathname={pathname}
               key={index}
             />
           ))}
         </ul>
       </div>
+
+      {/* overlay div */}
       <div
         className={`
           ${isMenuOpen ? "block" : "hidden"}
