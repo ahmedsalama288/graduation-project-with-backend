@@ -13,7 +13,7 @@ const nextConfigFunction = async (phase) => {
     const withPWA = (await import("@ducanh2912/next-pwa")).default({
       dest: "public",
       cacheOnFrontEndNav: true,
-      aggressiveFrontEndNavCaching: true,
+      cacheStartUrl: true,
       reloadOnOnline: true,
       disable: false,
       workboxOptions: {
