@@ -10,7 +10,7 @@ export default function Logo({ className }: props) {
   return (
     <Link href="/" className="drop-shadow-lg inline-block">
       <Image
-        className={`${className} w-[70px] h-[70px] min-w-[70px] max-w-[70px]`}
+        className={`${className} w-[70px] h-[70px] min-w-[70px] max-w-[70px] drop-shadow-md`}
         src={logo}
         priority
         sizes=""

@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" dir="rtl">
       <body className={`${cairo.className} antialiased bg-slate-100`}>
-        <header className=" relative xl:fixed top-0 w-full z-[100000] bg-light-blue drop-shadow-lg ">
+        <header className=" h-[70px] flex justify-center items-center relative xl:fixed top-0 w-full z-[100000] bg-light-blue drop-shadow-lg ">
           <Navbar />
         </header>
         <main className="xl:mt-[70px] overflow-y-hidden">{children}</main>
