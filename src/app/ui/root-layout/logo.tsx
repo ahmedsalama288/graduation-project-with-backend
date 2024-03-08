@@ -9,7 +9,6 @@ export default function Logo() {
         className="w-[70px] h-[70px] min-w-[70px] max-w-[70px] drop-shadow-md"
         src={logo}
         priority
-        sizes=""
         alt="delta logo"
         quality="100"
         height={1000}
