@@ -13,7 +13,7 @@ export default function Page() {
             <Image
               width={10000}
               height={10000}
-              priority={false}
+              priority
               className="rounded-sm sm:rounded-md w-auto h-full "
               src={organizationalChartImage}
               alt="الهيكل التنظيمي للمعهد"
