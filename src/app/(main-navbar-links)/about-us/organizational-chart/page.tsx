@@ -8,8 +8,9 @@ export default function Page() {
   return (
     <section>
       <MainPageHeader text="الهيكل التنظيمي" />
-      <PageContentContainer className=" flex justify-center items-center">
-        <ContentWrapper className="mt-0 w-fit lg:h-[600px] flex justify-center items-center">
+      <div className=" px-2 sm:px-0">
+        <PageContentContainer className=" flex justify-center items-center">
+          <ContentWrapper className="mt-0 w-fit lg:h-[600px] flex justify-center items-center">
             <Image
               width={10000}
               height={10000}
@@ -18,8 +19,9 @@ export default function Page() {
               src={organizationalChartImage}
               alt="الهيكل التنظيمي للمعهد"
             />
-        </ContentWrapper>
-      </PageContentContainer>
+          </ContentWrapper>
+        </PageContentContainer>
+      </div>
     </section>
   );
 }
