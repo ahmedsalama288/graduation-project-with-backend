@@ -130,7 +130,30 @@ export const navbarLinks: NavbarLinks = [
       { name: "علوم أساسيه", href: "/academic-life/basic-sciences" },
     ],
   },
-  { name: "وحدات و إدارات", nestedLinks: [] },
+  {
+    name: "وحدات و إدارات",
+    href: "/units-and-departments",
+    nestedLinks: [
+      {
+        name: "وحدات المعهد",
+        href: "",
+        nestedLinks: [
+          {
+            name: "وحدة تكنولوجيا المعلومات",
+            href: "/units-and-departments/institute-units/information-technology",
+          },
+          {
+            name: "وحدة ضمان الجودة",
+            href: "/units-and-departments/institute-units/quality-assurance",
+          },
+          {
+            name: "وحدة التدريب",
+            href: "/units-and-departments/institute-units/training",
+          },
+        ],
+      },
+    ],
+  },
   {
     name: "قطاعات المعهد",
     nestedLinks: [
@@ -151,6 +174,7 @@ export const ignoredLinks: string[] = [
   "/about-us",
   "/student-services",
   "/academic-life",
+  "/units-and-departments",
 ];
 
 export const dutiesOfDepartmentHead = [
