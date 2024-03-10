@@ -152,6 +152,52 @@ export const navbarLinks: NavbarLinks = [
           },
         ],
       },
+      {
+        name: "إدارات المعهد",
+        href: "",
+        nestedLinks: [
+          {
+            name: "إدارة شئون التعليم والطلاب",
+            href: "/units-and-departments/institute-departments/education-and-student-affairs",
+          },
+          {
+            name: "إدارة شئون الخريجين",
+            href: "/units-and-departments/institute-departments/alumni-affairs",
+          },
+          {
+            name: "إدارة شئون العاملين",
+            href: "/units-and-departments/institute-departments/personnel-affairs",
+          },
+          {
+            name: "الإدارة المالية",
+            href: "/units-and-departments/institute-departments/financial",
+          },
+          {
+            name: "الإدارة الهندسية",
+            href: "/units-and-departments/institute-departments/engineering",
+          },
+          {
+            name: "إدارة المشتريات والمخازن",
+            href: "/units-and-departments/institute-departments/purchasing-and-warehouse",
+          },
+          {
+            name: "إدارة رعاية الشباب",
+            href: "/units-and-departments/institute-departments/youth-care",
+          },
+          {
+            name: "العيادة الطبية",
+            href: "/units-and-departments/institute-departments/medical-clinic",
+          },
+          {
+            name: "المكتبة",
+            href: "/units-and-departments/institute-departments/library",
+          },
+          {
+            name: "إدارة الأمن",
+            href: "/units-and-departments/institute-departments/security",
+          },
+        ],
+      },
     ],
   },
   {
