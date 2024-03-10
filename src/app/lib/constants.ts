@@ -41,6 +41,7 @@ export const navbarLinks: NavbarLinks = [
   },
   {
     name: "خدمات الطلاب",
+    href: "/student-services",
     nestedLinks: [
       {
         name: "الجداول الدراسية",
@@ -114,10 +115,9 @@ export const navbarLinks: NavbarLinks = [
       { name: "تحميل الكتب", href: "https://dhic.ddns.net/ch/mycourses.php" },
     ],
   },
-  { name: "وحدات و إدارات", nestedLinks: [] },
-
   {
     name: "الحياه الاكاديمية",
+    href: "/academic-life",
     nestedLinks: [
       {
         name: "قسم نظم المعلومات الإدارية",
@@ -130,6 +130,7 @@ export const navbarLinks: NavbarLinks = [
       { name: "علوم أساسيه", href: "/academic-life/basic-sciences" },
     ],
   },
+  { name: "وحدات و إدارات", nestedLinks: [] },
   {
     name: "قطاعات المعهد",
     nestedLinks: [
@@ -146,4 +147,19 @@ export const navbarLinks: NavbarLinks = [
   { name: "تواصل معنا", nestedLinks: [] },
 ];
 
-export const ignoredLinks: string[] = ["/about-us"];
+export const ignoredLinks: string[] = [
+  "/about-us",
+  "/student-services",
+  "/academic-life",
+];
+
+export const dutiesOfDepartmentHead = [
+  "مناقشة العميد التقسيمات الخاصة بالجداول والامتحانات وما يترتب عليها من تجهيزات.",
+  "اكساب الخبرة لجميع الاعضاء من خلال اللقاءات الدورية.",
+  "الاشراف على تنفيذ القرارات التنفيذية والتأكد من سلامة اجراءات التنفيذ.",
+  "اعداد خطة سنوية باحتياجات القسم من السادة أعضاء هيئة التدريس والهيئة المعاونة.",
+  "تلقى مقترحات القسم فى شأن جودة التعليم ودراستها .",
+  "اقتراح تعيين المدرسين المساعدين والمعيدين.",
+  "اقتراح تعيين المدرسين المساعدين والمعيدين.",
+  "اقتراح تعيين اعضاء هيئة التدريس وندبهم.",
+];
