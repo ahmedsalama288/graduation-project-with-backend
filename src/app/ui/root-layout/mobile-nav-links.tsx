@@ -54,8 +54,8 @@ export default function MobileNavLinks({
         {!!nestedLinks?.length && (
           <ul
             className={`
-            mr-2
-            w-56 max-w-72 min-w-fit
+            hidden peer-hover:block hover:block
+            w-56 max-w-72 min-w-fit mr-2 
             bg-slate-200 rounded
             drop-shadow-lg
         `}

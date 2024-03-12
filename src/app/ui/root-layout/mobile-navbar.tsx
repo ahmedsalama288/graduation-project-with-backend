@@ -1,14 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Bars3Icon } from "@heroicons/react/20/solid";
 import { navbarLinks } from "../../lib/constants";
 import MobileNavLinks from "./mobile-nav-links";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 
 export default function MobileNavbar({ pathname }: { pathname: string }) {
-
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const openMenuHandler = () => {
@@ -17,9 +15,8 @@ export default function MobileNavbar({ pathname }: { pathname: string }) {
   const closeMenuHandler = () => {
     setIsMenuOpen(false);
   };
-  const closeMenuWhenNavigateHandler = () => {
-    setTimeout(closeMenuHandler, 100);
-  };
+
+  useEffect(closeMenuHandler, [pathname]);
 
   return (
     <>
@@ -30,7 +27,7 @@ export default function MobileNavbar({ pathname }: { pathname: string }) {
         />
 
         <ul
-          onClick={closeMenuWhenNavigateHandler}
+          // onClick={closeMenuWhenNavigateHandler}
           className={`
           ${isMenuOpen ? "flex" : "hidden"}
         bg-slate-200 absolute  flex-col
