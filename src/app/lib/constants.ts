@@ -1,4 +1,10 @@
-import { NavbarLinks } from "./definitions";
+import { AcademicLeadersInfo, NavbarLinks } from "./definitions";
+import drMansourImageSrc from "@/../../public/dr-images/dr-mansour.jpeg";
+import drAbdelwahabImageSrc from "@/../../public/dr-images/dr-abdelwahab.jpeg";
+import drHazemImageSrc from "@/../../public/dr-images/dr-hazem.jpeg";
+import mrEhabImageSrc from "@/../../public/dr-images/mr-ehab.jpg";
+import drAlbrashyImageSrc from "@/../../public/dr-images/dr-albrashy.jpg";
+import drIsalmImageSrc from "@/../../public/dr-images/dr-isalm.jpeg";
 
 export const navbarLinks: NavbarLinks = [
   {
@@ -232,4 +238,44 @@ export const dutiesOfDepartmentHead = [
   "اقتراح تعيين المدرسين المساعدين والمعيدين.",
   "اقتراح تعيين المدرسين المساعدين والمعيدين.",
   "اقتراح تعيين اعضاء هيئة التدريس وندبهم.",
+];
+
+export const academicLeadersInfo: AcademicLeadersInfo = [
+  {
+    memberImageSrc: drMansourImageSrc,
+    memberImageAlt: "أ.م.د/منصور شطا",
+    memberName: "أ.م.د / منصور شطا",
+    memberRole: "وكيل البحث العلمي",
+  },
+  {
+    memberImageSrc: drAbdelwahabImageSrc,
+    memberImageAlt: "أ.م.د/عبدالوهاب الراعي",
+    memberName: "أ.م.د / عبدالوهاب الراعي",
+    memberRole: "وكيل شئون البيئة وخدمة المجتمع",
+  },
+  {
+    memberImageSrc: drIsalmImageSrc,
+    memberImageAlt: "أ.م.د/محمد الشربيني إسلام",
+    memberName: "أ.م.د / محمد الشربيني إسلام",
+    memberRole: "رئيس قسم المحاسبة",
+  },
+  {
+    memberImageSrc: drHazemImageSrc,
+    memberImageAlt: "أ.د/حازم عطوه",
+    memberName: "أ.د / حازم عطوه",
+    memberRole: "وكيل شئون التعليم والطلاب",
+  },
+  {
+    memberImageSrc: mrEhabImageSrc,
+    memberImageAlt: "أ/إيهاب ناصر",
+    memberName: "أ / إيهاب ناصر",
+    memberRole: "الأمين العام",
+  },
+
+  {
+    memberImageSrc: drAlbrashyImageSrc,
+    memberImageAlt: "د/أحمد البراشي",
+    memberName: "د / أحمد البراشي",
+    memberRole: "مدير وحدة ضمان الجودة",
+  },
 ];

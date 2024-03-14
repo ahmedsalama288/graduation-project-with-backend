@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export type NavbarNestedLinks = {
   name?: string;
   href?: string;
@@ -16,3 +18,10 @@ export type InstituteStatusInfo = {
   icon: React.ReactNode;
   description: string;
 };
+
+export type AcademicLeadersInfo = {
+  memberImageSrc: StaticImageData;
+  memberImageAlt: string;
+  memberName: string;
+  memberRole: string;
+}[];

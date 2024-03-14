@@ -55,7 +55,7 @@ export default function MobileNavLinks({
           <ul
             className={`
             hidden peer-hover:block hover:block
-            w-56 max-w-72 min-w-fit mr-2 
+            w-56 max-w-72 min-w-fit mr-2
             bg-slate-200 rounded
             drop-shadow-lg
         `}
