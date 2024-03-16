@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { Bars3Icon } from "@heroicons/react/20/solid";
-import { navbarLinks } from "../../../lib/constants";
 import MobileNavLinks from "./mobile-nav-links";
 import { XMarkIcon } from "@heroicons/react/24/solid";
+import { navbarLinks } from "@/app/lib/constants";
 
 export default function MobileNavbar({ pathname }: { pathname: string }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

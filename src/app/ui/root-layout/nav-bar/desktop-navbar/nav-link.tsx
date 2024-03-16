@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { NavbarNestedLinks } from "../../lib/definitions";
 import {
   ChevronDownIcon,
   ChevronLeftIcon,
@@ -7,6 +6,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { getFirstSegment } from "@/app/lib/utils";
 import { ignoredLinks } from "@/app/lib/constants";
+import { NavbarNestedLinks } from "@/app/lib/definitions";
 
 interface props {
   href: string;

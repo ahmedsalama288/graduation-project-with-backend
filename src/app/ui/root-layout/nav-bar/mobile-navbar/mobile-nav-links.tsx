@@ -1,8 +1,7 @@
 import Link from "next/link";
-import { NavbarNestedLinks } from "../../../lib/definitions";
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { ignoredLinks } from "@/app/lib/constants";
 import NestedLinkContainer from "./nested-link-container";
+import { NavbarNestedLinks } from "@/app/lib/definitions";
 
 interface props {
   href: string;

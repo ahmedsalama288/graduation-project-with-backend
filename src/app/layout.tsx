@@ -7,7 +7,7 @@ import FooterSection from "./ui/root-layout/footer-section/footer-section";
 export const metadata: Metadata = {
   title: {
     default: "معهد الدلتا العالي",
-    template: '%s | معهد الدلتا العالي'
+    template: "%s | معهد الدلتا العالي",
   },
   description:
     "يهدف معهد الدلتا العالي إلى إتاحة الفرصة للطلاب للحصول على نوعية ممتازة وجادة ومتطورة من دراسات علوم الحاسبات وتكنولوجيا إدارة المعلومات على أيدي نخبة متميزة من أعضاء هيئة التدريس من الجامعات المصرية وعلى أحدث الأجهزة التعليمية المتطورة",
