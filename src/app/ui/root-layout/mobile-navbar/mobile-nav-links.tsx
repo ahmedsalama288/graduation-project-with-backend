@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { NavbarNestedLinks } from "../../lib/definitions";
+import { NavbarNestedLinks } from "../../../lib/definitions";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { ignoredLinks } from "@/app/lib/constants";
+import NestedLinkContainer from "./nested-link-container";
 
 interface props {
   href: string;
@@ -34,9 +35,10 @@ export default function MobileNavLinks({
         relative inline-block
     `}
       >
-        <Link
-          href={href || ""}
-          className={`
+        {!!!nestedLinks?.length && (
+          <Link
+            href={href || ""}
+            className={`
           transition-all
           py-3 px-4 rounded-md
           hover:pr-5 hover:bg-slate-300
@@ -44,39 +46,18 @@ export default function MobileNavLinks({
           w-fit flex gap-2 items-center
           peer
         `}
-        >
-          {name}
-          {!!nestedLinks?.length && (
-            <ChevronDownIcon className="h-4 w-4 text-gray-500 mt-1" />
-          )}
-        </Link>
+          >
+            {name}
+          </Link>
+        )}
 
         {!!nestedLinks?.length && (
-          <ul
-            className={`
-            hidden peer-hover:block hover:block
-            w-56 max-w-72 min-w-fit mr-2
-            bg-slate-200 rounded
-            drop-shadow-lg
-        `}
-          >
-            {nestedLinks.map(({ name, href }) => (
-              <li key={href}>
-                <Link
-                  href={href}
-                  className={` 
-                  transition-all
-                  py-3 px-4 rounded-md
-                  hover:pr-5 hover:bg-slate-300
-                  ${href === pathname ? "bg-slate-300 pr-5" : ""}
-                  w-full inline-block
-                `}
-                >
-                  {name}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <NestedLinkContainer
+            pathname={pathname}
+            nestedLinks={nestedLinks}
+            subLinksContainerName={name ||  ""}
+            href={href || ""}
+          />
         )}
       </li>
     ));

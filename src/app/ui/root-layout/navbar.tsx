@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import { navbarLinks } from "../../lib/constants";
 import Logo from "./logo";
-import MobileNavbar from "./mobile-navbar";
+import MobileNavbar from "./mobile-navbar/mobile-navbar";
 import NavLink from "./nav-link";
 
 export default function Navbar() {
