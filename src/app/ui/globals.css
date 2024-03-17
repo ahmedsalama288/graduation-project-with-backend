@@ -21,6 +21,7 @@
 }
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
+  scroll-behavior: smooth;
 }
 
 @layer utilities {
