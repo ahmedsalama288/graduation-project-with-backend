@@ -31,6 +31,7 @@ export default function LandingImage() {
         overflow-hidden w-full hero-img-hight
     `}
     >
+      <div className=" absolute inset-0 bg-black/20 z-20" />
       <div>
         <Image
           className={`
