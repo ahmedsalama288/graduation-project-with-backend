@@ -11,11 +11,14 @@ export default function MobileNavbar({ pathname }: { pathname: string }) {
 
   const openMenuHandler = () => {
     setIsMenuOpen(true);
+    document.documentElement.style.setProperty("--scroll-behavior", "hidden");
   };
   const closeMenuHandler = () => {
     setIsMenuOpen(false);
+    document.documentElement.style.setProperty("--scroll-behavior", "auto");
   };
 
+  // when the user navigate to another page close the nav-bar
   useEffect(closeMenuHandler, [pathname]);
 
   return (
@@ -25,16 +28,13 @@ export default function MobileNavbar({ pathname }: { pathname: string }) {
           onClick={openMenuHandler}
           className="h-8 w-8 xl:hidden cursor-pointer"
         />
-
         <ul
-          // onClick={closeMenuWhenNavigateHandler}
           className={`
-          ${isMenuOpen ? "flex" : "hidden"}
-        bg-slate-200 absolute  flex-col
-          top-0 right-0 p-8 w-[300px] 
-          h-[4000px]
-          gap-4
-      `}
+            ${isMenuOpen ? "flex" : "hidden"}
+          bg-slate-200 fixed flex-col
+            top-0 right-0 p-8 w-[300px] 
+            h-screen gap-4 overflow-y-scroll scrollbar-hidden
+          `}
         >
           {/* close Icon */}
           <li>
@@ -63,7 +63,7 @@ export default function MobileNavbar({ pathname }: { pathname: string }) {
           ${isMenuOpen ? "block" : "hidden"}
           cursor-pointer
           fixed top-0 left-0 bg-gray-700 opacity-20 width-minus-300px z-40
-            h-[4000px]
+          h-screen
         `}
         onClick={closeMenuHandler}
       ></div>

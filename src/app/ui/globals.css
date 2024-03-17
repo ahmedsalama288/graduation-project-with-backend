@@ -2,20 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --scroll-behavior: "auto";
+}
+
 ::-webkit-scrollbar {
   width: 12px;
   background-color: #ebf4ff;
   padding: 10px;
 }
-
 ::-webkit-scrollbar-thumb {
   background-color: #a3aebc;
   border-radius: 6px;
   padding: 3px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #94979b; 
+  background-color: #94979b;
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
 }
 
 @layer utilities {
@@ -27,6 +32,7 @@
 body {
   box-sizing: border-box;
   color: white;
+  overflow-y: var(--scroll-behavior, "auto");
 }
 
 .hero-img-hight {
