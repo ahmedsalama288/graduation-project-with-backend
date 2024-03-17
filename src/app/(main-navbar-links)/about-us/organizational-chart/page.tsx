@@ -16,7 +16,12 @@ export default function Page() {
               height={10000}
               priority
               className="rounded-sm sm:rounded-md w-auto h-full "
+              sizes="
+                    (max-width: 320px) 280px, 
+                    (max-width: 480px) 440px,
+                    800px"
               src={organizationalChartImage}
+              quality={100}
               alt="الهيكل التنظيمي للمعهد"
             />
           </ContentWrapper>
