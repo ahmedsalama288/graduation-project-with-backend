@@ -33,20 +33,19 @@ export default function FooterConnectUs() {
               <span>01013444530</span> - <span>0502529809</span>
             </p>
           </li>
-
-          <li className="rounded-lg p-4 bg-[#014e79] max-h-[60.43px]">
-            <ul className=" flex items-center gap-3 pr-2">
-              <li>
+          <li className="rounded-lg p-4 bg-[#014e79]">
+            <div className=" flex items-center justify-start gap-3 pr-2">
+              <div>
                 <Link href={"/"}>
                   <FaceBookIcon className=" w-6 h-fit fill-[#f2f2f2] rounded-sm" />
                 </Link>
-              </li>
-              <li>
+              </div>
+              <div>
                 <Link href={"/"}>
                   <YoutubeIcon className="w-8 h-fit fill-[#f2f2f2] " />
                 </Link>
-              </li>
-            </ul>
+              </div>
+            </div>
           </li>
         </ul>
       </div>
