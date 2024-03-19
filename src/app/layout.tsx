@@ -3,6 +3,7 @@ import { cairo } from "./ui/fonts";
 import Navbar from "./ui/root-layout/navbar";
 import "./ui/globals.css";
 import FooterSection from "./ui/root-layout/footer-section/footer-section";
+import { Turret_Road } from "next/font/google";
 
 export const metadata: Metadata = {
   title: {
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
     "معهد الدلتا",
   ],
   robots: "index",
+  appleWebApp: { capable: true, title: "Delta Higher Institute" },
 };
 export const viewport: Viewport = {
   themeColor: "#f6f6f6",
