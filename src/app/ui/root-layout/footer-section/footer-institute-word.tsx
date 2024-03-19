@@ -1,6 +1,6 @@
 export default function FooterInstituteWord() {
   return (
-    <div className="w-full mt-12 lg:mt-0 lg:w-1/2">
+    <div className="w-full lg:mt-0 lg:w-1/2">
       <div className="mb-7 font-semibold text-xl">
         <h4 className=" leading-[1.7]">معهد الدلتا العالي</h4>
       </div>

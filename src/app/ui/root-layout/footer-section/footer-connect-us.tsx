@@ -9,7 +9,7 @@ import YoutubeIcon from "./icons-components/youtube-icon";
 
 export default function FooterConnectUs() {
   return (
-    <div>
+    <div className=" h-fit">
       <div className="mb-8 font-semibold text-xl">
         <h4>تواصل معنا</h4>
       </div>
