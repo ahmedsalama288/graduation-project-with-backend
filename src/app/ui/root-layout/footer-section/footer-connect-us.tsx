@@ -13,7 +13,7 @@ export default function FooterConnectUs() {
       <div className="mb-8 font-semibold text-xl">
         <h4>تواصل معنا</h4>
       </div>
-      <div>
+      <>
         <ul className=" flex flex-col gap-4">
           <li className=" flex flex-col gap-1 rounded-lg p-4 bg-[#014e79]">
             <div className=" flex gap-1">
@@ -37,18 +37,18 @@ export default function FooterConnectUs() {
             <div className=" flex items-center justify-start gap-3 pr-2">
               <div>
                 <Link href={"/"}>
-                  <FaceBookIcon className=" w-6 h-fit fill-[#f2f2f2] rounded-sm" />
+                  <FaceBookIcon className=" w-6 h-7 fill-[#f2f2f2] rounded-sm" />
                 </Link>
               </div>
               <div>
                 <Link href={"/"}>
-                  <YoutubeIcon className="w-8 h-fit fill-[#f2f2f2] " />
+                  <YoutubeIcon className="w-8 h-8 fill-[#f2f2f2] " />
                 </Link>
               </div>
             </div>
           </li>
         </ul>
-      </div>
+      </>
     </div>
   );
 }
