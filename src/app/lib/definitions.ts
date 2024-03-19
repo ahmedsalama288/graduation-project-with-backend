@@ -1,9 +1,11 @@
 import { StaticImageData } from "next/image";
 
 export type NavbarNestedLinks = {
-  name?: string;
+  name: string;
   href?: string;
   nestedLinks?: { name: string; href: string }[];
+  downloadAblePDFLink?: boolean;
+  pdfname?: string;
 }[];
 
 export type NavbarLinks = {

@@ -1,4 +1,5 @@
 import { AcademicLeadersInfo, NavbarLinks } from "./definitions";
+
 import drMansourImageSrc from "@/../../public/dr-images/dr-mansour.jpeg";
 import drAbdelwahabImageSrc from "@/../../public/dr-images/dr-abdelwahab.jpeg";
 import drHazemImageSrc from "@/../../public/dr-images/dr-hazem.jpeg";
@@ -41,7 +42,9 @@ export const navbarLinks: NavbarLinks = [
       },
       {
         name: "اللائحة",
-        href: "/about-us/regulations",
+        href: "/pdf/internal-regulation.pdf",
+        downloadAblePDFLink: true,
+        pdfname:'internal-regulation.pdf'
       },
     ],
   },
@@ -217,8 +220,20 @@ export const navbarLinks: NavbarLinks = [
       { name: "", href: "" },
     ],
   },
-  { name: "البحث العلمي", nestedLinks: [] },
-  { name: "الوسائط المتعددة", nestedLinks: [] },
+  {
+    name: "البحث العلمي",
+    href: "https://djicsi.journals.ekb.eg/",
+    nestedLinks: [
+      { name: "المجلة العلمية", href: "https://djicsi.journals.ekb.eg/" },
+      {
+        name: "قاعدة بيانات البحث العلمي",
+        href: "/pdf/scientific-research.pdf",
+        downloadAblePDFLink: true,
+        pdfname: "scientific-research.pdf",
+      },
+    ],
+  },
+  { name: "بوابة أعضاء هيئة التدريس", href: "https://dhic.ddns.net/ch/signin.php", nestedLinks: [] },
   { name: "تواصل معنا", nestedLinks: [] },
 ];
 

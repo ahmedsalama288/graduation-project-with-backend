@@ -16,7 +16,11 @@ interface props {
 }
 
 export default function NavLink({ href, name, nestedLinks, pathname }: props) {
-  const hrefAfterFilteringIgnoredLinks = ignoredLinks.find((link) => link === href) ? "" : href;
+  const hrefAfterFilteringIgnoredLinks = ignoredLinks.find(
+    (link) => link === href
+  )
+    ? ""
+    : href;
 
   const parentSegmentInUrl = getFirstSegment(pathname);
 
@@ -27,61 +31,85 @@ export default function NavLink({ href, name, nestedLinks, pathname }: props) {
 
   const renderedNestedLinks =
     hasNestedLinks &&
-    nestedLinks.map(({ name, href, nestedLinks }, index) => (
-      <li
-        key={index}
-        className={`
+    nestedLinks.map(
+      (
+        { name, href = "", nestedLinks, downloadAblePDFLink, pdfname },
+        index
+      ) => (
+        <li
+          key={index}
+          className={`
           w-full whitespace-nowrap text-black-gray
           relative inline-block
       `}
-      >
-        <Link
-          href={href || ""}
-          className={`
+        >
+          {downloadAblePDFLink && (
+            <a
+              download={pdfname}
+              href={href}
+              className={`
             ${href == pathname ? "bg-slate-300 pr-5" : ""}
             transition-all
             py-3 px-4 rounded-md
             hover:pr-5 hover:bg-slate-300
             w-full flex justify-between items-center
             peer
-          `}
-        >
-          {name}{" "}
-          {!!nestedLinks?.length && (
-            <ChevronLeftIcon className=" h-5 w-5 text-gray-500" />
+            `}
+            >
+              {name}
+            </a>
           )}
-        </Link>
 
-        {!!nestedLinks?.length && (
-          <ul
-            className={`
+          {!downloadAblePDFLink && (
+            <Link
+              href={href || ""}
+              className={`
+              ${href == pathname ? "bg-slate-300 pr-5" : ""}
+              transition-all
+              py-3 px-4 rounded-md
+              hover:pr-5 hover:bg-slate-300
+              w-full flex justify-between items-center
+              peer
+          `}
+            >
+              {name}{" "}
+              {!!nestedLinks?.length && (
+                <ChevronLeftIcon className=" h-5 w-5 text-gray-500" />
+              )}
+            </Link>
+          )}
+
+          {!!nestedLinks?.length && (
+            <ul
+              className={`
               w-56 max-w-72 min-w-fit
               peer hidden peer-hover:block hover:block
               top-0 -left-full
               absolute bg-slate-200 rounded
               drop-shadow-lg
           `}
-          >
-            {nestedLinks.map(({ name, href }) => (
-              <li key={href}>
-                <Link
-                  href={href}
-                  className={` 
+            >
+              {nestedLinks.map(({ name, href }) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className={` 
                     ${href == pathname ? "bg-slate-300 pr-5" : ""}
                     transition-all
                     py-3 px-4 rounded-md
                     hover:pr-5 hover:bg-slate-300
                     w-full inline-block
                   `}
-                >
-                  {name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        )}
-      </li>
-    ));
+                  >
+                    {name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+      )
+    );
 
   return (
     <li
