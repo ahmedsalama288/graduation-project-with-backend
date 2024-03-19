@@ -10,7 +10,7 @@ export default function Page() {
       <MainPageHeader text="العيادة الطبية" />
       <div className=" px-2 sm:px-0">
         <PageContentContainer>
-          <ContentWrapper className=" mt-0">
+          <ContentWrapper>
             <ContentHeader text="مهام مدير العيادة الطبية" />
             <ContentContainer>
               {/* list-disc pr-4 */}

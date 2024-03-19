@@ -10,7 +10,7 @@ export default function Page() {
       <MainPageHeader text="وحدة ضمان الجودة" />
       <div className=" px-2 sm:px-0">
         <PageContentContainer>
-          <ContentWrapper className=" mt-0">
+          <ContentWrapper>
             <ContentHeader text="مهام وحدة ضمان الجودة" />
             <ContentContainer>
               <p>
@@ -22,7 +22,7 @@ export default function Page() {
             </ContentContainer>
           </ContentWrapper>
 
-          <ContentWrapper className=" sm:mt-6">
+          <ContentWrapper className=" mt-5 sm:mt-6">
             <ContentHeader text="مهام مدير وحدة ضمان الجودة" />
             <ContentContainer>
               <ul className=" list-disc pr-4">

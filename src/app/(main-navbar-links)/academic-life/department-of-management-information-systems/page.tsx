@@ -18,7 +18,7 @@ export default function Page() {
           alt="رئيس قسم نظم المعلومات الإدارية"
         />
         <MemberName memberName="أ.د / أحمد أبو الفتوح صالح" />
-        <ContentWrapper>
+        <ContentWrapper className="mt-5">
           <ContentHeader text="مهام رئيس القسم نظم المعلومات الإدارية" />
           <ContentContainer>
             <DutiesOfDepartmentHead />

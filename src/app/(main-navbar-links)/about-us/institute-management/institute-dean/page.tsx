@@ -15,7 +15,7 @@ export default function Page() {
         <PageContentContainer>
           <MemberPhoto imageSrc={imageSrc} alt="رئيس مجلس الإدارة" />
           <MemberName memberName="كلمة السيد الدكتور أحمد أبو الفتوح" />
-          <ContentWrapper>
+          <ContentWrapper className=" mt-5">
             <ContentHeader text="أبنائي الطلاب" />
             <ContentContainer>
               <p>

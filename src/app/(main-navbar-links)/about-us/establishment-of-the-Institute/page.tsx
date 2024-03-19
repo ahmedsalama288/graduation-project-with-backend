@@ -25,7 +25,7 @@ export default function Page() {
         </div>
 
         <div>
-          <ContentWrapper>
+          <ContentWrapper className="mt-5">
             <ContentHeader text="بدأ المعهد الدراسة في العام الدراسي 2000/2001 بقسمين هما" />
             <ContentContainer>
               <ul className=" list-decimal pr-4">
@@ -47,7 +47,7 @@ export default function Page() {
         </div>
 
         <div>
-          <ContentWrapper>
+          <ContentWrapper className="mt-5">
             <ContentContainer>
               <div>
                 <p>
@@ -67,31 +67,6 @@ export default function Page() {
           </ContentWrapper>
         </div>
 
-        {/* <div>
-          <ContentWrapper>
-            <ContentHeader text="من أهم إنجازات معهد الدلتا العالي لنظم المعلومات الإدارية والمحاسبية بالمنصورة:" />
-            <ContentContainer>
-              <ul className=" list-disc pr-5">
-                <li>
-                  حصوله على شهادة الاعتماد من الهيئة القومية لضمان جودة التعليم
-                  والاعتماد.
-                </li>
-                <li>
-                  حصوله على جائزة أفضل معهد في مصر في مجال نظم المعلومات
-                  الإدارية والمحاسبية.
-                </li>
-                <li>
-                  توقيعه العديد من الاتفاقيات مع الجامعات والمعاهد الرائدة في
-                  مصر والعالم.
-                </li>
-                <li>
-                  ويُعدّ المعهد أيضا صرحًا تعليميًا شامخًا يُساهم في بناء مستقبل
-                  أفضل للمنظمات والمجتمع.
-                </li>
-              </ul>
-            </ContentContainer>
-          </ContentWrapper>
-        </div> */}
       </PageContentContainer>
     </section>
   );

@@ -10,7 +10,7 @@ export default function Page() {
       <MainPageHeader text="إدارة شئون العاملين" />
       <div className=" px-2 sm:px-0">
         <PageContentContainer>
-          <ContentWrapper className=" mt-0">
+          <ContentWrapper>
             <ContentHeader text="مهام مدير ادارة شئون العاملين" />
             <ContentContainer>
               {/* list-disc pr-4 */}

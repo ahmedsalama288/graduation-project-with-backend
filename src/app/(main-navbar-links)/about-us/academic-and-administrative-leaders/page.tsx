@@ -22,7 +22,7 @@ export default function Page() {
                 justify-items-center gap-6
               "
           >
-            <ContentWrapper className="!mt-0 w-full md:col-span-2 lg:col-span-3 drop-shadow-md">
+            <ContentWrapper className="w-full md:col-span-2 lg:col-span-3 drop-shadow-md">
               <div className=" flex flex-col justify-center items-center gap-4 pt-4">
                 <MemberPhoto
                   imageSrc={deanOfTheInstituteImage}
@@ -41,7 +41,7 @@ export default function Page() {
             </ContentWrapper>
             {academicLeadersInfo.map(
               ({ memberImageSrc, memberImageAlt, memberName, memberRole }) => (
-                <ContentWrapper className="!mt-0 w-full drop-shadow-md " key={memberImageAlt}>
+                <ContentWrapper className=" w-full drop-shadow-md " key={memberImageAlt}>
                   <div className=" flex flex-col justify-center items-center gap-4 pt-4">
                     <MemberPhoto
                       imageSrc={memberImageSrc}

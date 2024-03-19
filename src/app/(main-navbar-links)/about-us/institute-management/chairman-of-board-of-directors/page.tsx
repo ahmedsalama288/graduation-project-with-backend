@@ -16,7 +16,7 @@ export default function Page() {
           <MemberPhoto imageSrc={imageSrc} alt="رئيس مجلس الإدارة" />
           <MemberName memberName="كلمة السيد الدكتور محمد ربيع ناصر" />
 
-          <ContentWrapper>
+          <ContentWrapper className=" mt-5">
             <ContentHeader text="أبنائي الطلاب" />
             <ContentContainer>
               <p>

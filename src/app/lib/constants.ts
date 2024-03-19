@@ -44,7 +44,7 @@ export const navbarLinks: NavbarLinks = [
         name: "اللائحة",
         href: "/pdf/internal-regulation.pdf",
         downloadAblePDFLink: true,
-        pdfname:'internal-regulation.pdf'
+        pdfname: "internal-regulation.pdf",
       },
     ],
   },
@@ -211,18 +211,23 @@ export const navbarLinks: NavbarLinks = [
   },
   {
     name: "قطاعات المعهد",
+    href: "/institute-sectors",
     nestedLinks: [
-      { name: "", href: "" },
-      { name: "", href: "" },
-      { name: "", href: "" },
-      { name: "", href: "" },
-      { name: "", href: "" },
-      { name: "", href: "" },
+      {
+        name: "قطاع شئون الطلاب",
+        href: "",
+        nestedLinks: [
+          {
+            name: "قواعد هامه للطلاب",
+            href: "/institute-sectors/student-affairs/important-rules-for-students",
+          },
+        ],
+      },
     ],
   },
   {
     name: "البحث العلمي",
-    href: "https://djicsi.journals.ekb.eg/",
+    href: "",
     nestedLinks: [
       { name: "المجلة العلمية", href: "https://djicsi.journals.ekb.eg/" },
       {
@@ -233,7 +238,11 @@ export const navbarLinks: NavbarLinks = [
       },
     ],
   },
-  { name: "بوابة أعضاء هيئة التدريس", href: "https://dhic.ddns.net/ch/signin.php", nestedLinks: [] },
+  {
+    name: "بوابة أعضاء هيئة التدريس",
+    href: "https://dhic.ddns.net/ch/signin.php",
+    nestedLinks: [],
+  },
   { name: "تواصل معنا", nestedLinks: [] },
 ];
 
@@ -242,6 +251,7 @@ export const ignoredLinks: string[] = [
   "/student-services",
   "/academic-life",
   "/units-and-departments",
+  "/institute-sectors",
 ];
 
 export const dutiesOfDepartmentHead = [

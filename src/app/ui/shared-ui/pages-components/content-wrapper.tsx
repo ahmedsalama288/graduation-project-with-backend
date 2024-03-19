@@ -7,7 +7,7 @@ export default function ContentWrapper({
 }) {
   return (
     <div
-      className={`bg-slate-500 rounded-md p-3 sm:p-4 mt-4 flex flex-col gap-4 ${className}`}
+      className={`bg-slate-500 rounded-md p-3 sm:p-4 flex flex-col gap-4 ${className}`}
     >
       {children}
     </div>

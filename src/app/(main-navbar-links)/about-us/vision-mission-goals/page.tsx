@@ -28,7 +28,7 @@ export default function Page() {
         </div>
 
         <div>
-          <ContentWrapper>
+          <ContentWrapper className="mt-5">
             <ContentHeader text="رسالة المعهد" />
             <ContentContainer>
               <div>
@@ -48,7 +48,7 @@ export default function Page() {
         </div>
 
         <div>
-          <ContentWrapper>
+          <ContentWrapper className="mt-5">
             <ContentHeader text="نسعى من خلال برامجنا التعليمية المتقدمة إلى إعداد طلاب متميزين قادرين على" />
             <ContentContainer>
               <ul className=" list-disc pr-5">
@@ -71,7 +71,7 @@ export default function Page() {
         </div>
 
         <div>
-          <ContentWrapper>
+          <ContentWrapper className="mt-5">
             <ContentContainer>
               <p>
                 ونلتزم بتقديم برامج تعليمية عالية الجودة تُلبي احتياجات سوق

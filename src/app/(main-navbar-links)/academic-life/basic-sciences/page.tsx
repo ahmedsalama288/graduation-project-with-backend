@@ -15,7 +15,7 @@ export default function Page() {
       <PageContentContainer>
         <MemberPhoto imageSrc={memberImage} alt="رئيس قسم العلوم الأساسيه" />
         <MemberName memberName="أ.م.د / منصور شطا" />
-        <ContentWrapper>
+        <ContentWrapper className=" mt-5">
           <ContentHeader text="مهام رئيس قسم العلوم الأساسيه" />
           <ContentContainer>
             <DutiesOfDepartmentHead />

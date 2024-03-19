@@ -10,7 +10,7 @@ export default function Page() {
       <MainPageHeader text="وحدة التدريب" />
       <div className=" px-2 sm:px-0">
         <PageContentContainer>
-          <ContentWrapper className=" mt-0">
+          <ContentWrapper>
             <ContentHeader text="مهام رئيس لجنة التدريب" />
             <ContentContainer>
               <ul className=" list-disc pr-4">
