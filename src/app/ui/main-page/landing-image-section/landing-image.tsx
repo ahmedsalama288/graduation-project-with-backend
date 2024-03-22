@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import heroOne from "../../../../../public/root-images/heroOne.jpg";
-import heroTwo from "../../../../../public/root-images/heroTwo.jpg";
-import heroThree from "../../../../../public/root-images/heroThree.jpg";
+import heroOne from "../../../../../public/root-images/hero-one.jpg";
+import heroTwo from "../../../../../public/root-images/hero-two.jpg";
+import heroThree from "../../../../../public/root-images/hero-three.jpg";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 
@@ -36,13 +36,13 @@ export default function LandingImage() {
         <Image
           className={`
               w-full h-screen object-cover
-              contrast-[60%] relative 
+              contrast-[90%] relative 
             `}
           src={heroImages[currentImageIndex]}
           alt="landing page image"
           width={10000}
           height={600}
-          quality={50}
+          quality={100}
           priority
         />
         <ChevronLeftIcon
