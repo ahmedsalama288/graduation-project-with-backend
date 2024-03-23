@@ -6,6 +6,8 @@ import drHazemImageSrc from "@/../../public/dr-images/dr-hazem.jpeg";
 import mrEhabImageSrc from "@/../../public/dr-images/mr-ehab.jpg";
 import drAlbrashyImageSrc from "@/../../public/dr-images/dr-albrashy.jpg";
 import drIsalmImageSrc from "@/../../public/dr-images/dr-isalm.jpeg";
+import drAbdesalam from "@/../../public/dr-images/dr-abdesalam.jpg";
+import personImage from "@/../../public/dr-images/person.jpg";
 
 export const navbarLinks: NavbarLinks = [
   {
@@ -223,6 +225,20 @@ export const navbarLinks: NavbarLinks = [
           },
         ],
       },
+      {
+        name: "قطاع شئون الخريجين",
+        href: "/institute-sectors/graduate-affairs",
+        nestedLinks: [
+          {
+            name: "لجنة متابعة الخريجين",
+            href: "/institute-sectors/graduate-affairs/follow-up-committee",
+          },
+          {
+            name: "رابطة الخريجين",
+            href: "https://www.facebook.com/groups/641981626325885/?ref=share&mibextid=F3zKvj",
+          },
+        ],
+      },
     ],
   },
   {
@@ -302,5 +318,46 @@ export const academicLeadersInfo: AcademicLeadersInfo = [
     memberImageAlt: "د/أحمد البراشي",
     memberName: "د / أحمد البراشي",
     memberRole: "مدير وحدة ضمان الجودة",
+  },
+];
+
+export const graduateFollowCommittee: AcademicLeadersInfo = [
+  {
+    memberImageSrc: drHazemImageSrc,
+    memberImageAlt: "أ.د/حازم عطوه",
+    memberName: "أ.د / حازم عطوه",
+    memberRole: "رئيس لجنة متابعة الخريجين",
+  },
+
+  {
+    memberImageSrc: drAbdesalam,
+    memberImageAlt: "د/عبدالسلام عاصى",
+    memberName: "د / عبدالسلام عاصى",
+    memberRole: "عضو في لجنة متابعة الخريجين",
+  },
+  {
+    memberImageSrc: drAlbrashyImageSrc,
+    memberImageAlt: "د/أحمد البراشي",
+    memberName: "د / أحمد البراشي",
+    memberRole: "عضو في لجنة متابعة الخريجين",
+  },
+
+  {
+    memberImageSrc: personImage,
+    memberImageAlt: "أ/أحمد صالح",
+    memberName: "أ / أحمد صالح",
+    memberRole: "عضو في لجنة متابعة الخريجين",
+  },
+  {
+    memberImageSrc: personImage,
+    memberImageAlt: "أ/منى أحمد",
+    memberName: "أ / منى أحمد",
+    memberRole: "عضو في لجنة متابعة الخريجين",
+  },
+  {
+    memberImageSrc: personImage,
+    memberImageAlt: "أ/مكرم رضوان",
+    memberName: "أ / مكرم رضوان",
+    memberRole: "عضو في لجنة متابعة الخريجين",
   },
 ];
