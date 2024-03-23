@@ -10,7 +10,7 @@ export default function Logo() {
         src={logo}
         priority
         alt="delta logo"
-        quality="100"
+        quality={90}
         height={1000}
         width={1000}
       />
