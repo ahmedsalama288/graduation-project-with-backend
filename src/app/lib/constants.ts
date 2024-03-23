@@ -59,19 +59,19 @@ export const navbarLinks: NavbarLinks = [
         href: "",
         nestedLinks: [
           {
-            name: "الفرقة الاول",
+            name: "الفرقة الاولي",
             href: "/student-services/class-schedules/year-one",
           },
           {
-            name: "الفرقة الثاني",
+            name: "الفرقة الثانية",
             href: "/student-services/class-schedules/year-two",
           },
           {
-            name: "الفرقة الثالث",
+            name: "الفرقة الثالثة",
             href: "/student-services/class-schedules/year-three",
           },
           {
-            name: "الفرقة الرابع",
+            name: "الفرقة الرابعة",
             href: "/student-services/class-schedules/year-four",
           },
         ],
@@ -328,7 +328,6 @@ export const graduateFollowCommittee: AcademicLeadersInfo = [
     memberName: "أ.د / حازم عطوه",
     memberRole: "رئيس لجنة متابعة الخريجين",
   },
-
   {
     memberImageSrc: drAbdesalam,
     memberImageAlt: "د/عبدالسلام عاصى",
@@ -341,7 +340,6 @@ export const graduateFollowCommittee: AcademicLeadersInfo = [
     memberName: "د / أحمد البراشي",
     memberRole: "عضو في لجنة متابعة الخريجين",
   },
-
   {
     memberImageSrc: personImage,
     memberImageAlt: "أ/أحمد صالح",
