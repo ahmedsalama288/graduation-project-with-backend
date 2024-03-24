@@ -46,6 +46,17 @@ export default function Page() {
               )
             )}
           </div>
+          <ContentWrapper className=" mt-5">
+            <ContentHeader text="مهام لجنة متابعة الخريجين" />
+            <ContentContainer>
+              <ul className=" flex flex-col gap-3 mt-4 list-disc pr-4">
+                <li> عمل قاعدة بيانات ورابطة للخريجين.</li>
+                <li>التواصل الدائم مع شئون الخريجين بالمعهد.</li>
+                <li>وضع برامج لرفع كفاءة الخريجين.</li>
+                <li>اسهام الخريجين فى تطوير وارتقاء المعهد.</li>
+              </ul>
+            </ContentContainer>
+          </ContentWrapper>
         </PageContentContainer>
       </article>
     </section>
