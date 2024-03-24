@@ -227,7 +227,7 @@ export const navbarLinks: NavbarLinks = [
       },
       {
         name: "قطاع شئون الخريجين",
-        href: "/institute-sectors/graduate-affairs",
+        href: "",
         nestedLinks: [
           {
             name: "لجنة متابعة الخريجين",
