@@ -1,3 +1,5 @@
+import ContentHeader from "../../shared-ui/pages-components/content-header";
+
 export default function QuestionsList() {
   // p-4 sm:p-8
   return (
@@ -6,13 +8,12 @@ export default function QuestionsList() {
         rounded-lg flex flex-col justify-between gap-y-10 flex-wrap mt-6
       "
     >
-      <li className=" bg-slate-400 p-4 sm:p-6 rounded-lg w-full max-w-full drop-shadow-md">
+      <li className=" bg-slate-500 p-3 sm:p-4 rounded-md w-full max-w-full drop-shadow-md">
         <div className=" mb-4">
-          <p className=" text-lg sm:text-xl font-semibold bg-slate-500 w-fit p-4 rounded-lg">
-            ما الدرجة العلمية التي يمنحها المعهد؟
-          </p>
+          <ContentHeader text="ما الدرجة العلمية التي يمنحها المعهد؟" />
         </div>
-        <div className="  bg-slate-500 rounded-lg text-base sm:text-lg">
+
+        <div className="  bg-slate-600 rounded-lg text-base sm:text-lg">
           <ul className="flex flex-col p-4 pr-8 gap-2 leading-[2] list-disc">
             <li>يمنح المعهد بكالوريوس في نظم المعلومات الإدارية (شعبة نظم).</li>
             <li>يمنح بكالوريوس في المحاسبة والمراجعة (شعبة المحاسبة).</li>
@@ -24,13 +25,12 @@ export default function QuestionsList() {
         </div>
       </li>
 
-      <li className=" bg-slate-400 p-4 sm:p-6 rounded-lg w-full max-w-full drop-shadow-md">
+      <li className=" bg-slate-500 p-3 sm:p-4 rounded-md w-full max-w-full drop-shadow-md">
         <div className=" mb-4">
-          <p className=" text-lg sm:text-xl font-semibold bg-slate-500 w-fit p-4 rounded-lg">
-            شروط القبول بالمعهد؟
-          </p>
+          <ContentHeader text="شروط القبول بالمعهد؟" />
         </div>
-        <div className="  bg-slate-500 rounded-lg text-base sm:text-lg">
+
+        <div className="  bg-slate-600 rounded-lg text-base sm:text-lg">
           <ul className="flex flex-col p-4 pr-8 gap-2 leading-[2] list-disc">
             <li>
               قبول الطالب الحاصلين على الثانوية العامة بشعبتيها الأدبية
@@ -46,13 +46,11 @@ export default function QuestionsList() {
         </div>
       </li>
 
-      <li className=" bg-slate-400 p-4 sm:p-6 rounded-lg w-full max-w-full drop-shadow-md">
+      <li className=" bg-slate-500 p-3 sm:p-4 rounded-md w-full max-w-full drop-shadow-md">
         <div className=" mb-4">
-          <p className=" text-lg sm:text-xl font-semibold bg-slate-500 w-fit p-4 rounded-lg">
-            ما هو الحد الأدنى للقبول في المعهد؟
-          </p>
+          <ContentHeader text="ما هو الحد الأدنى للقبول في المعهد؟" />
         </div>
-        <div className="  bg-slate-500 rounded-lg text-base sm:text-lg">
+        <div className="  bg-slate-600 rounded-lg text-base sm:text-lg">
           <ul className="flex flex-col p-4 pr-8 gap-2 leading-[2] list-disc">
             <li>الشعبة العلمية: 52.68%</li>
             <li>الشعبة الأدبية: 54.26% </li>
@@ -64,13 +62,11 @@ export default function QuestionsList() {
         </div>
       </li>
 
-      <li className=" bg-slate-400 p-4 sm:p-6 rounded-lg w-full max-w-full drop-shadow-md">
+      <li className=" bg-slate-500 p-3 sm:p-4 rounded-md w-full max-w-full drop-shadow-md">
         <div className=" mb-4">
-          <p className=" text-lg sm:text-xl font-semibold bg-slate-500 w-fit p-4 rounded-lg">
-            ما هي الأوراق المطلوبة للتقديم في المعهد؟
-          </p>
+          <ContentHeader text="ما هي الأوراق المطلوبة للتقديم في المعهد؟" />
         </div>
-        <div className="  bg-slate-500 rounded-lg text-base sm:text-lg">
+        <div className="  bg-slate-600 rounded-lg text-base sm:text-lg">
           <ul className="flex flex-col p-4 pr-8 gap-2 leading-[2] list-disc">
             <li>أصل المؤهل.</li>
             <li>بطاقة الترشيح.</li>

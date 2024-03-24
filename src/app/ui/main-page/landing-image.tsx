@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import heroOne from "../../../../../public/root-images/hero-one.jpg";
-import heroTwo from "../../../../../public/root-images/hero-two.jpg";
-import heroThree from "../../../../../public/root-images/hero-three.jpg";
+import heroOne from "../../../../public/root-images/hero-one.jpg";
+import heroTwo from "../../../../public/root-images/hero-two.jpg";
+import heroThree from "../../../../public/root-images/hero-three.jpg";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 

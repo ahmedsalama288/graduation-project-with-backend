@@ -3,47 +3,47 @@ import InfoCard from "./info-card";
 import { UserGroupIcon } from "@heroicons/react/16/solid";
 import { AcademicCapIcon } from "@heroicons/react/16/solid";
 import SectionHeader from "../../shared-ui/page-section-title";
+import PageContentContainer from "../../shared-ui/pages-components/page-content-container";
+import ContentWrapper from "../../shared-ui/pages-components/content-wrapper";
+import ContentContainer from "../../shared-ui/pages-components/content-container";
+import ContentHeader from "../../shared-ui/pages-components/content-header";
 
 const statusList: InstituteStatusInfo[] = [
   {
     statusName: "عدد الطلاب بالمعهد",
     statusNumber: 5769,
-    icon: <UserGroupIcon className="h-24 w-24 text-white" />,
+    icon: <UserGroupIcon className="h-16 w-16 sm:h-24 sm:w-24 text-white" />,
     description: "طالب",
   },
   {
     statusName: "عدد الطلاب الخريجين بالمعهد ",
     statusNumber: 10609,
-    icon: <AcademicCapIcon className="h-24 w-24 text-white" />,
+    icon: <AcademicCapIcon className="h-16 w-16 sm:h-24 sm:w-24 text-white" />,
     description: "طالب",
   },
 ];
 
 export default function InstituteInfoContainer() {
   return (
-    <section
-      className={`
-        container mx-auto mt-10 mb-28 w-full flex flex-col justify-around items-center
-        border-[1px] border-slate-400 border-solid bg-slate-100 flex-wrap
-        rounded-xl md:rounded-2xl
-        md:flex-row
-        p-6 sm:p-8 md:p-8
-        gap-8 lg:gap-0
-    `}
-    >
-      <div className=" w-full mb-2 sm:mb-14">
-        <SectionHeader text={"معهد الدلتا بالأرقام"} />
-      </div>
-
-      {statusList.map(({ statusName, statusNumber, icon, description }) => (
-        <InfoCard
-          key={statusName}
-          statusName={statusName}
-          statusNumber={statusNumber}
-          icon={icon}
-          description={description}
-        />
-      ))}
-    </section>
+    <article className="px-2">
+      <PageContentContainer>
+        <ContentWrapper>
+          <ContentHeader text="معهد الدلتا بالأرقام" />
+          <div className=" flex flex-col justify-around items-center lg:flex-row gap-6 ">
+            {statusList.map(
+              ({ statusName, statusNumber, icon, description }) => (
+                <InfoCard
+                  key={statusName}
+                  statusName={statusName}
+                  statusNumber={statusNumber}
+                  icon={icon}
+                  description={description}
+                />
+              )
+            )}
+          </div>
+        </ContentWrapper>
+      </PageContentContainer>
+    </article>
   );
 }

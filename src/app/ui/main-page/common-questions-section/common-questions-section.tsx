@@ -1,23 +1,19 @@
 import SectionHeader from "../../shared-ui/page-section-title";
+import ContentContainer from "../../shared-ui/pages-components/content-container";
+import ContentHeader from "../../shared-ui/pages-components/content-header";
+import ContentWrapper from "../../shared-ui/pages-components/content-wrapper";
+import PageContentContainer from "../../shared-ui/pages-components/page-content-container";
 import QuestionsList from "./questions-list";
 
 export default function CommonQuestionsSection() {
   return (
     <section className="p-2 md:p-0">
-      <div
-        className="
-        container sm:mx-auto p-0 sm:p-6 md:p-8
-        border-[1px] border-slate-400 border-solid
-        rounded-xl md:rounded-2xl
-      "
-      >
-        <div className=" p-4">
-          <div className=" mb-14 ">
-            <SectionHeader text={"الأسئلة الشائعة"} />
-          </div>
-          <QuestionsList />
-        </div>
-      </div>
+      <PageContentContainer>
+        <ContentWrapper>
+          <ContentHeader text="الأسئلة الشائعة" />
+        </ContentWrapper>
+        <QuestionsList />
+      </PageContentContainer>
     </section>
   );
 }

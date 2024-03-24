@@ -15,28 +15,29 @@ export default function InfoCard({
     <div
       className={`
         flex flex-col justify-center items-center
-        w-[350px]  max-w-full bg-slate-400 text-white 
-        rounded-[10px] sm:rounded-2xl p-6 drop-shadow-md
+        w-[350px] max-w-full bg-slate-600 rounded-lg
+        p-6 drop-shadow-md
       `}
     >
       <div>
-        <h3 className=" px-2 pt-4 pb-2 text-2xl mb-4">{statusName}</h3>
+        <h3 className=" text-xl sm:text-2xl px-2 pt-4 pb-2 mb-4">
+          {statusName}
+        </h3>
       </div>
       <div
         className={`
           flex flex-col justify-center items-center 
-          rounded-full mb-[6px] w-40 h-40 bg-slate-500 
+          rounded-full mb-[6px] p-8 bg-slate-700 
       `}
       >
         {icon}
       </div>
-      <div className=" flex flex-col gap-2 justify-center items-center mb-4">
+      <div className=" flex flex-col gap-2 justify-center items-center mb-2 sm:mb-4">
         <p className=" text-base">اكثر من</p>
-        <p className=" text-3xl">{statusNumber}</p>
+        <p className=" text-2xl sm:text-3xl">{statusNumber}</p>
       </div>
-
-      <div className="">
-        <p className=" text-2xl mb-2">{description}</p>
+      <div>
+        <p className=" text-xl sm:text-2xl mb-2">{description}</p>
       </div>
     </div>
   );
