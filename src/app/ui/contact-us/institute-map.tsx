@@ -30,7 +30,9 @@ export default function InstituteMap() {
           }
         >
           <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
+            معهد الدلتا العالي
+            <br/>
+            للنظم والمعلومات الإدارية والمحاسبيه
           </Popup>
         </Marker>
       </MapContainer>
