@@ -8,8 +8,3 @@ export const getFirstSegment = (url: string): string => {
   // Return the first segment
   return "/" + segments[0];
 };
-
-// Example usage
-// const url = "/about-us/institute-management/chairman-of-board-of-directors";
-// const firstSegment = getFirstSegment(url);
-// console.log(firstSegment); // Output: "/about-us"
