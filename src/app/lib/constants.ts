@@ -259,7 +259,7 @@ export const navbarLinks: NavbarLinks = [
     href: "https://dhic.ddns.net/ch/signin.php",
     nestedLinks: [],
   },
-  { name: "تواصل معنا", nestedLinks: [] },
+  { name: "تواصل معنا", href: "/contact-us", nestedLinks: [] },
 ];
 
 export const ignoredLinks: string[] = [
