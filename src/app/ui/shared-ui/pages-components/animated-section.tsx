@@ -12,7 +12,7 @@ export default function AnimatedSection({
   duration?: string;
 }) {
   const [ref, inView] = useInView({
-    threshold: threshold || 0.3,
+    threshold: threshold || 0.1,
     triggerOnce: true,
   });
 
@@ -21,7 +21,7 @@ export default function AnimatedSection({
       ref={ref}
       className={`
         transition ${duration || "duration-1000"}
-        ${inView ? "translate-y-0 opacity-100" : "-translate-y-16 opacity-0"}
+        ${inView ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"}
       `}
     >
       {children}
