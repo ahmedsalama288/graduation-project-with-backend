@@ -1,3 +1,16 @@
+import dynamic from "next/dynamic";
+const InteractiveInfoStatus = dynamic(
+  () => import("./interactive-info-status"),
+  {
+    loading: () => (
+      <div className=" flex flex-col gap-2 justify-center items-center mb-2 sm:mb-4">
+        <p className=" text-base">اكثر من</p>
+        <p className=" text-2xl sm:text-3xl">0</p>
+      </div>
+    ),
+  }
+);
+
 interface props {
   statusName: string;
   statusNumber: number;
@@ -32,10 +45,7 @@ export default function InfoCard({
       >
         {icon}
       </div>
-      <div className=" flex flex-col gap-2 justify-center items-center mb-2 sm:mb-4">
-        <p className=" text-base">اكثر من</p>
-        <p className=" text-2xl sm:text-3xl">{statusNumber}</p>
-      </div>
+      <InteractiveInfoStatus statusNumber={statusNumber} />
       <div>
         <p className=" text-xl sm:text-2xl mb-2">{description}</p>
       </div>
