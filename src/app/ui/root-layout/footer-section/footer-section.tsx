@@ -4,7 +4,7 @@ import FooterInstituteWord from "./footer-institute-word";
 
 export default function FooterSection() {
   return (
-    <footer className=" bg-light-blue">
+    <footer className=" bg-light-blue overflow-hidden mt-6">
       <div
         className="
           container m-auto 

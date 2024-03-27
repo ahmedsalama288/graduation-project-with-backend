@@ -6,6 +6,7 @@ import heroTwo from "../../../../public/root-images/hero-two.jpg";
 import heroThree from "../../../../public/root-images/hero-three.jpg";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
+import AnimatedSection from "../shared-ui/pages-components/animated-section";
 
 const heroImages = [heroOne, heroTwo, heroThree];
 
@@ -66,16 +67,19 @@ export default function LandingImage() {
           onClick={goToNextImageHandler}
         />
       </div>
+
       <div className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30">
-        <figcaption
-          className={`
-            flex flex-col justify-center items-center
-            text-3xl md:text-5xl whitespace-nowrap !leading-[1.2]
-          `}
-        >
-          <span>معهد الدلتا العالي</span>
-          <span>للنظم والمعلومات الإدارية</span>
-        </figcaption>
+        <AnimatedSection>
+          <figcaption
+            className="
+                  flex flex-col justify-center items-center
+                  text-3xl md:text-5xl whitespace-nowrap !leading-[1.2]
+                "
+          >
+            <span>معهد الدلتا العالي</span>
+            <span>للنظم والمعلومات الإدارية</span>
+          </figcaption>
+        </AnimatedSection>
       </div>
     </figure>
   );
