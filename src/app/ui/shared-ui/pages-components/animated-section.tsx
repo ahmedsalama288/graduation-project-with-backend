@@ -1,7 +1,7 @@
 "use client";
+import useInView from "@/app/lib/hooks/use-in-view";
 import { cn } from "@/app/lib/utils";
-// import { HTMLAttributes } from "react";
-import { useInView } from "react-intersection-observer";
+import { useRef } from "react";
 
 interface Props {
   children: React.ReactNode;
@@ -18,10 +18,8 @@ export default function AnimatedSection({
   endPosition = "translate-y-0 opacity-100",
   duration,
 }: Props) {
-  const [ref, inView] = useInView({
-    threshold: threshold || 0.1,
-    triggerOnce: true,
-  });
+  const ref = useRef(null);
+  const inView = useInView(ref, { threshold: threshold || 0.1 });
 
   return (
     <div
