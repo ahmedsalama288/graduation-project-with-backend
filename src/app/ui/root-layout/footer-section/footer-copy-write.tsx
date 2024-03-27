@@ -6,7 +6,6 @@ export default function FooterCopyWrite() {
       <AnimatedSection
         startPosition="translate-y-10 opacity-0"
         endPosition="translate-y-0 opacity-100"
-        threshold={0}
       >
         <div
           dir="ltr"
