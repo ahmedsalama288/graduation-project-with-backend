@@ -44,7 +44,7 @@ export default function LandingImage() {
             alt="landing page image"
             width={10000}
             height={600}
-            quality={50}
+            quality={30}
             priority
           />
           <ChevronLeftIcon
