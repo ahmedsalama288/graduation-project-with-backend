@@ -1,4 +1,5 @@
 import SectionHeader from "../../shared-ui/page-section-title";
+import AnimatedSection from "../../shared-ui/pages-components/animated-section";
 import ContentContainer from "../../shared-ui/pages-components/content-container";
 import ContentHeader from "../../shared-ui/pages-components/content-header";
 import ContentWrapper from "../../shared-ui/pages-components/content-wrapper";
@@ -8,12 +9,14 @@ import QuestionsList from "./questions-list";
 export default function CommonQuestionsSection() {
   return (
     <section className="p-2 md:p-0">
-      <PageContentContainer>
-        <ContentWrapper>
-          <ContentHeader text="الأسئلة الشائعة" />
-        </ContentWrapper>
-        <QuestionsList />
-      </PageContentContainer>
+      <AnimatedSection>
+        <PageContentContainer>
+          <ContentWrapper>
+            <ContentHeader text="الأسئلة الشائعة" />
+          </ContentWrapper>
+          <QuestionsList />
+        </PageContentContainer>
+      </AnimatedSection>
     </section>
   );
 }

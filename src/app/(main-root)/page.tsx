@@ -9,22 +9,12 @@ export default function Home() {
   return (
     <section className=" bg-slate-100">
       <MainPageHeader text="الصفحة الرئيسية" />
-      <AnimatedSection duration="duration-500">
-        <article className="w-full mx-auto relative z-0 ">
-          <LandingImage />
-        </article>
-      </AnimatedSection>
-      <AnimatedSection>
-        <BriefAboutUs />
-      </AnimatedSection>
-
-      <AnimatedSection>
-        <InstituteInfoContainer />
-      </AnimatedSection>
-
-      <AnimatedSection>
-        <CommonQuestionsSection />
-      </AnimatedSection>
+      <article className="w-full mx-auto relative z-0 ">
+        <LandingImage />
+      </article>
+      <BriefAboutUs />
+      <InstituteInfoContainer />
+      <CommonQuestionsSection />
     </section>
   );
 }

@@ -7,6 +7,7 @@ import PageContentContainer from "../../shared-ui/pages-components/page-content-
 import ContentWrapper from "../../shared-ui/pages-components/content-wrapper";
 import ContentContainer from "../../shared-ui/pages-components/content-container";
 import ContentHeader from "../../shared-ui/pages-components/content-header";
+import AnimatedSection from "../../shared-ui/pages-components/animated-section";
 
 const statusList: InstituteStatusInfo[] = [
   {
@@ -26,24 +27,26 @@ const statusList: InstituteStatusInfo[] = [
 export default function InstituteInfoContainer() {
   return (
     <article className="px-2">
-      <PageContentContainer>
-        <ContentWrapper>
-          <ContentHeader text="معهد الدلتا بالأرقام" />
-          <div className=" flex flex-col justify-around items-center lg:flex-row gap-6 ">
-            {statusList.map(
-              ({ statusName, statusNumber, icon, description }) => (
-                <InfoCard
-                  key={statusName}
-                  statusName={statusName}
-                  statusNumber={statusNumber}
-                  icon={icon}
-                  description={description}
-                />
-              )
-            )}
-          </div>
-        </ContentWrapper>
-      </PageContentContainer>
+      <AnimatedSection>
+        <PageContentContainer>
+          <ContentWrapper>
+            <ContentHeader text="معهد الدلتا بالأرقام" />
+            <div className=" flex flex-col justify-around items-center lg:flex-row gap-6 ">
+              {statusList.map(
+                ({ statusName, statusNumber, icon, description }) => (
+                  <InfoCard
+                    key={statusName}
+                    statusName={statusName}
+                    statusNumber={statusNumber}
+                    icon={icon}
+                    description={description}
+                  />
+                )
+              )}
+            </div>
+          </ContentWrapper>
+        </PageContentContainer>
+      </AnimatedSection>
     </article>
   );
 }

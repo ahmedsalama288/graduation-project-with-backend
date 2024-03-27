@@ -26,37 +26,38 @@ export default function LandingImage() {
   };
 
   return (
-    <figure
-      className={`
+    <AnimatedSection duration="duration-500">
+      <figure
+        className={`
         relative
         overflow-hidden w-full hero-img-hight
     `}
-    >
-      <div className=" absolute inset-0 bg-black/20 z-20" />
-      <div>
-        <Image
-          className={`
+      >
+        <div className=" absolute inset-0 bg-black/20 z-20" />
+        <div>
+          <Image
+            className={`
               w-full h-screen object-cover
               contrast-[90%] relative 
             `}
-          src={heroImages[currentImageIndex]}
-          alt="landing page image"
-          width={10000}
-          height={600}
-          quality={50}
-          priority
-        />
-        <ChevronLeftIcon
-          className={`
+            src={heroImages[currentImageIndex]}
+            alt="landing page image"
+            width={10000}
+            height={600}
+            quality={50}
+            priority
+          />
+          <ChevronLeftIcon
+            className={`
             h-[45px] w-[45px]  md:h-14 md:w-14 
             text-white
             absolute top-1/2 -translate-y-1/2 left-1 z-50
             cursor-pointer
           `}
-          onClick={goToPreviousImageHandler}
-        />
-        <ChevronRightIcon
-          className={`
+            onClick={goToPreviousImageHandler}
+          />
+          <ChevronRightIcon
+            className={`
             h-[45px] w-[45px]  md:h-14 md:w-14 
             text-white
 
@@ -64,23 +65,24 @@ export default function LandingImage() {
             absolute top-1/2 -translate-y-1/2 right-1 z-50
             cursor-pointer
           `}
-          onClick={goToNextImageHandler}
-        />
-      </div>
+            onClick={goToNextImageHandler}
+          />
+        </div>
 
-      <div className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30">
-        <AnimatedSection>
-          <figcaption
-            className="
+        <div className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30">
+          <AnimatedSection>
+            <figcaption
+              className="
                   flex flex-col justify-center items-center
                   text-3xl md:text-5xl whitespace-nowrap !leading-[1.2]
                 "
-          >
-            <span>معهد الدلتا العالي</span>
-            <span>للنظم والمعلومات الإدارية</span>
-          </figcaption>
-        </AnimatedSection>
-      </div>
-    </figure>
+            >
+              <span>معهد الدلتا العالي</span>
+              <span>للنظم والمعلومات الإدارية</span>
+            </figcaption>
+          </AnimatedSection>
+        </div>
+      </figure>
+    </AnimatedSection>
   );
 }
