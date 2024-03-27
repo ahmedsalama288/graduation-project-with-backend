@@ -2,10 +2,8 @@ import { InstituteStatusInfo } from "@/app/lib/definitions";
 import InfoCard from "./info-card";
 import { UserGroupIcon } from "@heroicons/react/16/solid";
 import { AcademicCapIcon } from "@heroicons/react/16/solid";
-import SectionHeader from "../../shared-ui/page-section-title";
 import PageContentContainer from "../../shared-ui/pages-components/page-content-container";
 import ContentWrapper from "../../shared-ui/pages-components/content-wrapper";
-import ContentContainer from "../../shared-ui/pages-components/content-container";
 import ContentHeader from "../../shared-ui/pages-components/content-header";
 import AnimatedSection from "../../shared-ui/pages-components/animated-section";
 

@@ -3,7 +3,6 @@ import CommonQuestionsSection from "../ui/main-page/common-questions-section/com
 import InstituteInfoContainer from "../ui/main-page/institute-info-section/institute-info-container";
 import LandingImage from "../ui/main-page/landing-image";
 import BriefAboutUs from "../ui/main-page/brief-about-us";
-import AnimatedSection from "../ui/shared-ui/pages-components/animated-section";
 
 export default function Home() {
   return (

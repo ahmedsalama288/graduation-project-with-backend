@@ -1,7 +1,7 @@
 "use client";
 
-import { Suspense, useEffect, useState } from "react";
-import { useInView } from "react-intersection-observer";
+import useInView from "@/app/lib/hooks/use-in-view";
+import {  useEffect, useRef, useState } from "react";
 
 interface Props {
   statusNumber: number;
@@ -9,13 +9,14 @@ interface Props {
 
 export default function InteractiveInfoStatus({ statusNumber }: Props) {
   const [count, setCount] = useState(0);
-  const [ref, inView] = useInView({ threshold: 1, triggerOnce: true });
+  const ref = useRef(null)
+  const inView = useInView(ref,{ threshold: 1 });
 
   useEffect(() => {
     if (inView) {
       const counterInterval = setInterval(() => {
         setCount((prevCount) =>
-          prevCount < statusNumber ? prevCount + 10 : statusNumber
+          prevCount < statusNumber ? prevCount + 11 : statusNumber
         );
       }, 0.01);
       return () => clearInterval(counterInterval);
