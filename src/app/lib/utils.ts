@@ -1,3 +1,6 @@
+import { twMerge } from "tailwind-merge";
+import { clsx, ClassValue } from "clsx";
+
 export const getFirstSegment = (url: string): string => {
   // Remove leading and trailing slashes
   url = url.replace(/^\/|\/$/g, "");
@@ -8,3 +11,5 @@ export const getFirstSegment = (url: string): string => {
   // Return the first segment
   return "/" + segments[0];
 };
+
+export const cn = (...inputs: ClassValue[]) => twMerge(clsx(inputs));
