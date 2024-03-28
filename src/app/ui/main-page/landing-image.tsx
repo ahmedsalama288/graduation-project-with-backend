@@ -1,25 +1,26 @@
 "use client";
 
 import Image from "next/image";
-import heroOne from "../../../../public/root-images/hero-one.jpg";
-import heroTwo from "../../../../public/root-images/hero-two.jpg";
-import heroThree from "../../../../public/root-images/hero-three.jpg";
+import landingImageOne from "../../../../public/landing-images/landing-one.jpg";
+import landingImageTwo from "../../../../public/landing-images/landing-two.jpg";
+import landingImageThree from "../../../../public/landing-images/landing-three.jpg";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import AnimatedSection from "../shared-ui/pages-components/animated-section";
 import { cn } from "@/app/lib/utils";
 
-const heroImages = [heroOne, heroTwo, heroThree];
 
 export default function LandingImage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
+  const landingImages = [landingImageOne, landingImageTwo, landingImageThree];
+
   const goToNextImageHandler = () => {
     setIsAnimating(true);
     setTimeout(() => {
       setCurrentImageIndex((prevIndex) =>
-        prevIndex === heroImages.length - 1 ? 0 : prevIndex + 1
+        prevIndex === landingImages.length - 1 ? 0 : prevIndex + 1
       );
       setIsAnimating(false);
     }, 300);
@@ -29,7 +30,7 @@ export default function LandingImage() {
     setIsAnimating(true);
     setTimeout(() => {
       setCurrentImageIndex((prevIndex) =>
-        prevIndex === 0 ? heroImages.length - 1 : prevIndex - 1
+        prevIndex === 0 ? landingImages.length - 1 : prevIndex - 1
       );
       setIsAnimating(false);
     }, 300);
@@ -52,7 +53,7 @@ export default function LandingImage() {
               isAnimating && " opacity-95 scale-110",
               !isAnimating && " scale-100"
             )}
-            src={heroImages[currentImageIndex]}
+            src={landingImages[currentImageIndex]}
             alt="landing page image"
             width={10000}
             height={600}
