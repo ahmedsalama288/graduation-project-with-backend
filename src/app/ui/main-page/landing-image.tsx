@@ -7,22 +7,32 @@ import heroThree from "../../../../public/root-images/hero-three.jpg";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import AnimatedSection from "../shared-ui/pages-components/animated-section";
+import { cn } from "@/app/lib/utils";
 
 const heroImages = [heroOne, heroTwo, heroThree];
 
 export default function LandingImage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const goToNextImageHandler = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === heroImages.length - 1 ? 0 : prevIndex + 1
-    );
+    setIsAnimating(true);
+    setTimeout(() => {
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === heroImages.length - 1 ? 0 : prevIndex + 1
+      );
+      setIsAnimating(false);
+    }, 300);
   };
 
   const goToPreviousImageHandler = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? heroImages.length - 1 : prevIndex - 1
-    );
+    setIsAnimating(true);
+    setTimeout(() => {
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === 0 ? heroImages.length - 1 : prevIndex - 1
+      );
+      setIsAnimating(false);
+    }, 300);
   };
 
   return (
@@ -36,10 +46,12 @@ export default function LandingImage() {
         <div className=" absolute inset-0 bg-black/20 z-20" />
         <div>
           <Image
-            className={`
-              w-full h-screen object-cover
-              contrast-[90%] relative 
-            `}
+            className={cn(
+              "w-full h-screen object-cover contrast-[90%] relative",
+              "transition duration-500 ease-in-out opacity-100",
+              isAnimating && " opacity-95 scale-110",
+              !isAnimating && " scale-100"
+            )}
             src={heroImages[currentImageIndex]}
             alt="landing page image"
             width={10000}
@@ -47,17 +59,18 @@ export default function LandingImage() {
             quality={30}
             priority
           />
-          <ChevronLeftIcon
-            className={`
+          <>
+            <ChevronLeftIcon
+              className={`
             h-[45px] w-[45px]  md:h-14 md:w-14 
             text-white
             absolute top-1/2 -translate-y-1/2 left-1 z-50
             cursor-pointer
           `}
-            onClick={goToPreviousImageHandler}
-          />
-          <ChevronRightIcon
-            className={`
+              onClick={goToPreviousImageHandler}
+            />
+            <ChevronRightIcon
+              className={`
             h-[45px] w-[45px]  md:h-14 md:w-14 
             text-white
 
@@ -65,8 +78,9 @@ export default function LandingImage() {
             absolute top-1/2 -translate-y-1/2 right-1 z-50
             cursor-pointer
           `}
-            onClick={goToNextImageHandler}
-          />
+              onClick={goToNextImageHandler}
+            />
+          </>
         </div>
 
         <div className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30">
