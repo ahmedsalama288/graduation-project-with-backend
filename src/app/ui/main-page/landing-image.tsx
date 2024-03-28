@@ -2,13 +2,12 @@
 
 import Image from "next/image";
 import landingImageOne from "../../../../public/landing-images/landing-one.jpg";
-import landingImageTwo from "../../../../public/landing-images/landing-two.jpg";
-import landingImageThree from "../../../../public/landing-images/landing-three.jpg";
+import landingImageTwo from "../../../../public/landing-images/landing-two.webp";
+import landingImageThree from "../../../../public/landing-images/landing-three.webp";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import AnimatedSection from "../shared-ui/pages-components/animated-section";
 import { cn } from "@/app/lib/utils";
-
 
 export default function LandingImage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -49,9 +48,9 @@ export default function LandingImage() {
           <Image
             className={cn(
               "w-full h-screen object-cover contrast-[90%] relative",
-              "transition duration-500 ease-in-out opacity-100",
-              isAnimating && " opacity-95 scale-110",
-              !isAnimating && " scale-100"
+              "transition duration-[700ms] ease-in-out",
+              isAnimating && "opacity-95 scale-[1.20]",
+              !isAnimating && "opacity-100 scale-100"
             )}
             src={landingImages[currentImageIndex]}
             alt="landing page image"
