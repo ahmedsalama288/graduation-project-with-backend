@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "@/../../public/logo.png";
+import logo from "@/../../public/logo.webp";
 import Link from "next/link";
 
 export default function Logo() {
@@ -10,7 +10,7 @@ export default function Logo() {
         src={logo}
         priority
         alt="delta logo"
-        quality={90}
+        quality={80}
         height={1000}
         width={1000}
       />
