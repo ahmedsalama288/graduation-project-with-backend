@@ -31,7 +31,7 @@ export default function InstituteMap() {
         >
           <Popup>
             معهد الدلتا العالي
-            <br/>
+            <br />
             للنظم والمعلومات الإدارية والمحاسبيه
           </Popup>
         </Marker>
