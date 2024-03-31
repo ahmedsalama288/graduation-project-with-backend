@@ -3,13 +3,8 @@
 import { cn } from "@/app/lib/utils";
 import { useState } from "react";
 import Image from "next/image";
-import landingImageOne from "@/../../public/landing-images/landing-one.webp";
-import landingImageTwo from "@/../../public/landing-images/landing-two.webp";
-import landingImageThree from "@/../../public/landing-images/landing-three.webp";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import AnimatedSection from "../../shared-ui/pages-components/animated-section";
-
-const landingImages = [landingImageOne, landingImageTwo, landingImageThree];
 
 export default function SliderImages() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -26,6 +21,12 @@ export default function SliderImages() {
     );
   };
 
+  const landingImages = [
+    "/landing-images/landing-one.webp",
+    "/landing-images/landing-two.webp",
+    "/landing-images/landing-three.webp",
+  ];
+
   const slides = landingImages.map((imageSrc, index) => (
     <div key={index} className={`min-w-full z-50`}>
       {index === 0 && (
@@ -35,7 +36,7 @@ export default function SliderImages() {
           src={imageSrc}
           width={10000}
           height={600}
-          quality={30}
+          quality={60}
           priority={true}
         />
       )}
@@ -46,7 +47,7 @@ export default function SliderImages() {
           src={imageSrc}
           width={10000}
           height={600}
-          quality={30}
+          quality={60}
           priority={false}
         />
       )}
