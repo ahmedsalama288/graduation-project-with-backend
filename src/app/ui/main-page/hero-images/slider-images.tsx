@@ -36,7 +36,7 @@ export default function SliderImages() {
           src={imageSrc}
           width={10000}
           height={600}
-          quality={60}
+          quality={50}
           priority={true}
         />
       )}
@@ -47,7 +47,7 @@ export default function SliderImages() {
           src={imageSrc}
           width={10000}
           height={600}
-          quality={60}
+          quality={50}
           priority={false}
         />
       )}
