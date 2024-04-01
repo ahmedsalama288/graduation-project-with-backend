@@ -35,11 +35,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl">
-      <body className={`${cairo.className} antialiased bg-slate-100`}>
+      <body className={`${cairo.className} flex flex-col min-h-screen antialiased bg-slate-100`}>
         <header className=" h-[70px] flex justify-center items-center relative xl:fixed top-0 w-full z-[100000] bg-light-blue drop-shadow-lg ">
           <Navbar />
         </header>
-        <main className="xl:mt-[70px] overflow-y-hidden">{children}</main>
+        <main className="xl:mt-[70px] overflow-y-hidden flex-1">{children}</main>
         <FooterSection />
       </body>
     </html>
