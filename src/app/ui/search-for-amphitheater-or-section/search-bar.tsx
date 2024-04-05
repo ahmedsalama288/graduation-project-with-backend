@@ -24,7 +24,7 @@ export default function SearchBar() {
     <div className=" container mx-auto mt-6">
       <div>
         <form className=" w-full flex bg-slate-400 gap-1 rounded-md p-2">
-          <button className=" p-2 rounded-md bg-slate-300" type="submit">
+          <button className=" p-2 rounded-md bg-slate-300">
             <MagnifyingGlassIcon className="h-6 w-6  text-slate-500" />
           </button>
           <label htmlFor="بحث عن مدرج او سكشن"></label>
