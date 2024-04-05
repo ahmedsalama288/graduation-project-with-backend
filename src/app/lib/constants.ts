@@ -1,4 +1,8 @@
-import { AcademicLeadersInfo, NavbarLinks } from "./definitions";
+import {
+  AcademicLeadersInfo,
+  InstituteFloorsStructure,
+  NavbarLinks,
+} from "./definitions";
 
 import drMansourImageSrc from "@/../../public/dr-images/dr-mansour.jpeg";
 import drAbdelwahabImageSrc from "@/../../public/dr-images/dr-abdelwahab.jpeg";
@@ -8,6 +12,10 @@ import drAlbrashyImageSrc from "@/../../public/dr-images/dr-albrashy.jpg";
 import drIsalmImageSrc from "@/../../public/dr-images/dr-isalm.jpeg";
 import drAbdesalam from "@/../../public/dr-images/dr-abdesalam.jpg";
 import personImage from "@/../../public/dr-images/person.jpg";
+
+import amphitheaterImage from "@/../../public/institute-floors-images/amphitheaters/amphitheater-image.webp";
+import amphitheaterTwoImage from "@/../../public/institute-floors-images/floor-2/مدرج-2-من-الداخل.webp";
+import amphitheaterTwoDoorImage from "@/../../public/institute-floors-images/floor-2/باب-مدرج-2.webp";
 
 export const navbarLinks: NavbarLinks = [
   {
@@ -116,6 +124,10 @@ export const navbarLinks: NavbarLinks = [
             href: "/student-services/exam-schedules/year-four",
           },
         ],
+      },
+      {
+        name: "بحث عن مدرج او سكشن",
+        href: "/student-services/search-for-amphitheater-or-section",
       },
 
       { name: "شكاوى الطلاب", href: "/student-services/complaints" },
@@ -357,5 +369,74 @@ export const graduateFollowCommittee: AcademicLeadersInfo = [
     memberImageAlt: "أ/مكرم رضوان",
     memberName: "أ / مكرم رضوان",
     memberRole: "عضو في لجنة متابعة الخريجين",
+  },
+];
+
+export const instituteFloorsStructure: InstituteFloorsStructure = [
+  {
+    name: "الطابق الاول",
+    amphitheaterList: [
+      {
+        name: "المدرج 1",
+        mainImage: amphitheaterImage,
+        doorImage: amphitheaterImage,
+      },
+    ],
+  },
+  {
+    name: "الطابق الثاني",
+    amphitheaterList: [
+      {
+        name: "المدرج 2",
+        mainImage: amphitheaterTwoImage,
+        doorImage: amphitheaterTwoDoorImage,
+      },
+    ],
+  },
+  {
+    name: "الطابق الثالث",
+    amphitheaterList: [
+      {
+        name: "المدرج 3",
+        mainImage: amphitheaterImage,
+        doorImage: amphitheaterImage,
+      },
+    ],
+  },
+  {
+    name: "الطابق الرابع",
+    amphitheaterList: [
+      {
+        name: "المدرج 4",
+        mainImage: amphitheaterImage,
+        doorImage: amphitheaterImage,
+      },
+    ],
+  },
+  {
+    name: "الطابق الخامس",
+    amphitheaterList: [
+      {
+        name: "المدرج 5",
+        mainImage: amphitheaterImage,
+        doorImage: amphitheaterImage,
+      },
+    ],
+  },
+  {
+    name: "الطابق السادس",
+    sections: [201, 203],
+    amphitheaterList: [
+      {
+        name: "المدرج 6أ",
+        mainImage: amphitheaterImage,
+        doorImage: amphitheaterImage,
+      },
+      {
+        name: "المدرج 6ب",
+        mainImage: amphitheaterImage,
+        doorImage: amphitheaterImage,
+      },
+    ],
   },
 ];

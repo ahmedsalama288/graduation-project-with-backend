@@ -27,3 +27,17 @@ export type AcademicLeadersInfo = {
   memberName: string;
   memberRole: string;
 }[];
+
+export type Amphitheater = {
+  name: string;
+  description?: string;
+  mainImage: StaticImageData | string;
+  doorImage: StaticImageData | string;
+}[];
+
+export type InstituteFloorsStructure = {
+  name: string;
+  sections?: number[];
+  floorImage?: StaticImageData | string;
+  amphitheaterList: Amphitheater;
+}[];
