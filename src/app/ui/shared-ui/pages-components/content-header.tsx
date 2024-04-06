@@ -13,7 +13,7 @@ export default function ContentHeader({ text, className }: props) {
         className
       )}
     >
-      <h3 className={`text-base sm:text-lg font-semibold`}>{text}</h3>
+      <h2 className={`text-base sm:text-lg font-semibold`}>{text}</h2>
     </div>
   );
 }

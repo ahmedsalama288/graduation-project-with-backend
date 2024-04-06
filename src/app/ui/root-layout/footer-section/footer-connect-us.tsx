@@ -16,14 +16,14 @@ export default function FooterConnectUs() {
         endPosition="translate-x-0 opacity-100"
       >
         <div className="mb-8 font-semibold text-xl">
-          <h4>تواصل معنا</h4>
+          <h3>تواصل معنا</h3>
         </div>
         <>
           <ul className=" flex flex-col gap-4">
             <li className=" flex flex-col gap-1 rounded-lg p-4 bg-[#014e79]">
               <div className=" flex gap-1">
                 <MapPinIcon className="h-5 w-5" />
-                <h5>العنوان</h5>
+                <h4>العنوان</h4>
               </div>
               <p className="pr-1">
                 المنصورة - طلخا - أول طريق المنصورة دمياط السريع
@@ -32,7 +32,7 @@ export default function FooterConnectUs() {
             <li className=" flex flex-col gap-1 rounded-lg p-4 bg-[#014e79]">
               <div className=" flex gap-1">
                 <DevicePhoneMobileIcon className="h-5 w-5" />
-                <h5>تليفون</h5>
+                <h4>تليفون</h4>
               </div>
               <p className="pr-1 ">
                 <span>01013444530</span> - <span>0502529809</span>
@@ -41,12 +41,20 @@ export default function FooterConnectUs() {
             <li className="rounded-lg p-4 bg-[#014e79]">
               <div className=" flex items-center justify-start gap-3 pr-2">
                 <div>
-                  <Link href={"/"}>
+                  <Link
+                    aria-label="لينك الي صفحة الفيسبوك"
+                    href={"https://www.facebook.com/groups/689877418208090"}
+                    target="blank"
+                  >
                     <FaceBookIcon className=" w-6 h-7 fill-[#f2f2f2] rounded-sm" />
                   </Link>
                 </div>
                 <div>
-                  <Link href={"/"}>
+                  <Link
+                    aria-label="لينك الي قناة اليوتيوب"
+                    href={"https://www.facebook.com/groups/689877418208090"}
+                    target="blank"
+                  >
                     <YoutubeIcon className="w-8 h-8 fill-[#f2f2f2] " />
                   </Link>
                 </div>

@@ -8,7 +8,7 @@ export default function FooterInstituteWord() {
         endPosition="translate-x-0 opacity-100"
       >
         <div className="mb-7 font-semibold text-xl">
-          <h4 className=" leading-[1.7]">معهد الدلتا العالي</h4>
+          <h3 className=" leading-[1.7]">معهد الدلتا العالي</h3>
         </div>
         <div className="w-full">
           <p className="rounded-lg p-4 bg-[#014e79] leading-[2] flex flex-col">
