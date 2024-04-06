@@ -1,35 +1,27 @@
 "use client";
 import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useDebouncedCallback } from "use-debounce";
 
-export default function SearchBar() {
-  const searchParams = useSearchParams();
-  const pathname = usePathname();
-  const { replace } = useRouter();
+interface Props {
+  searchInputValue: string;
+  onSearchInputChange: (searchInput: string) => void;
+  isInputHasInvalidValue: boolean;
+}
 
-  const handleSearch = useDebouncedCallback((term: string) => {
-    const params = new URLSearchParams(searchParams);
-
-    if (term) {
-      params.set("search", term);
-    } else {
-      params.delete("search");
-    }
-    const newUrl = `${pathname}?${params.toString()}`;
-    replace(newUrl);
-  }, 400);
-
+export default function SearchBar({
+  searchInputValue,
+  onSearchInputChange,
+  isInputHasInvalidValue,
+}: Props) {
   return (
     <div className=" container mx-auto mt-6">
       <div>
         <form className=" w-full flex bg-slate-400 gap-1 rounded-md p-2">
-          <button className=" p-2 rounded-md bg-slate-300">
+          <button className=" p-2 rounded-md bg-slate-300" type="button">
             <MagnifyingGlassIcon className="h-6 w-6  text-slate-500" />
           </button>
           <label htmlFor="بحث عن مدرج او سكشن"></label>
           <input
-            onChange={(e) => handleSearch(e.target.value.trim())}
+            onChange={(e) => onSearchInputChange(e.target.value)}
             className="
                 transition-all ease-in-out duration-100
                 w-full bg-slate-400 text-lg sm:text-xl
@@ -41,9 +33,12 @@ export default function SearchBar() {
             type="text"
             name="search"
             placeholder="اسم المدرج او السكشن ..."
-            defaultValue={searchParams.get("search")?.toString()}
+            value={searchInputValue}
           />
         </form>
+        {isInputHasInvalidValue && (
+          <p className=" text-red-800 mt-1 text-center">لا توجد نتيجه تأكد من الاسم</p>
+        )}
       </div>
     </div>
   );
