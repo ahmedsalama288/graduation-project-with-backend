@@ -15,7 +15,10 @@ export default function SearchBar({
   return (
     <div className=" container mx-auto mt-6">
       <div>
-        <form className=" w-full flex bg-slate-400 gap-1 rounded-md p-2">
+        <form
+          className=" w-full flex bg-slate-400 gap-1 rounded-md p-2"
+          onSubmit={(e) => e.preventDefault()}
+        >
           <button className=" p-2 rounded-md bg-slate-300" type="button">
             <MagnifyingGlassIcon className="h-6 w-6  text-slate-500" />
           </button>
@@ -37,7 +40,9 @@ export default function SearchBar({
           />
         </form>
         {isInputHasInvalidValue && (
-          <p className=" text-red-800 mt-1 text-center">لا توجد نتيجه تأكد من الاسم</p>
+          <p className=" text-red-800 mt-1 text-center">
+            لا توجد نتيجه تأكد من الاسم
+          </p>
         )}
       </div>
     </div>
