@@ -8,7 +8,17 @@ import { instituteFloorsStructure } from "@/app/lib/constants";
 import ContentHeader from "../shared-ui/pages-components/content-header";
 import { InstituteFloorsStructure } from "@/app/lib/definitions";
 
-export default function SearchResult({ search = "" }: { search?: string }) {
+interface Props {
+  search: string;
+  checkInvalidInputValue: (isInvalid: boolean) => void;
+}
+
+export default function SearchResult({
+  search,
+  checkInvalidInputValue,
+}: Props) {
+  checkInvalidInputValue(false);
+
   const searchResultInfo: InstituteFloorsStructure = instituteFloorsStructure
     .filter(
       ({ name, amphitheaterList }) =>
@@ -23,17 +33,13 @@ export default function SearchResult({ search = "" }: { search?: string }) {
     }));
 
   if (!search || !searchResultInfo.length) {
+    if (search.length >= 3 && !searchResultInfo.length) {
+      checkInvalidInputValue(true);
+    }
     return (
-      <div className=" container mx-auto mt-[18px] h-[108px] sm:h-[160px]">
-        {search.length >= 3 && (
-          <p className=" bg-slate-400 p-5 w-full text-2xl text-center rounded-md">
-            not found
-          </p>
-        )}
-      </div>
+      <div className=" container mx-auto mt-[18px] h-[108px] sm:h-[160px]"></div>
     );
   }
-
   return (
     <div className=" px-2 sm:px-0">
       <PageContentContainer>
