@@ -26,7 +26,7 @@ export default function SearchForAmphitheaterOrSection() {
       </div>
       <SearchResult
         checkInvalidInputValue={handleInvalidInputValue}
-        search={searchInputValue}
+        search={searchInputValue.trim()}
       />
     </>
   );
