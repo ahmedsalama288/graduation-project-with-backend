@@ -37,6 +37,7 @@ export default function SearchBar({
             name="search"
             placeholder="اسم المدرج او السكشن ..."
             value={searchInputValue}
+            autoComplete="off"
           />
         </form>
         {isInputHasInvalidValue && (
