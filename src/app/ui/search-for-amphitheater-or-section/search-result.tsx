@@ -2,11 +2,13 @@
 
 import PageContentContainer from "../shared-ui/pages-components/page-content-container";
 import ContentWrapper from "../shared-ui/pages-components/content-wrapper";
-import ContentContainer from "../shared-ui/pages-components/content-container";
+import ContentHeader from "../shared-ui/pages-components/content-header";
 import Image from "next/image";
 import { instituteFloorsStructure } from "@/app/lib/constants";
-import ContentHeader from "../shared-ui/pages-components/content-header";
 import { InstituteFloorsStructure } from "@/app/lib/definitions";
+import AmphitheaterImage from "./amphitheater-image";
+import ContentContainer from "../shared-ui/pages-components/content-container";
+import FloorImage from "./floor-image";
 
 interface Props {
   search: string;
@@ -21,9 +23,10 @@ export default function SearchResult({
 
   const searchResultInfo: InstituteFloorsStructure = instituteFloorsStructure
     .filter(
-      ({ name, amphitheaterList }) =>
+      ({ name, amphitheaterList, sections }) =>
         name.includes(search) ||
-        amphitheaterList.some(({ name }) => name.includes(search))
+        amphitheaterList.some(({ name }) => name.includes(search)) ||
+        sections.some((sectionNumber) => sectionNumber.toString() === search)
     )
     .map((instituteFloorInfo) => ({
       ...instituteFloorInfo,
@@ -40,53 +43,31 @@ export default function SearchResult({
       <div className=" container mx-auto mt-[18px] h-[108px] sm:h-[160px]"></div>
     );
   }
+
   return (
     <div className=" px-2 sm:px-0">
       <PageContentContainer>
         <div className=" flex flex-col gap-4">
-          {searchResultInfo.map(({ name, amphitheaterList }) => (
+          {searchResultInfo.map(({ name, floorImage, amphitheaterList }) => (
             <div className="flex flex-col gap-4" key={name}>
               <ContentWrapper>
-                <ContentHeader text={`${name}`} />
-                <div className=" flex flex-col gap-4">
-                  {amphitheaterList.map((amphitheater) => (
-                    <div key={amphitheater.name}>
-                      <ContentContainer>
-                        <h3>{amphitheater.name}</h3>
-                        <div>
-                          <div>
-                            <div className=" flex flex-col gap-4 sm:flex-row">
-                              <div className="basis-1/2">
-                                <h4>المدرج من الداخل</h4>
-                                <Image
-                                  className=" rounded-md max-h-[500px] object-cover"
-                                  width={10000}
-                                  height={400}
-                                  src={amphitheater.mainImage}
-                                  alt={amphitheater.name}
-                                  quality={40}
-                                  priority={false}
-                                />
-                              </div>
-                              <div className="basis-1/2">
-                                <h4>باب المدرج</h4>
-                                <Image
-                                  className=" rounded-md max-h-[500px] object-cover"
-                                  width={10000}
-                                  height={400}
-                                  src={amphitheater.doorImage}
-                                  alt={amphitheater.name}
-                                  quality={40}
-                                  priority={false}
-                                />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </ContentContainer>
-                    </div>
-                  ))}
-                </div>
+                <ContentHeader text={`في ${name}`} />
+                {amphitheaterList.length === 0 && (
+                  <FloorImage floorImage={floorImage} floorName={name} />
+                )}
+
+                {amphitheaterList.length > 0 && (
+                  <div className="flex flex-col gap-4">
+                    {amphitheaterList.map((amphitheater) => (
+                      <AmphitheaterImage
+                        key={amphitheater.name}
+                        amphitheaterName={amphitheater.name}
+                        amphitheaterMainImage={amphitheater.mainImage}
+                        amphitheaterDoorImage={amphitheater.doorImage}
+                      />
+                    ))}
+                  </div>
+                )}
               </ContentWrapper>
             </div>
           ))}
