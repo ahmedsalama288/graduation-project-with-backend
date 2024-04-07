@@ -16,6 +16,7 @@ import personImage from "@/../../public/dr-images/person.jpg";
 import amphitheaterImage from "@/../../public/institute-floors-images/amphitheaters/amphitheater-image.webp";
 import amphitheaterTwoImage from "@/../../public/institute-floors-images/floor-2/مدرج-2-من-الداخل.webp";
 import amphitheaterTwoDoorImage from "@/../../public/institute-floors-images/floor-2/باب-مدرج-2.webp";
+import floorOneImage from "@/../../public/institute-floors-images/floor-1/الطابق-الاول.webp";
 
 export const navbarLinks: NavbarLinks = [
   {
@@ -375,6 +376,8 @@ export const graduateFollowCommittee: AcademicLeadersInfo = [
 export const instituteFloorsStructure: InstituteFloorsStructure = [
   {
     name: "الطابق الاول",
+    floorImage: floorOneImage,
+    sections: [103, 104],
     amphitheaterList: [
       {
         name: "المدرج 1",
@@ -385,6 +388,8 @@ export const instituteFloorsStructure: InstituteFloorsStructure = [
   },
   {
     name: "الطابق الثاني",
+    floorImage: floorOneImage,
+    sections: [203, 204, 206, 208],
     amphitheaterList: [
       {
         name: "المدرج 2",
@@ -395,6 +400,8 @@ export const instituteFloorsStructure: InstituteFloorsStructure = [
   },
   {
     name: "الطابق الثالث",
+    floorImage: floorOneImage,
+    sections: [303, 304, 306, 308],
     amphitheaterList: [
       {
         name: "المدرج 3",
@@ -405,6 +412,8 @@ export const instituteFloorsStructure: InstituteFloorsStructure = [
   },
   {
     name: "الطابق الرابع",
+    floorImage: floorOneImage,
+    sections: [404, 404, 406, 408],
     amphitheaterList: [
       {
         name: "المدرج 4",
@@ -415,6 +424,8 @@ export const instituteFloorsStructure: InstituteFloorsStructure = [
   },
   {
     name: "الطابق الخامس",
+    floorImage: floorOneImage,
+    sections: [505, 504, 506, 508],
     amphitheaterList: [
       {
         name: "المدرج 5",
@@ -425,7 +436,8 @@ export const instituteFloorsStructure: InstituteFloorsStructure = [
   },
   {
     name: "الطابق السادس",
-    sections: [201, 203],
+    floorImage: floorOneImage,
+    sections: [],
     amphitheaterList: [
       {
         name: "المدرج 6أ",
