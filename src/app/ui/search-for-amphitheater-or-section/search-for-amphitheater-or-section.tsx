@@ -4,7 +4,7 @@ import SearchBar from "./search-bar";
 import SearchResult from "./search-result";
 
 export default function SearchForAmphitheaterOrSection() {
-  const [searchInputValue, setSearchInputValue] = useState("");
+  const [searchInputValue, setSearchInputValue] = useState("مدرج");
   const [isInputHasInvalidValue, setIsInputHasInvalidValue] = useState(false);
 
   const handleSearchInputChange = (searchInput: string) => {
