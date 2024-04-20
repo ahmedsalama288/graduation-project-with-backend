@@ -10,7 +10,8 @@ export default function FooterSection() {
           container m-auto 
           flex flex-col gap-7
           lg:gap-0 lg:flex-row
-          justify-around mt-7 p-8
+          justify-around mt-7 
+          px-6 sm:px-8 py-9
         "
       >
         <FooterConnectUs />
