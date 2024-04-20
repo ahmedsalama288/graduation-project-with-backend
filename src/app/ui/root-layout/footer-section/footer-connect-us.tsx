@@ -15,7 +15,7 @@ export default function FooterConnectUs() {
         startPosition="translate-x-14 opacity-0"
         endPosition="translate-x-0 opacity-100"
       >
-        <div className="mb-8 font-semibold text-xl">
+        <div className="mb-7 font-semibold text-xl">
           <h3>تواصل معنا</h3>
         </div>
         <>
