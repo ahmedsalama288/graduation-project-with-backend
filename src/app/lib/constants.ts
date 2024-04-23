@@ -4,19 +4,50 @@ import {
   NavbarLinks,
 } from "./definitions";
 
-import drMansourImageSrc from "@/../../public/dr-images/dr-mansour.jpeg";
-import drAbdelwahabImageSrc from "@/../../public/dr-images/dr-abdelwahab.jpeg";
-import drHazemImageSrc from "@/../../public/dr-images/dr-hazem.jpeg";
-import mrEhabImageSrc from "@/../../public/dr-images/mr-ehab.jpg";
-import drAlbrashyImageSrc from "@/../../public/dr-images/dr-albrashy.jpg";
-import drIsalmImageSrc from "@/../../public/dr-images/dr-isalm.jpeg";
-import drAbdesalam from "@/../../public/dr-images/dr-abdesalam.jpg";
-import personImage from "@/../../public/dr-images/person.jpg";
+import {
+  drMansourImageSrc,
+  drAbdelwahabImageSrc,
+  drHazemImageSrc,
+  mrEhabImageSrc,
+  drAlbrashyImageSrc,
+  drIsalmImageSrc,
+  drAbdesalam,
+  personImage,
+} from "@/app/assets/dr-images";
 
-import amphitheaterImage from "@/../../public/institute-floors-images/amphitheaters/amphitheater-image.webp";
-import amphitheaterTwoImage from "@/../../public/institute-floors-images/floor-2/مدرج-2-من-الداخل.webp";
-import amphitheaterTwoDoorImage from "@/../../public/institute-floors-images/floor-2/باب-مدرج-2.webp";
-import floorOneImage from "@/../../public/institute-floors-images/floor-1/الطابق-الاول.webp";
+import {
+  // Floor 1
+  floorOneImage,
+  amphitheaterOneMainImage,
+  amphitheaterOneDoorImage,
+
+  // Floor 2
+  floorTwoImage,
+  amphitheaterTwoMainImage,
+  amphitheaterTwoDoorImage,
+
+  // Floor 3
+  floorThreeImage,
+  amphitheaterThreeDoorImage,
+  amphitheaterThreeMainImage,
+
+  // Floor 4
+  floorFourImage,
+  amphitheaterFourDoorImage,
+  amphitheaterFourMainImage,
+
+  // Floor 5
+  floorFiveImage,
+  amphitheaterFiveDoorImage,
+  amphitheaterFiveMainImage,
+
+  // Floor 6
+  floorSixImage,
+  amphitheaterSixADoorImage,
+  amphitheaterSixAMainImage,
+  amphitheaterSixBDoorImage,
+  amphitheaterSixBMainImage,
+} from "@/app/assets/institute-floors-amphitheater-images";
 
 export const navbarLinks: NavbarLinks = [
   {
@@ -375,79 +406,79 @@ export const graduateFollowCommittee: AcademicLeadersInfo = [
 
 export const instituteFloorsStructure: InstituteFloorsStructure = [
   {
-    name: "الطابق الاول",
+    name: "الدور الاول",
     floorImage: floorOneImage,
     sections: [103, 104],
     amphitheaterList: [
       {
         name: "المدرج 1",
-        mainImage: amphitheaterImage,
-        doorImage: amphitheaterImage,
+        mainImage: amphitheaterOneMainImage,
+        doorImage: amphitheaterOneDoorImage,
       },
     ],
   },
   {
-    name: "الطابق الثاني",
-    floorImage: floorOneImage,
+    name: "الدور الثاني",
+    floorImage: floorTwoImage,
     sections: [203, 204, 206, 208],
     amphitheaterList: [
       {
         name: "المدرج 2",
-        mainImage: amphitheaterTwoImage,
+        mainImage: amphitheaterTwoMainImage,
         doorImage: amphitheaterTwoDoorImage,
       },
     ],
   },
   {
-    name: "الطابق الثالث",
-    floorImage: floorOneImage,
+    name: "الدور الثالث",
+    floorImage: floorThreeImage,
     sections: [303, 304, 306, 308],
     amphitheaterList: [
       {
         name: "المدرج 3",
-        mainImage: amphitheaterImage,
-        doorImage: amphitheaterImage,
+        mainImage: amphitheaterThreeMainImage,
+        doorImage: amphitheaterThreeDoorImage,
       },
     ],
   },
   {
-    name: "الطابق الرابع",
-    floorImage: floorOneImage,
+    name: "الدور الرابع",
+    floorImage: floorFourImage,
     sections: [404, 404, 406, 408],
     amphitheaterList: [
       {
         name: "المدرج 4",
-        mainImage: amphitheaterImage,
-        doorImage: amphitheaterImage,
+        mainImage: amphitheaterFourMainImage,
+        doorImage: amphitheaterFourDoorImage,
       },
     ],
   },
   {
-    name: "الطابق الخامس",
-    floorImage: floorOneImage,
+    name: "الدور الخامس",
+    floorImage: floorFiveImage,
     sections: [505, 504, 506, 508],
     amphitheaterList: [
       {
         name: "المدرج 5",
-        mainImage: amphitheaterImage,
-        doorImage: amphitheaterImage,
+        mainImage: amphitheaterFiveMainImage,
+        doorImage: amphitheaterFiveDoorImage,
       },
     ],
   },
   {
-    name: "الطابق السادس",
-    floorImage: floorOneImage,
+    name: "الدور السادس",
+    floorImage: floorSixImage,
     sections: [],
     amphitheaterList: [
       {
         name: "المدرج 6أ",
-        mainImage: amphitheaterImage,
-        doorImage: amphitheaterImage,
+        mainImage: amphitheaterSixAMainImage,
+        doorImage: amphitheaterSixADoorImage,
       },
       {
         name: "المدرج 6ب",
-        mainImage: amphitheaterImage,
-        doorImage: amphitheaterImage,
+        mainImage: amphitheaterSixBMainImage,
+        doorImage: amphitheaterSixBDoorImage,
       },
     ],
   },
