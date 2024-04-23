@@ -49,7 +49,7 @@ export default function SearchResult({
           {searchResultInfo.map(({ name, floorImage, amphitheaterList }) => (
             <div className="flex flex-col gap-4" key={name}>
               <ContentWrapper>
-                <ContentHeader text={`في ${name}`} />
+                <ContentHeader text={`${name}`} />
                 {amphitheaterList.length === 0 && (
                   <FloorImage floorImage={floorImage} floorName={name} />
                 )}
