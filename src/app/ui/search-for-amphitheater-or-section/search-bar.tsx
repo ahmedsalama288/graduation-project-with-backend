@@ -30,7 +30,7 @@ export default function SearchBar({
                 w-full bg-slate-400 text-lg sm:text-xl
                 outline-2 outline-transparent
                 focus-visible:outline focus-visible:outline-slate-500
-                rounded-md pr-3 
+                rounded pr-3 
                 placeholder:text-lg placeholder:text-slate-100 
               "
             type="text"
