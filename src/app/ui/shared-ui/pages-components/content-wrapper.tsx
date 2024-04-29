@@ -1,3 +1,5 @@
+import { cn } from "@/app/lib/utils";
+
 export default function ContentWrapper({
   children,
   className,
@@ -7,7 +9,10 @@ export default function ContentWrapper({
 }) {
   return (
     <div
-      className={`bg-slate-500 rounded-md p-3 sm:p-4 flex flex-col gap-4 ${className}`}
+      className={cn(
+        "bg-slate-500 rounded-md p-3 sm:p-4 flex flex-col gap-4",
+        className
+      )}
     >
       {children}
     </div>
