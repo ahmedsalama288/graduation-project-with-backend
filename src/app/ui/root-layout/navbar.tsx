@@ -12,7 +12,7 @@ export default function Navbar() {
     <nav
       className="
         z-[100000] mx-auto w-full px-8
-        flex items-center gap-3
+        flex items-center gap-2
         justify-between xl:justify-center
         flex-row-reverse xl:flex-row
       "
