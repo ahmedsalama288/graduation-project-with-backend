@@ -84,9 +84,7 @@ export const navbarLinks: NavbarLinks = [
       },
       {
         name: "اللائحة",
-        href: "/pdf/internal-regulation.pdf",
-        downloadAblePDFLink: true,
-        pdfname: "internal-regulation.pdf",
+        href: "/about-us/institute-regulations",
       },
     ],
   },
@@ -293,8 +291,6 @@ export const navbarLinks: NavbarLinks = [
       {
         name: "قاعدة بيانات البحث العلمي",
         href: "/pdf/scientific-research.pdf",
-        downloadAblePDFLink: true,
-        pdfname: "scientific-research.pdf",
       },
     ],
   },

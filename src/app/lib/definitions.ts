@@ -4,8 +4,6 @@ export type NavbarNestedLinks = {
   name: string;
   href?: string;
   nestedLinks?: { name: string; href: string }[];
-  downloadAblePDFLink?: boolean;
-  pdfname?: string;
 }[];
 
 export type NavbarLinks = {
