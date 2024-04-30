@@ -24,7 +24,7 @@ const statusList: InstituteStatusInfo[] = [
 
 export default function InstituteInfoContainer() {
   return (
-    <article className="px-2">
+    <article>
       <AnimatedSection>
         <PageContentContainer>
           <ContentWrapper>
