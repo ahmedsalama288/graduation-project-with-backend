@@ -16,17 +16,15 @@ export default function Page() {
   return (
     <section>
       <MainPageHeader text="تواصل معنا" />
-      <div>
-        <PageContentContainer>
-          <ContentWrapper>
-            <ContactUsSection />
-          </ContentWrapper>
+      <PageContentContainer>
+        <ContentWrapper>
+          <ContactUsSection />
+        </ContentWrapper>
 
-          <ContentWrapper className=" mt-5">
-            <InstituteMap />
-          </ContentWrapper>
-        </PageContentContainer>
-      </div>
+        <ContentWrapper className=" mt-5">
+          <InstituteMap />
+        </ContentWrapper>
+      </PageContentContainer>
     </section>
   );
 }

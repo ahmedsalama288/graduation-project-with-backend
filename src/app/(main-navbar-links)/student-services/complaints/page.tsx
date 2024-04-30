@@ -6,11 +6,9 @@ export default function Page() {
   return (
     <section>
       <MainPageHeader text="شكاوي الطلاب" />
-      <div className=" px-2 sm:px-0">
-        <PageContentContainer>
-          <StudentComplaintsForm />
-        </PageContentContainer>
-      </div>
+      <PageContentContainer>
+        <StudentComplaintsForm />
+      </PageContentContainer>
     </section>
   );
 }
