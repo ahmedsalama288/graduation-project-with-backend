@@ -6,7 +6,7 @@ import PageContentContainer from "../shared-ui/pages-components/page-content-con
 
 export default function BriefAboutUs() {
   return (
-    <section className=" px-2">
+    <section>
       <AnimatedSection>
         <PageContentContainer>
           <ContentWrapper>
