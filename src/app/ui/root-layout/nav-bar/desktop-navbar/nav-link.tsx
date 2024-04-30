@@ -33,7 +33,7 @@ export default function NavLink({ href, name, nestedLinks, pathname }: props) {
     hasNestedLinks &&
     nestedLinks.map(
       (
-        { name, href = "", nestedLinks, downloadAblePDFLink, pdfname },
+        { name, href = "", nestedLinks},
         index
       ) => (
         <li
@@ -43,27 +43,9 @@ export default function NavLink({ href, name, nestedLinks, pathname }: props) {
           relative inline-block
       `}
         >
-          {downloadAblePDFLink && (
-            <a
-              download={pdfname}
-              href={href}
-              className={`
-            ${href == pathname ? "bg-slate-300 pr-5" : ""}
-            transition-all
-            py-3 px-4 rounded-md
-            hover:pr-5 hover:bg-slate-300
-            w-full flex justify-between items-center
-            peer
-            `}
-            >
-              {name}
-            </a>
-          )}
-
-          {!downloadAblePDFLink && (
-            <Link
-              href={href || ""}
-              className={`
+          <Link
+            href={href || ""}
+            className={`
               ${href == pathname ? "bg-slate-300 pr-5" : ""}
               transition-all
               py-3 px-4 rounded-md
@@ -71,13 +53,12 @@ export default function NavLink({ href, name, nestedLinks, pathname }: props) {
               w-full flex justify-between items-center
               peer
           `}
-            >
-              {name}{" "}
-              {!!nestedLinks?.length && (
-                <ChevronLeftIcon className=" h-5 w-5 text-gray-500" />
-              )}
-            </Link>
-          )}
+          >
+            {name}{" "}
+            {!!nestedLinks?.length && (
+              <ChevronLeftIcon className=" h-5 w-5 text-gray-500" />
+            )}
+          </Link>
 
           {!!nestedLinks?.length && (
             <ul
