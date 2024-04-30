@@ -43,34 +43,32 @@ export default function SearchResult({
   }
 
   return (
-    <div className=" px-2 sm:px-0">
-      <PageContentContainer>
-        <div className=" flex flex-col gap-4">
-          {searchResultInfo.map(({ name, floorImage, amphitheaterList }) => (
-            <div className="flex flex-col gap-4" key={name}>
-              <ContentWrapper>
-                <ContentHeader text={`${name}`} />
-                {amphitheaterList.length === 0 && (
-                  <FloorImage floorImage={floorImage} floorName={name} />
-                )}
+    <PageContentContainer>
+      <div className=" flex flex-col gap-4">
+        {searchResultInfo.map(({ name, floorImage, amphitheaterList }) => (
+          <div className="flex flex-col gap-4" key={name}>
+            <ContentWrapper>
+              <ContentHeader text={`${name}`} />
+              {amphitheaterList.length === 0 && (
+                <FloorImage floorImage={floorImage} floorName={name} />
+              )}
 
-                {amphitheaterList.length > 0 && (
-                  <div className="flex flex-col gap-4">
-                    {amphitheaterList.map((amphitheater) => (
-                      <AmphitheaterImages
-                        key={amphitheater.name}
-                        amphitheaterName={amphitheater.name}
-                        amphitheaterMainImage={amphitheater.mainImage}
-                        amphitheaterDoorImage={amphitheater.doorImage}
-                      />
-                    ))}
-                  </div>
-                )}
-              </ContentWrapper>
-            </div>
-          ))}
-        </div>
-      </PageContentContainer>
-    </div>
+              {amphitheaterList.length > 0 && (
+                <div className="flex flex-col gap-4">
+                  {amphitheaterList.map((amphitheater) => (
+                    <AmphitheaterImages
+                      key={amphitheater.name}
+                      amphitheaterName={amphitheater.name}
+                      amphitheaterMainImage={amphitheater.mainImage}
+                      amphitheaterDoorImage={amphitheater.doorImage}
+                    />
+                  ))}
+                </div>
+              )}
+            </ContentWrapper>
+          </div>
+        ))}
+      </div>
+    </PageContentContainer>
   );
 }
