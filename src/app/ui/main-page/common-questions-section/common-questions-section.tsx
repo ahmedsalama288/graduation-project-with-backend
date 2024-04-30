@@ -6,7 +6,7 @@ import QuestionsList from "./questions-list";
 
 export default function CommonQuestionsSection() {
   return (
-    <section className="p-2 md:p-0">
+    <section>
       <AnimatedSection>
         <PageContentContainer>
           <ContentWrapper>
