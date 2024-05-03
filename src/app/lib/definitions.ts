@@ -35,7 +35,7 @@ export type Amphitheater = {
 
 export type InstituteFloorsStructure = {
   name: string;
-  sections: number[];
+  sections: (number | string)[];
   floorImage: StaticImageData | string;
   amphitheaterList: Amphitheater;
 }[];
