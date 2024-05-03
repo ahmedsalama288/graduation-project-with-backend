@@ -24,7 +24,7 @@ export default function SearchResult({
       ({ name, amphitheaterList, sections }) =>
         name.includes(search) ||
         amphitheaterList.some(({ name }) => name.includes(search)) ||
-        sections.some((sectionNumber) => sectionNumber.toString() === search)
+        sections.some((sectionName) => sectionName.toString().includes(search))
     )
     .map((instituteFloorInfo) => ({
       ...instituteFloorInfo,
@@ -48,7 +48,7 @@ export default function SearchResult({
         {searchResultInfo.map(({ name, floorImage, amphitheaterList }) => (
           <div className="flex flex-col gap-4" key={name}>
             <ContentWrapper>
-              <ContentHeader text={`${name}`} />
+              <ContentHeader text={`يوجد في ${name}`} />
               {amphitheaterList.length === 0 && (
                 <FloorImage floorImage={floorImage} floorName={name} />
               )}
