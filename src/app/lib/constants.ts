@@ -404,7 +404,17 @@ export const instituteFloorsStructure: InstituteFloorsStructure = [
   {
     name: "الدور الاول",
     floorImage: floorOneImage,
-    sections: [103, 104],
+    sections: [
+      101,
+      "الخزينة",
+      "شئون الطلاب",
+      "مكتب عميد المعهد",
+      "مكتب سكرتارية العميد",
+      "مكتب رئيس الاكاديمية",
+      "مكتب رئيس المجلس التنفيذي",
+      "وحدة التدريب",
+      "الاستعلامات",
+    ],
     amphitheaterList: [
       {
         name: "المدرج 1",
@@ -416,7 +426,20 @@ export const instituteFloorsStructure: InstituteFloorsStructure = [
   {
     name: "الدور الثاني",
     floorImage: floorTwoImage,
-    sections: [203, 204, 206, 208],
+    sections: [
+      207,
+      208,
+      210,
+      "إدارة رعاية الطلاب",
+      "الشئون الإدارية والقانونية",
+      "إدارة شؤون الخريجين",
+      "مكتب الأمين العام",
+      "شئون أعضاء هيئة التدريس",
+      "المدير المالي",
+      "الإدارة المالية",
+      "مكتب أعضاء هيئة التدريس (د/ رانيا محمد عبد الغفار – د/ رحاب عادل العراقي)",
+      "وكيل المعهد",
+    ],
     amphitheaterList: [
       {
         name: "المدرج 2",
@@ -428,7 +451,18 @@ export const instituteFloorsStructure: InstituteFloorsStructure = [
   {
     name: "الدور الثالث",
     floorImage: floorThreeImage,
-    sections: [303, 304, 306, 308],
+    sections: [
+      302,
+      304,
+      307,
+      308,
+      "الكنترول المركزي",
+      "مكتب إدارة تقنية المعلومات IT it",
+      "شئون إدارية",
+      "مكتب أعضاء هيئة التدريس (أ.م. د/ منصور شطا – د/ أحمد عيد)",
+      "مكتب أعضاء هيئة التدريس (د/ محمود البهلول – د/ أحمد الإبراشي)",
+      "مكتب أ أعضاء هيئة التدريس (أ.د/ عبد السلام عاصي)",
+    ],
     amphitheaterList: [
       {
         name: "المدرج 3",
@@ -440,7 +474,15 @@ export const instituteFloorsStructure: InstituteFloorsStructure = [
   {
     name: "الدور الرابع",
     floorImage: floorFourImage,
-    sections: [404, 404, 406, 408],
+    sections: [
+      407,
+      408,
+      "وحدة ضمان الجودة",
+      "المكتبة",
+      "مكتب معاوني أعضاء هيئة التدريس",
+      "مكتب أعضاء هيئة التدريس (د/ ايمان المشد)",
+      "مكتب أعضاء هيئة التدريس (د/ مجدي شرارة – د/ ميسرة فاضل)",
+    ],
     amphitheaterList: [
       {
         name: "المدرج 4",
@@ -452,7 +494,16 @@ export const instituteFloorsStructure: InstituteFloorsStructure = [
   {
     name: "الدور الخامس",
     floorImage: floorFiveImage,
-    sections: [505, 504, 506, 508],
+    sections: [
+      501,
+      506,
+      508,
+      510,
+      511,
+      "مكتب معاوني أعضاء هيئة التدريس",
+      "مكتب أعضاء هيئة التدريس (د/ ريهام أنسي – د/ رانيا المرسي)",
+      "مكتب أعضاء هيئة التدريس (أ.م. د/ محمد اسلام – د/ أسعد السعدني)",
+    ],
     amphitheaterList: [
       {
         name: "المدرج 5",
