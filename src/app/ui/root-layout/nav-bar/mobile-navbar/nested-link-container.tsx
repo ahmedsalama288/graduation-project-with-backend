@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { ChevronDownIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { cn } from "@/app/lib/utils";
 
 interface props {
   href: string;
@@ -24,16 +25,16 @@ export default function NestedLinkContainer({
   };
 
   return (
-    <>
+    <div>
       <span
         onClick={toggleNestedLinksHandler}
-        className={`
-            transition-all cursor-pointer
-            py-3 px-4 rounded-md
-            ${isNestedLinksOpen ? "pr-5 bg-slate-300" : ""}
-            ${href === pathname ? "bg-slate-300 pr-5" : ""}
-            w-fit flex gap-2 items-center
-          `}
+        className={cn(
+          `transition-all cursor-pointer
+            py-3 px-4 rounded-md hover:bg-slate-300
+            w-fit flex gap-2 items-center`,
+          isNestedLinksOpen && "pr-5 bg-slate-300",
+          href === pathname && "pr-5 bg-slate-300"
+        )}
       >
         {subLinksContainerName}
         <>
@@ -52,14 +53,16 @@ export default function NestedLinkContainer({
         </>
       </span>
 
-      {!!nestedLinks?.length && (
+      {nestedLinks && (
         <ul
-          className={`
-            ${isNestedLinksOpen ? "block" : "hidden"}
+          className={cn(
+            `
+            transition-all duration-400 max-h-0 overflow-hidden
             w-56 max-w-72 min-w-fit mr-2
             bg-slate-200 rounded
-            drop-shadow-lg
-          `}
+            drop-shadow-lg`,
+            isNestedLinksOpen && "max-h-[1000px] overflow-visible"
+          )}
         >
           {nestedLinks.map(({ name, href }) => (
             <li key={href}>
@@ -79,6 +82,6 @@ export default function NestedLinkContainer({
           ))}
         </ul>
       )}
-    </>
+    </div>
   );
 }
