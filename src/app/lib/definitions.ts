@@ -39,3 +39,12 @@ export type InstituteFloorsStructure = {
   floorImage: StaticImageData | string;
   amphitheaterList: Amphitheater;
 }[];
+
+export type DashboardSidebarLinks = {
+  sectionName: string;
+  sectionHref?: string;
+  sectionLinks?: {
+    linkName: string;
+    href: string;
+  }[];
+}[];
