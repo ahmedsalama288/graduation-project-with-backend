@@ -50,11 +50,11 @@ export default function MobileNavLinks({
           </Link>
         )}
 
-        {!!nestedLinks?.length && (
+        {nestedLinks && (
           <NestedLinkContainer
             pathname={pathname}
             nestedLinks={nestedLinks}
-            subLinksContainerName={name ||  ""}
+            subLinksContainerName={name || ""}
             href={href || ""}
           />
         )}
@@ -63,13 +63,20 @@ export default function MobileNavLinks({
 
   return (
     <li>
-      <Link
-        href={hrefAfterFilteringIgnoredLinks}
-        className=" text-black-gray font-bold mb-4 inline-block"
-      >
-        {name}
-      </Link>
-      <ul>{renderedNestedLinks}</ul>
+      {hrefAfterFilteringIgnoredLinks && (
+        <Link
+          href={hrefAfterFilteringIgnoredLinks}
+          className=" text-black-gray font-bold mb-4 inline-block"
+        >
+          {name}
+        </Link>
+      )}{" "}
+      {!hrefAfterFilteringIgnoredLinks && (
+        <span className=" text-black-gray font-bold mb-4 inline-block">
+          {name}
+        </span>
+      )}
+      <ul className=" flex flex-col gap-0">{renderedNestedLinks}</ul>
     </li>
   );
 }
