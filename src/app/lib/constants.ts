@@ -1,5 +1,6 @@
 import {
   AcademicLeadersInfo,
+  DashboardSidebarLinks,
   InstituteFloorsStructure,
   NavbarLinks,
 } from "./definitions";
@@ -300,6 +301,158 @@ export const navbarLinks: NavbarLinks = [
     nestedLinks: [],
   },
   { name: "تواصل معنا", href: "/contact-us", nestedLinks: [] },
+];
+
+export const dashboardSidebarLinks: DashboardSidebarLinks = [
+  {
+    sectionName: "تعديل الصفحة الرئيسية",
+    sectionHref: "/dashboard/edit/main-page",
+  },
+  {
+    sectionName: "عن المعهد",
+    sectionLinks: [
+      {
+        linkName: "تعديل صفحة رئيس مجلس الإدارة",
+        href: "/dashboard/edit/chairman-of-board-of-directors",
+      },
+      {
+        linkName: "تعديل صفحة عميد المعهد",
+        href: "/dashboard/edit/institute-dean",
+      },
+      {
+        linkName: "تعديل صفحة نشأة المعهد",
+        href: "/dashboard/edit/establishment-of-the-Institute",
+      },
+      {
+        linkName: "تعديل صفحة الرؤية - الرسالة - الاهداف",
+        href: "/dashboard/edit/vision-mission-goals",
+      },
+      {
+        linkName: "تعديل صفحة القيادات الأكاديمية والإدارية",
+        href: "/dashboard/edit/academic-and-administrative-leaders",
+      },
+      {
+        linkName: "تعديل صفحة الهيكل التنظيمي",
+        href: "/dashboard/edit/organizational-chart",
+      },
+      {
+        linkName: "تعديل صفحة اللائحة",
+        href: "/dashboard/edit/institute-regulations",
+      },
+    ],
+  },
+  {
+    sectionName: "خدمات الطلاب",
+    sectionLinks: [
+      {
+        linkName: "تعديل الجداول الدراسية",
+        href: "/dashboard/edit/class-schedules",
+      },
+      {
+        linkName: "تعديل المقررات الدراسية",
+        href: "/dashboard/edit/courses",
+      },
+      {
+        linkName: "تعديل جداول الامتحانات",
+        href: "/dashboard/edit/exam-schedules",
+      },
+      {
+        linkName: "شكاوي الطلاب",
+        href: "/dashboard/students-complaints",
+      },
+    ],
+  },
+  {
+    sectionName: "الحياة الكاديميه",
+    sectionLinks: [
+      {
+        linkName: "تعديل قسم نظم المعلومات الإدارية",
+        href: "/dashboard/edit/department-of-management-information-systems",
+      },
+      {
+        linkName: "تعديل قسم المحاسبه",
+        href: "/dashboard/edit/department-of-accounting",
+      },
+      {
+        linkName: "تعديل قسم العلوم الأساسيه",
+        href: "/dashboard/edit/basic-sciences",
+      },
+    ],
+  },
+  {
+    sectionName: "وحدات و إدارات",
+    sectionLinks: [
+      {
+        linkName: "تعديل وحدة تكنولوجيا المعلومات",
+        href: "/dashboard/edit/information-technology",
+      },
+      {
+        linkName: "تعديل وحدة ضمان الجودة",
+        href: "/dashboard/edit/quality-assurance",
+      },
+      {
+        linkName: "تعديل وحدة التدريب",
+        href: "/dashboard/edit/training",
+      },
+      {
+        linkName: "تعديل إدارة شئون التعليم والطلاب",
+        href: "/dashboard/edit/education-and-student-affairs",
+      },
+      {
+        linkName: "تعديل إدارة شئون الخريجين",
+        href: "/dashboard/edit/alumni-affairs",
+      },
+      {
+        linkName: "تعديل إدارة شئون العاملين",
+        href: "/dashboard/edit/personnel-affairs",
+      },
+      {
+        linkName: "تعديل الإدارة المالية",
+        href: "/dashboard/edit/financial",
+      },
+      {
+        linkName: "تعديل الإدارة الهندسية",
+        href: "/dashboard/edit/engineering",
+      },
+      {
+        linkName: "تعديل إدارة المشتريات والمخازن",
+        href: "/dashboard/edit/purchasing-and-warehouse",
+      },
+      {
+        linkName: "تعديل إدارة رعاية الشباب",
+        href: "/dashboard/edit/youth-care",
+      },
+      {
+        linkName: "تعديل العيادة الطبية",
+        href: "/dashboard/edit/medical-clinic",
+      },
+      {
+        linkName: "تعديل المكتبة",
+        href: "/dashboard/edit/library",
+      },
+      {
+        linkName: "تعديل إدارة الأمن",
+        href: "/dashboard/edit/security",
+      },
+    ],
+  },
+  {
+    sectionName: "قطاعات المعهد",
+    sectionLinks: [
+      {
+        linkName: "تعديل قواعد هامه للطلاب",
+        href: "/dashboard/edit/important-rules-for-students",
+      },
+      {
+        linkName: "تعديل لجنة متابعة الخريجين",
+        href: "/dashboard/edit/follow-up-committee",
+      },
+    ],
+  },
+  {
+    sectionName: "تواصل معنا",
+    sectionHref: "dashboard/edit/contact-us",
+  },
 ];
 
 export const ignoredLinks: string[] = [
