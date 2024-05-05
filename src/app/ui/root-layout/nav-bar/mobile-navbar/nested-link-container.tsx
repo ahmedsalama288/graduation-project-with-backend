@@ -68,13 +68,12 @@ export default function NestedLinkContainer({
             <li key={href}>
               <Link
                 href={href}
-                className={` 
-                  transition-all
-                  py-3 px-4 rounded-md
-                  hover:pr-5 hover:bg-slate-300
-                  ${href === pathname ? "bg-slate-300 pr-5" : ""}
-                  w-full inline-block
-                `}
+                className={cn(
+                  ` transition-color duration-300 py-3 px-4 rounded-md hover:pr-5 hover:bg-slate-300
+                    w-full inline-block text-transparent`,
+                  href === pathname && "pr-5 bg-slate-300",
+                  isNestedLinksOpen && "text-black-gray"
+                )}
               >
                 {name}
               </Link>
