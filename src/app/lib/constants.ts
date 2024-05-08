@@ -683,3 +683,5 @@ export const instituteFloorsStructure: InstituteFloorsStructure = [
     ],
   },
 ];
+
+export const serverDomainName = "https://bbc4-197-32-61-217.ngrok-free.app";
