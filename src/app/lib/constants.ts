@@ -101,7 +101,7 @@ export const navbarLinks: NavbarLinks = [
         href: "/student-services/courses",
       },
       {
-        name: "الجداول الإمتحانات",
+        name: "جداول الإمتحانات",
         href: "/student-services/exam-schedules",
       },
       {

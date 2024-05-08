@@ -6,7 +6,7 @@ import PageContentContainer from "@/app/ui/shared-ui/pages-components/page-conte
 export default function Page() {
   return (
     <section>
-      <MainPageHeader text="الجداول الإمتحانات" />
+      <MainPageHeader text="جداول الإمتحانات" />
       <PageContentContainer>
         <ContentWrapper>
           <div className=" p-4 min-h-[400px] flex justify-center items-center">
