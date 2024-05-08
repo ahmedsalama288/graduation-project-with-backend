@@ -18,7 +18,7 @@ export default function DownloadPdf({ pdfName, pdfHref }: Props) {
         <a
           className="
               flex flex-col justify-center items-center
-              p-4 h-[170px] w-[170px] max-w-full
+              p-4 h-[190px] w-[190px] max-w-full
               border border-inherit
               border-solid rounded-full text-base
             "
