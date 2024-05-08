@@ -94,73 +94,22 @@ export const navbarLinks: NavbarLinks = [
     nestedLinks: [
       {
         name: "الجداول الدراسية",
-        href: "",
-        nestedLinks: [
-          {
-            name: "الفرقة الاولي",
-            href: "/student-services/class-schedules/year-one",
-          },
-          {
-            name: "الفرقة الثانية",
-            href: "/student-services/class-schedules/year-two",
-          },
-          {
-            name: "الفرقة الثالثة",
-            href: "/student-services/class-schedules/year-three",
-          },
-          {
-            name: "الفرقة الرابعة",
-            href: "/student-services/class-schedules/year-four",
-          },
-        ],
+        href: "/student-services/class-schedules",
       },
       {
         name: "المقررات الدراسية",
-        href: "",
-        nestedLinks: [
-          { name: "الفرقة الاولي", href: "/student-services/courses/year-one" },
-          {
-            name: "الفرقة الثانية",
-            href: "/student-services/courses/year-two",
-          },
-          {
-            name: "الفرقة الثالثة",
-            href: "/student-services/courses/year-three",
-          },
-          {
-            name: "الفرقة الرابعة",
-            href: "/student-services/courses/year-four",
-          },
-        ],
+        href: "/student-services/courses",
       },
       {
-        name: "جداول الامتحانات",
-        href: "",
-        nestedLinks: [
-          {
-            name: "الفرقة الاولي",
-            href: "/student-services/exam-schedules/year-one",
-          },
-          {
-            name: "الفرقة الثانية",
-            href: "/student-services/exam-schedules/year-two",
-          },
-          {
-            name: "الفرقة الثالثة",
-            href: "/student-services/exam-schedules/year-three",
-          },
-          {
-            name: "الفرقة الرابعة",
-            href: "/student-services/exam-schedules/year-four",
-          },
-        ],
+        name: "الجداول الإمتحانات",
+        href: "/student-services/exam-schedules",
       },
       {
         name: "بحث عن مدرج او سكشن",
         href: "/student-services/search-for-amphitheater-or-section",
       },
-
       { name: "شكاوى الطلاب", href: "/student-services/complaints" },
+      { name: "بوابة الطالب", href: "https://dhic.ddns.net/ch/signin.php" },
       {
         name: "معرفة النتيجة",
         href: "https://dhic.ddns.net/ch/student_info.php",
