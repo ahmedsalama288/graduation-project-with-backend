@@ -30,49 +30,45 @@ export default function MobileNavbar() {
           onClick={openMenuHandler}
           className="h-8 w-8 xl:hidden cursor-pointer"
         />
-        {isMenuOpen && (
-          <ul
-            className={`
+        <ul
+          className={`
             ${isMenuOpen ? "flex" : "hidden"}
           bg-slate-200 fixed flex-col
             top-0 right-0 p-8 w-[300px] 
             h-screen gap-4 overflow-y-scroll scrollbar-hidden
           `}
-          >
-            {/* close Icon */}
-            <li>
-              <XMarkIcon
-                className="h-8 w-8 text-gray-500 cursor-pointer mb-3"
-                onClick={closeMenuHandler}
-              />
-            </li>
+        >
+          {/* close Icon */}
+          <li>
+            <XMarkIcon
+              className="h-8 w-8 text-gray-500 cursor-pointer mb-3"
+              onClick={closeMenuHandler}
+            />
+          </li>
 
-            {/* nav-bar-links */}
-            {navbarLinks.map(({ href, name, nestedLinks }, index) => (
-              <MobileNavLinks
-                href={href || ""}
-                name={name}
-                nestedLinks={nestedLinks}
-                pathname={pathname}
-                key={index}
-              />
-            ))}
-          </ul>
-        )}
+          {/* nav-bar-links */}
+          {navbarLinks.map(({ href, name, nestedLinks }, index) => (
+            <MobileNavLinks
+              href={href || ""}
+              name={name}
+              nestedLinks={nestedLinks}
+              pathname={pathname}
+              key={index}
+            />
+          ))}
+        </ul>
       </div>
 
       {/* overlay div */}
-      {isMenuOpen && (
-        <div
-          className={`
+      <div
+        className={`
           ${isMenuOpen ? "block" : "hidden"}
           cursor-pointer
           fixed top-0 left-0 bg-gray-700 opacity-20 width-minus-300px z-40
           h-screen
         `}
-          onClick={closeMenuHandler}
-        ></div>
-      )}
+        onClick={closeMenuHandler}
+      ></div>
     </>
   );
 }
