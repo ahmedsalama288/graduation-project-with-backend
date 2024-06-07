@@ -48,6 +48,7 @@ export default function SliderImages() {
           width={10000}
           height={600}
           quality={40}
+          placeholder="blur"
           priority={false}
         />
       )}
@@ -56,12 +57,7 @@ export default function SliderImages() {
 
   return (
     <AnimatedSection duration="duration-500">
-      <figure
-        className={`
-        relative
-        overflow-hidden w-full hero-img-hight
-    `}
-      >
+      <figure className="relative overflow-hidden w-full hero-img-hight">
         <div className="absolute inset-0 bg-black/20 z-20" />
         <div className="overflow-hidden">
           <div
