@@ -50,6 +50,7 @@ export default function AmphitheaterImages({
                     alt={amphitheaterName}
                     quality={40}
                     priority={false}
+                    placeholder="blur"
                   />
                 </div>
               </div>
@@ -71,6 +72,7 @@ export default function AmphitheaterImages({
                     src={amphitheaterDoorImage}
                     alt={amphitheaterName}
                     quality={40}
+                    placeholder="blur"
                     priority={false}
                   />
                 </div>
