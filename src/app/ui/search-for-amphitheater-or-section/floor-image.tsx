@@ -27,6 +27,7 @@ export default function FloorImage({ floorName, floorImage }: Props) {
           height={500}
           src={floorImage}
           alt={floorName}
+          placeholder="blur"
           quality={60}
           priority={false}
         />

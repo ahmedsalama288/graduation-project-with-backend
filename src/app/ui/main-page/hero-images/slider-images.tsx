@@ -1,10 +1,15 @@
 "use client";
 
-import { cn } from "@/app/lib/utils";
 import { useState } from "react";
 import Image from "next/image";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import AnimatedSection from "../../shared-ui/pages-components/animated-section";
+
+import imageOne from "@/../../public/landing-images/landing-one.webp";
+import imageTwo from "@/../../public/landing-images/landing-two.webp";
+import imageThree from "@/../../public/landing-images/landing-three.webp";
+
+const landingImages = [imageOne, imageTwo, imageThree];
 
 export default function SliderImages() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -21,12 +26,6 @@ export default function SliderImages() {
     );
   };
 
-  const landingImages = [
-    "/landing-images/landing-one.webp",
-    "/landing-images/landing-two.webp",
-    "/landing-images/landing-three.webp",
-  ];
-
   const slides = landingImages.map((imageSrc, index) => (
     <div key={index} className={`min-w-full z-50`}>
       {index === 0 && (
@@ -37,6 +36,7 @@ export default function SliderImages() {
           width={10000}
           height={600}
           quality={40}
+          placeholder="blur"
           priority={true}
         />
       )}
