@@ -7,6 +7,7 @@ import { instituteFloorsStructure } from "@/app/lib/constants";
 import { InstituteFloorsStructure } from "@/app/lib/definitions";
 import FloorImage from "./floor-image";
 import AmphitheaterImages from "./amphitheater-images";
+import { cn } from "@/app/lib/utils";
 
 interface Props {
   search: string;
@@ -46,8 +47,13 @@ export default function SearchResult({
     <PageContentContainer>
       <div className=" flex flex-col gap-4">
         {searchResultInfo.map(({ name, floorImage, amphitheaterList }) => (
-          <div className="flex flex-col gap-4" key={name}>
-            <ContentWrapper>
+          <div
+            className="flex flex-col gap-4 justify-center items-center"
+            key={name}
+          >
+            <ContentWrapper
+              className={cn("w-full", amphitheaterList.length === 0 && "w-fit")}
+            >
               <ContentHeader text={`يوجد في ${name}`} />
               {amphitheaterList.length === 0 && (
                 <FloorImage floorImage={floorImage} floorName={name} />
