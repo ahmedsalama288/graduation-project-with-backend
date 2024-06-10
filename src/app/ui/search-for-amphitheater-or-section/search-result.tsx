@@ -52,7 +52,7 @@ export default function SearchResult({
             key={name}
           >
             <ContentWrapper
-              className={cn("w-full", amphitheaterList.length === 0 && "w-fit")}
+              className={cn("w-full max-w-full", amphitheaterList.length === 0 && "w-fit")}
             >
               <ContentHeader text={`يوجد في ${name}`} />
               {amphitheaterList.length === 0 && (
