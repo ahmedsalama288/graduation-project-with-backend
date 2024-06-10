@@ -14,29 +14,31 @@ export default function FloorImage({ floorName, floorImage }: Props) {
   const { isImageOpen, handleOpenImage, handleCloseImage } = useImageLightbox();
 
   return (
-    <ContentContainer>
-      <div className=" max-w-full overflow-hidden rounded sm:rounded-md cursor-pointer">
-        <Image
-          className="
-                      rounded sm:rounded-md max-h-[500px] object-cover
-                      drop-shadow-xl transition duration-[400ms]
-                      hover:scale-105 hover:rotate-[0.15deg] 
-                    "
-          onClick={handleOpenImage}
-          width={2000}
-          height={500}
-          src={floorImage}
-          alt={floorName}
-          placeholder="blur"
-          quality={60}
-          priority={false}
+    <div className=" w-full">
+      <ContentContainer className=" w-fit">
+        <div className="w-[700px] max-w-full overflow-hidden rounded sm:rounded-md cursor-pointer">
+          <Image
+            className="
+                  rounded sm:rounded-md object-cover
+                  drop-shadow-xl transition duration-[400ms]
+                  hover:scale-105 hover:rotate-[0.15deg]
+                  w-full h-auto
+                "
+            onClick={handleOpenImage}
+            sizes="100vw"
+            src={floorImage}
+            alt={floorName}
+            placeholder="blur"
+            quality={60}
+            priority={false}
+          />
+        </div>
+        <Lightbox
+          isImageOpen={isImageOpen}
+          imageSrc={floorImage}
+          onImageClose={handleCloseImage}
         />
-      </div>
-      <Lightbox
-        isImageOpen={isImageOpen}
-        imageSrc={floorImage}
-        onImageClose={handleCloseImage}
-      />
-    </ContentContainer>
+      </ContentContainer>
+    </div>
   );
 }
