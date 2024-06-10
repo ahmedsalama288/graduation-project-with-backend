@@ -5,9 +5,9 @@ import Image from "next/image";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import AnimatedSection from "../../shared-ui/pages-components/animated-section";
 
-import imageOne from "@/../../public/landing-images/landing-one.jpg";
-import imageTwo from "@/../../public/landing-images/landing-two.jpg";
-import imageThree from "@/../../public/landing-images/landing-three.jpg";
+import imageOne from "@/../../public/landing-images/landing-one.webp";
+import imageTwo from "@/../../public/landing-images/landing-two.webp";
+import imageThree from "@/../../public/landing-images/landing-three.webp";
 
 const landingImages = [imageOne, imageTwo, imageThree];
 
@@ -34,7 +34,7 @@ export default function SliderImages() {
           alt="landing page image"
           src={imageSrc}
           placeholder="blur"
-          quality={100}
+          quality={85}
           fill
           sizes="(max-width: 480px) 200vw, 100vw"
           style={{
@@ -49,7 +49,7 @@ export default function SliderImages() {
           alt="landing page image"
           src={imageSrc}
           placeholder="blur"
-          quality={100}
+          quality={85}
           fill
           sizes="(max-width: 480px) 200vw, 100vw"
           style={{
