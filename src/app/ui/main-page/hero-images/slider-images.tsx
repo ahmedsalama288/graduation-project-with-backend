@@ -5,9 +5,9 @@ import Image from "next/image";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import AnimatedSection from "../../shared-ui/pages-components/animated-section";
 
-import imageOne from "@/../../public/landing-images/landing-one.webp";
-import imageTwo from "@/../../public/landing-images/landing-two.webp";
-import imageThree from "@/../../public/landing-images/landing-three.webp";
+import imageOne from "@/../../public/landing-images/landing-one.jpg";
+import imageTwo from "@/../../public/landing-images/landing-two.jpg";
+import imageThree from "@/../../public/landing-images/landing-three.jpg";
 
 const landingImages = [imageOne, imageTwo, imageThree];
 
@@ -27,16 +27,19 @@ export default function SliderImages() {
   };
 
   const slides = landingImages.map((imageSrc, index) => (
-    <div key={index} className={`min-w-full z-50`}>
+    <div key={index} className="min-w-full z-50 relative h-screen">
       {index === 0 && (
         <Image
-          className="min-w-full h-screen object-cover contrast-[90%] relative"
+          className="w-full h-screen object-cover contrast-[90%] relative"
           alt="landing page image"
           src={imageSrc}
-          width={10000}
-          height={600}
-          quality={40}
           placeholder="blur"
+          quality={100}
+          fill
+          sizes="(max-width: 480px) 200vw, 100vw"
+          style={{
+            objectFit: "cover",
+          }}
           priority={true}
         />
       )}
@@ -45,11 +48,13 @@ export default function SliderImages() {
           className="min-w-full h-screen object-cover contrast-[90%] relative"
           alt="landing page image"
           src={imageSrc}
-          width={10000}
-          height={600}
-          quality={40}
           placeholder="blur"
-          priority={false}
+          quality={100}
+          fill
+          sizes="(max-width: 480px) 200vw, 100vw"
+          style={{
+            objectFit: "cover",
+          }}
         />
       )}
     </div>
