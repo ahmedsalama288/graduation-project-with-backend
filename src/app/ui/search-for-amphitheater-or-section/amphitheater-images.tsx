@@ -1,6 +1,6 @@
 "use client";
 
-import useImageLightbox from "@/app/lib/hooks/use-image-lightbox";
+import useImageLightBox from "@/app/lib/hooks/use-image-lightbox";
 import ContentContainer from "../shared-ui/pages-components/content-container";
 import Image, { StaticImageData } from "next/image";
 import Lightbox from "./lightbox";
@@ -22,7 +22,7 @@ export default function AmphitheaterImages({
     handleCloseImage,
     imageSrcValue,
     handleImageSrcValue,
-  } = useImageLightbox();
+  } = useImageLightBox();
 
   return (
     <ContentContainer>

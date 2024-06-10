@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
 import { useState } from "react";
 
-export default function useImageLightbox() {
+export default function useImageLightBox() {
   const [isImageOpen, setIsImageOpen] = useState(false);
   const [imageSrcValue, setImageSrcValue] = useState<string | StaticImageData>(
     ""
