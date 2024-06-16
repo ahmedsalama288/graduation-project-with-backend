@@ -9,20 +9,22 @@ export default function Page() {
     <section>
       <MainPageHeader text="الهيكل التنظيمي" />
       <PageContentContainer className=" flex justify-center items-center">
-        <ContentWrapper className=" w-fit h-full lg:h-[600px] flex justify-center items-center">
-          <Image
-            width={10000}
-            height={10000}
-            priority
-            className="rounded-sm sm:rounded-md w-auto h-full "
-            sizes="
-                    (max-width: 320px) 280px, 
-                    (max-width: 480px) 440px,
-                    800px"
-            src={organizationalChartImage}
-            quality={100}
-            alt="الهيكل التنظيمي للمعهد"
-          />
+        <ContentWrapper className=" max-w-[900px]">
+          <div className="w-full">
+            <Image
+              className=" rounded object-cover"
+              src={organizationalChartImage}
+              alt="organizational chart image"
+              priority
+              sizes="100vw"
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
+              placeholder='blur'
+            />
+          </div>
+          
         </ContentWrapper>
       </PageContentContainer>
     </section>
