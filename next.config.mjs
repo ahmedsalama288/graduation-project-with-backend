@@ -7,6 +7,12 @@ import {
 const nextConfig = {
   reactStrictMode: true,
   images: {
+    remotePatterns: [
+      {
+        protocol: "http",
+        hostname: "**",
+      },
+    ],
     formats: ["image/webp", "image/avif"],
   },
 };
