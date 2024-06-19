@@ -1,4 +1,5 @@
 import { StaticImageData } from "next/image";
+import { string } from "zod";
 
 export type NavbarNestedLinks = {
   name: string;
@@ -48,3 +49,55 @@ export type DashboardSidebarLinks = {
     href: string;
   }[];
 }[];
+
+export interface MainPageData {
+  title: string;
+  ourGoals: {
+    "1": string;
+    "2": string;
+    "3": string;
+  };
+  studentsNumber: number;
+  graduatedStudents: number;
+  commonQuestions: {
+    id: number;
+    question: string;
+    answers: {
+      "1": string;
+      "2": string;
+      "3": string;
+      "4"?: string;
+      "5"?: string;
+      "6"?: string;
+      "7"?: string;
+    };
+  }[];
+}
+
+export type EstablishmentOfTheInstituteData = {
+  id: number;
+  title?: string;
+  description: {
+    [key: string]: string;
+  };
+}[];
+
+export type VisionMissionGoalsData = {
+  id: number;
+  title?: string;
+  description: {
+    [key: string]: string;
+  };
+}[];
+
+export type AcademicLeadersData = {
+  id: number;
+  image: string;
+  name: string;
+  title: string;
+}[];
+
+export interface InstituteRegulationsData {
+  newRegulation: string;
+  oldRegulation: string;
+}
