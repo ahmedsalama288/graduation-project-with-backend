@@ -1,28 +1,32 @@
 import MainPageHeader from "@/app/ui/shared-ui/pages-components/main-page-header";
 import PageContentContainer from "@/app/ui/shared-ui/pages-components/page-content-container";
 import ContentWrapper from "@/app/ui/shared-ui/pages-components/content-wrapper";
-import organizationalChartImage from "@/../../public/about-us/organizational-chart/organizational-chart.jpeg";
 import Image from "next/image";
+import { fetchOrganizationalChartImage } from "@/app/lib/data";
 
-export default function Page() {
+export default async function Page() {
+  const imageSrc = await fetchOrganizationalChartImage();
+
   return (
     <section>
       <MainPageHeader text="الهيكل التنظيمي" />
       <PageContentContainer className=" flex justify-center items-center">
-        <ContentWrapper className=" w-fit h-full lg:h-[600px] flex justify-center items-center">
-          <Image
-            width={10000}
-            height={10000}
-            priority
-            className="rounded-sm sm:rounded-md w-auto h-full "
-            sizes="
-                    (max-width: 320px) 280px, 
-                    (max-width: 480px) 440px,
-                    800px"
-            src={organizationalChartImage}
-            quality={100}
-            alt="الهيكل التنظيمي للمعهد"
-          />
+        <ContentWrapper className="flex justify-center items-center">
+          <div className="w-full max-w-[900px] flex flex-col">
+            <Image
+              width={1000}
+              height={1000}
+              className="rounded-md"
+              src={imageSrc}
+              sizes="100vw"
+              alt="الهيكل التنظيمي للمعهد"
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
+              priority
+            />
+          </div>
         </ContentWrapper>
       </PageContentContainer>
     </section>
