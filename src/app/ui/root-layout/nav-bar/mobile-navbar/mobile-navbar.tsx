@@ -5,8 +5,10 @@ import { Bars3Icon } from "@heroicons/react/20/solid";
 import MobileNavLinks from "./mobile-nav-links";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 import { navbarLinks } from "@/app/lib/constants";
+import { usePathname } from "next/navigation";
 
-export default function MobileNavbar({ pathname }: { pathname: string }) {
+export default function MobileNavbar() {
+  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const openMenuHandler = () => {

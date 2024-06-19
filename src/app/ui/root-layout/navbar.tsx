@@ -1,13 +1,10 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import Logo from "./logo";
 import MobileNavbar from "./nav-bar/mobile-navbar/mobile-navbar";
 import DesktopNavbar from "./nav-bar/desktop-navbar/desktop-navbar";
 
 export default function Navbar() {
-  const pathname = usePathname();
-
   return (
     <nav
       className="
@@ -18,8 +15,8 @@ export default function Navbar() {
       "
     >
       <Logo />
-      <MobileNavbar pathname={pathname} />
-      <DesktopNavbar pathname={pathname} />
+      <MobileNavbar />
+      <DesktopNavbar />
     </nav>
   );
 }

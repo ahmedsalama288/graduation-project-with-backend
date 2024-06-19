@@ -19,7 +19,7 @@ export default function AnimatedSection({
   duration,
 }: Props) {
   const ref = useRef(null);
-  const inView = useInView(ref, { threshold: threshold || 0.1 });
+  const inView = useInView(ref, { threshold: threshold || 0 });
 
   return (
     <div

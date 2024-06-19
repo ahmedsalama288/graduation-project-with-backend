@@ -1,6 +1,6 @@
 "use client";
 
-import useImageLightbox from "@/app/lib/hooks/use-image-lightbox";
+import useImageLightBox from "@/app/lib/hooks/use-image-lightbox";
 import ContentContainer from "../shared-ui/pages-components/content-container";
 import Image, { StaticImageData } from "next/image";
 import Lightbox from "./lightbox";
@@ -22,7 +22,7 @@ export default function AmphitheaterImages({
     handleCloseImage,
     imageSrcValue,
     handleImageSrcValue,
-  } = useImageLightbox();
+  } = useImageLightBox();
 
   return (
     <ContentContainer>
@@ -40,16 +40,20 @@ export default function AmphitheaterImages({
                       handleImageSrcValue(amphitheaterMainImage);
                     }}
                     className="
-                      rounded sm:rounded-md max-h-[500px] object-cover
+                      rounded sm:rounded-md object-cover
                       drop-shadow-xl transition duration-[400ms]
-                      hover:scale-105 hover:rotate-[0.15deg] 
+                      hover:scale-105 hover:rotate-[0.15deg]
                     "
-                    width={2000}
-                    height={500}
+                    sizes="100vw"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                    }}
                     src={amphitheaterMainImage}
                     alt={amphitheaterName}
-                    quality={40}
+                    quality={70}
                     priority={false}
+                    placeholder="blur"
                   />
                 </div>
               </div>
@@ -62,15 +66,19 @@ export default function AmphitheaterImages({
                       handleImageSrcValue(amphitheaterDoorImage);
                     }}
                     className="
-                      rounded sm:rounded-md max-h-[500px] object-cover
+                      rounded sm:rounded-md object-cover
                       drop-shadow-xl transition duration-[400ms]
                       hover:scale-105 hover:rotate-[0.15deg]
                     "
-                    width={2000}
-                    height={400}
+                    sizes="100vw"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                    }}
                     src={amphitheaterDoorImage}
                     alt={amphitheaterName}
-                    quality={40}
+                    quality={70}
+                    placeholder="blur"
                     priority={false}
                   />
                 </div>
