@@ -2,7 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 interface props {
-  imageSrc: StaticImageData;
+  imageSrc: StaticImageData | string;
   alt: string;
   href?: string;
 }
