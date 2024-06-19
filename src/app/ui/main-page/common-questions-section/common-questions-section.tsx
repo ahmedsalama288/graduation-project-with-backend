@@ -4,7 +4,11 @@ import ContentWrapper from "../../shared-ui/pages-components/content-wrapper";
 import PageContentContainer from "../../shared-ui/pages-components/page-content-container";
 import QuestionsList from "./questions-list";
 
-export default function CommonQuestionsSection() {
+interface props {
+  commonQuestions: any[];
+}
+
+export default function CommonQuestionsSection({ commonQuestions }: props) {
   return (
     <section>
       <AnimatedSection>
@@ -12,7 +16,7 @@ export default function CommonQuestionsSection() {
           <ContentWrapper>
             <ContentHeader text="الأسئلة الشائعة" />
           </ContentWrapper>
-          <QuestionsList />
+          <QuestionsList commonQuestions={commonQuestions}/>
         </PageContentContainer>
       </AnimatedSection>
     </section>

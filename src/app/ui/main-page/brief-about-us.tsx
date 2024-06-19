@@ -4,7 +4,14 @@ import ContentHeader from "../shared-ui/pages-components/content-header";
 import ContentWrapper from "../shared-ui/pages-components/content-wrapper";
 import PageContentContainer from "../shared-ui/pages-components/page-content-container";
 
-export default function BriefAboutUs() {
+interface Props {
+  title: string;
+  ourGoalsObj: any;
+}
+
+export default function BriefAboutUs({ title, ourGoalsObj }: Props) {
+  const ourGoals: string[] = Object.values(ourGoalsObj);
+
   return (
     <section>
       <AnimatedSection>
@@ -13,26 +20,15 @@ export default function BriefAboutUs() {
             <ContentHeader text="معهد الدلتا العالي" />
             <ContentContainer>
               <div>
-                <p>
-                  يهدف معهد الدلتا العالي إلى إتاحة الفرصة للطلاب للحصول على
-                  نوعية ممتازة وجادة ومتطورة من دراسات علوم الحاسبات وتكنولوجيا
-                  إدارة المعلومات على أيدي نخبة متميزة من أعضاء هيئة التدريس من
-                  الجامعات المصرية وعلى أحدث الأجهزة التعليمية المتطورة.
-                </p>
+                <p>{title}</p>
               </div>
             </ContentContainer>
 
             <ContentContainer>
               <ul className=" list-disc pr-4">
-                <li>
-                  المساهمة في إعداد وتنمية الكوادر الفنية المتخصصة في فروع
-                  الدراسة بالمعهد.
-                </li>
-                <li>
-                  تنمية القدرات والمهارات للقيادات المتخصصة فى الممارسة العلمية
-                  والعملية.
-                </li>
-                <li>تنمية البحث العلمي والعمل على إتاحة الفرص وحل المشكلات.</li>
+                {ourGoals.map((goal, index) => (
+                  <li key={index}>{goal}</li>
+                ))}
               </ul>
             </ContentContainer>
           </ContentWrapper>

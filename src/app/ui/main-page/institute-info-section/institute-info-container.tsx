@@ -7,22 +7,31 @@ import ContentWrapper from "../../shared-ui/pages-components/content-wrapper";
 import ContentHeader from "../../shared-ui/pages-components/content-header";
 import AnimatedSection from "../../shared-ui/pages-components/animated-section";
 
-const statusList: InstituteStatusInfo[] = [
-  {
-    statusName: "عدد الطلاب بالمعهد",
-    statusNumber: 5769,
-    icon: <UserGroupIcon className="h-16 w-16 sm:h-24 sm:w-24 text-white" />,
-    description: "طالب",
-  },
-  {
-    statusName: "عدد الطلاب الخريجين بالمعهد ",
-    statusNumber: 10609,
-    icon: <AcademicCapIcon className="h-16 w-16 sm:h-24 sm:w-24 text-white" />,
-    description: "طالب",
-  },
-];
+interface Prop {
+  studentsNumber: number;
+  graduatedStudents: number;
+}
+export default function InstituteInfoContainer({
+  studentsNumber,
+  graduatedStudents,
+}: Prop) {
+  const statusList: InstituteStatusInfo[] = [
+    {
+      statusName: "عدد الطلاب بالمعهد",
+      statusNumber: studentsNumber,
+      icon: <UserGroupIcon className="h-16 w-16 sm:h-24 sm:w-24 text-white" />,
+      description: "طالب",
+    },
+    {
+      statusName: "عدد الطلاب الخريجين بالمعهد ",
+      statusNumber: graduatedStudents,
+      icon: (
+        <AcademicCapIcon className="h-16 w-16 sm:h-24 sm:w-24 text-white" />
+      ),
+      description: "طالب",
+    },
+  ];
 
-export default function InstituteInfoContainer() {
   return (
     <article>
       <AnimatedSection>
