@@ -4,15 +4,15 @@ import Link from "next/link";
 
 export default function Logo() {
   return (
-    <Link href="/" className="drop-shadow-lg inline-flex justify-center items-center w-[73px] h-[70px]">
+    <Link href="/" className="drop-shadow-lg inline-flex shrink-0 justify-center items-center w-[73px] h-[69px]">
       <Image
         className=" w-full h-auto drop-shadow-md"
         src={logo}
         priority
         alt="delta logo"
-        quality={80}
-        height={1080}
-        width={1013}
+        height={900}
+        width={845}
+        quality={90}
       />
     </Link>
   );
