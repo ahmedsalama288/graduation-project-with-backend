@@ -1,4 +1,4 @@
-import { graduateFollowCommittee } from "@/app/lib/constants";
+import { fetchGraduateFollowUpPageData } from "@/app/lib/data";
 import ContentContainer from "@/app/ui/shared-ui/pages-components/content-container";
 import ContentHeader from "@/app/ui/shared-ui/pages-components/content-header";
 import ContentWrapper from "@/app/ui/shared-ui/pages-components/content-wrapper";
@@ -6,7 +6,9 @@ import MainPageHeader from "@/app/ui/shared-ui/pages-components/main-page-header
 import MemberPhoto from "@/app/ui/shared-ui/pages-components/member-photo";
 import PageContentContainer from "@/app/ui/shared-ui/pages-components/page-content-container";
 
-export default function Page() {
+export default async function Page() {
+  const graduateFollowUpMembers = await fetchGraduateFollowUpPageData();
+
   return (
     <section>
       <MainPageHeader text="لجنة متابعة الخريجين" />
@@ -20,14 +22,16 @@ export default function Page() {
                 justify-items-center gap-6
               "
         >
-          {graduateFollowCommittee.map(
-            ({ memberImageSrc, memberImageAlt, memberName, memberRole }) => (
-              <ContentWrapper
-                className=" w-full drop-shadow-md "
-                key={memberImageAlt}
-              >
+          {graduateFollowUpMembers.map(
+            ({
+              id,
+              name: memberName,
+              image: memberImageSrc,
+              title: memberRole,
+            }) => (
+              <ContentWrapper className=" w-full drop-shadow-md " key={id}>
                 <div className=" flex flex-col justify-center items-center gap-4 pt-4">
-                  <MemberPhoto imageSrc={memberImageSrc} alt={memberImageAlt} />
+                  <MemberPhoto imageSrc={memberImageSrc} alt={memberName} />
                   <ContentHeader
                     className="w-[350px] max-w-full text-center"
                     text={memberName}
