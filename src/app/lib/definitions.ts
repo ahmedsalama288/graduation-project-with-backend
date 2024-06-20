@@ -101,3 +101,31 @@ export interface InstituteRegulationsData {
   newRegulation: string;
   oldRegulation: string;
 }
+
+export interface StudentClassSchedules {
+  firstPdfSchedule: string;
+  secondPdfSchedule: string;
+  theadPdfSchedule: string;
+  fourthPdfSchedule: string;
+}
+
+export interface StudentExamSchedules {
+  firstPdfSchedule: string;
+  secondPdfSchedule: string;
+  theadPdfSchedule: string;
+  fourthPdfSchedule: string;
+}
+
+export interface InstituteDepartmentData {
+  id: number;
+  profName: string;
+  imageSrc: string;
+  dutiesAndMission: { [key: string]: string };
+}
+
+export type UnitsAndDepartmentsData = {
+  id: number;
+  title: string;
+  pageName: string;
+  description: { [key: string]: string };
+}[];
