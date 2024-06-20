@@ -2,11 +2,13 @@ import { serverDomainName } from "./constants";
 import {
   AcademicLeadersData,
   EstablishmentOfTheInstituteData,
+  GraduateFollowUpMembersData,
   InstituteDepartmentData,
   InstituteRegulationsData,
   MainPageData,
   StudentClassSchedules,
   StudentExamSchedules,
+  StudentsRulesPdfFiles,
   UnitsAndDepartmentsData,
   VisionMissionGoalsData,
 } from "./definitions";
@@ -263,7 +265,6 @@ export async function fetchDepartmentData(url: string) {
   }
 }
 
-// units-and-departments
 export async function fetchUnitsAndDepartmentsData(pageName: string) {
   try {
     const bodyData = {
@@ -289,5 +290,60 @@ export async function fetchUnitsAndDepartmentsData(pageName: string) {
     return data;
   } catch (error) {
     throw new Error(`Failed to fetch units-and-departments/data.`);
+  }
+}
+
+export async function fetchImportantRulesForStudentsPageData() {
+  try {
+    const response = await fetch(
+      `${serverDomainName}/api/dashboard/important-rules-for-students/get`,
+      {
+        headers: {
+          "ngrok-skip-browser-warning": "true",
+        },
+      }
+    );
+    if (!response.ok)
+      throw new Error("Failed to fetch important-rules-for-students data.");
+
+    const { data } = await response.json();
+
+    const {
+      student_guide: studentGuidePdf,
+      academic_advising: academicAdvisingPdf,
+      scientific_leadership_guide: scientificLeadershipGuidePdf,
+    } = data;
+
+    const studentsRulesPdfFiles: StudentsRulesPdfFiles = {
+      studentGuidePdf,
+      academicAdvisingPdf,
+      scientificLeadershipGuidePdf,
+    };
+
+    return studentsRulesPdfFiles;
+  } catch (error) {
+    throw new Error("Failed to fetch important-rules-for-students data.");
+  }
+}
+
+export async function fetchGraduateFollowUpPageData() {
+  try {
+    const response = await fetch(
+      `${serverDomainName}/api/dashboard/follow-up-committee/get`,
+      {
+        headers: {
+          "ngrok-skip-browser-warning": "true",
+        },
+      }
+    );
+    if (!response.ok)
+      throw new Error("Failed to fetch Graduate FollowUp Page data.");
+
+    const { data }: { data: GraduateFollowUpMembersData } =
+      await response.json();
+
+    return data;
+  } catch (error) {
+    throw new Error("Failed to fetch Graduate FollowUp Page data.");
   }
 }
