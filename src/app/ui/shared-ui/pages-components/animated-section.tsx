@@ -19,13 +19,13 @@ export default function AnimatedSection({
   duration,
 }: Props) {
   const ref = useRef(null);
-  const inView = useInView(ref, { threshold: threshold || 0 });
+  const inView = useInView(ref, { threshold: threshold || 0.01 });
 
   return (
     <div
       ref={ref}
       className={cn(
-        "transition duration-1000",
+        "transition ease-in-out duration-700",
         duration,
         !inView && startPosition,
         inView && endPosition
