@@ -5,20 +5,28 @@ import ContentWrapper from "@/app/ui/shared-ui/pages-components/content-wrapper"
 import ContentContainer from "@/app/ui/shared-ui/pages-components/content-container";
 import MemberPhoto from "@/app/ui/shared-ui/pages-components/member-photo";
 import MemberName from "@/app/ui/shared-ui/pages-components/member-name";
-import memberImage from "@/../../public/dr-images/dr-isalm.jpeg";
-import DutiesOfDepartmentHead from "@/app/ui/academic-life/duties-of-department-head";
+import { fetchDepartmentData } from "@/app/lib/data";
+import UlList from "@/app/ui/shared-ui/ul-list";
 
-export default function Page() {
+export default async function Page() {
+  const departmentData = await fetchDepartmentData(
+    "department-of-accounting/get"
+  );
+  const dutiesOfDepartmentHead = Object.values(departmentData.dutiesAndMission);
+
   return (
     <section>
       <MainPageHeader text="قسم المحاسبه" />
       <PageContentContainer>
-        <MemberPhoto imageSrc={memberImage} alt="رئيس قسم المحاسبة" />
-        <MemberName memberName="أ.م.د / محمد الشربيني إسلام" />
+        <MemberPhoto
+          imageSrc={departmentData.imageSrc}
+          alt="رئيس قسم المحاسبة"
+        />
+        <MemberName memberName={departmentData.profName} />
         <ContentWrapper className="mt-5">
           <ContentHeader text="مهام رئيس القسم العلوم المحاسبية" />
           <ContentContainer>
-            <DutiesOfDepartmentHead />
+            <UlList list={dutiesOfDepartmentHead} />
           </ContentContainer>
         </ContentWrapper>
       </PageContentContainer>

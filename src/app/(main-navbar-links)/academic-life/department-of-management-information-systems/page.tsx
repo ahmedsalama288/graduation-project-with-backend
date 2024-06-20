@@ -6,22 +6,28 @@ import memberImage from "@/../../public/dr-images/dr-ahmed-abu-al-futouh.jpg";
 import MemberPhoto from "@/app/ui/shared-ui/pages-components/member-photo";
 import MemberName from "@/app/ui/shared-ui/pages-components/member-name";
 import ContentContainer from "@/app/ui/shared-ui/pages-components/content-container";
-import DutiesOfDepartmentHead from "@/app/ui/academic-life/duties-of-department-head";
+import { fetchDepartmentData } from "@/app/lib/data";
+import UlList from "@/app/ui/shared-ui/ul-list";
 
-export default function Page() {
+export default async function Page() {
+  const departmentData = await fetchDepartmentData(
+    "department-of-management-information-systems/get"
+  );
+  const dutiesOfDepartmentHead = Object.values(departmentData.dutiesAndMission);
+
   return (
     <section>
       <MainPageHeader text="قسم نظم المعلومات الإدارية" />
       <PageContentContainer>
         <MemberPhoto
-          imageSrc={memberImage}
+          imageSrc={departmentData.imageSrc}
           alt="رئيس قسم نظم المعلومات الإدارية"
         />
-        <MemberName memberName="أ.د / أحمد أبو الفتوح صالح" />
+        <MemberName memberName={departmentData.profName} />
         <ContentWrapper className="mt-5">
           <ContentHeader text="مهام رئيس القسم نظم المعلومات الإدارية" />
           <ContentContainer>
-            <DutiesOfDepartmentHead />
+            <UlList list={dutiesOfDepartmentHead} />
           </ContentContainer>
         </ContentWrapper>
       </PageContentContainer>
