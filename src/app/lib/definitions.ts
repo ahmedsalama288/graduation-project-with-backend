@@ -129,3 +129,16 @@ export type UnitsAndDepartmentsData = {
   pageName: string;
   description: { [key: string]: string };
 }[];
+
+export interface StudentsRulesPdfFiles {
+  studentGuidePdf: string;
+  academicAdvisingPdf: string;
+  scientificLeadershipGuidePdf: string;
+}
+
+export type GraduateFollowUpMembersData = {
+  id: number;
+  image: string;
+  name: string;
+  title: string;
+}[];
