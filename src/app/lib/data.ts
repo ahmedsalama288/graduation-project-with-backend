@@ -2,8 +2,12 @@ import { serverDomainName } from "./constants";
 import {
   AcademicLeadersData,
   EstablishmentOfTheInstituteData,
+  InstituteDepartmentData,
   InstituteRegulationsData,
   MainPageData,
+  StudentClassSchedules,
+  StudentExamSchedules,
+  UnitsAndDepartmentsData,
   VisionMissionGoalsData,
 } from "./definitions";
 
@@ -158,5 +162,132 @@ export async function fetchInstituteRegulationsFileLinks() {
     return InstituteRegulationsFiles;
   } catch (error) {
     throw new Error("Failed to fetch organizational-chart data.");
+  }
+}
+
+export async function fetchClassSchedules() {
+  try {
+    const response = await fetch(
+      `${serverDomainName}/api/dashboard/class-schedules/get`,
+      {
+        headers: {
+          "ngrok-skip-browser-warning": "true",
+        },
+      }
+    );
+    if (!response.ok) throw new Error("Failed to fetch class-schedules data.");
+
+    const { data } = await response.json();
+    const {
+      first_class_schedule: firstPdfSchedule,
+      second_class_schedule: secondPdfSchedule,
+      third_class_schedule: theadPdfSchedule,
+      fourth_class_schedule: fourthPdfSchedule,
+    } = data;
+
+    const studentClassSchedules: StudentClassSchedules = {
+      firstPdfSchedule,
+      secondPdfSchedule,
+      theadPdfSchedule,
+      fourthPdfSchedule,
+    };
+
+    return studentClassSchedules;
+  } catch (error) {
+    throw new Error("Failed to fetch class-schedules data.");
+  }
+}
+
+export async function fetchExamSchedules() {
+  try {
+    const response = await fetch(
+      `${serverDomainName}/api/dashboard/exam-schedules/get`,
+      {
+        headers: {
+          "ngrok-skip-browser-warning": "true",
+        },
+      }
+    );
+    if (!response.ok) throw new Error("Failed to fetch exam-schedules data.");
+
+    const { data } = await response.json();
+    const {
+      first_class_schedule: firstPdfSchedule,
+      second_class_schedule: secondPdfSchedule,
+      third_class_schedule: theadPdfSchedule,
+      fourth_class_schedule: fourthPdfSchedule,
+    } = data;
+
+    const studentExamSchedules: StudentExamSchedules = {
+      firstPdfSchedule,
+      secondPdfSchedule,
+      theadPdfSchedule,
+      fourthPdfSchedule,
+    };
+
+    return studentExamSchedules;
+  } catch (error) {
+    throw new Error("Failed to fetch exam-schedules data.");
+  }
+}
+
+export async function fetchDepartmentData(url: string) {
+  try {
+    const response = await fetch(`${serverDomainName}/api/dashboard/${url}`, {
+      headers: {
+        "ngrok-skip-browser-warning": "true",
+      },
+    });
+    if (!response.ok)
+      throw new Error(`Failed to fetch academic-life/${url} data.`);
+
+    const { data } = await response.json();
+
+    const {
+      id,
+      name: profName,
+      image: imageSrc,
+      description: dutiesAndMission,
+    } = data;
+
+    const instituteDepartmentData: InstituteDepartmentData = {
+      id,
+      profName,
+      imageSrc,
+      dutiesAndMission,
+    };
+
+    return instituteDepartmentData;
+  } catch (error) {
+    throw new Error(`Failed to fetch academic-life/${url} data.`);
+  }
+}
+
+// units-and-departments
+export async function fetchUnitsAndDepartmentsData(pageName: string) {
+  try {
+    const bodyData = {
+      page_name: pageName,
+    };
+
+    const response = await fetch(
+      `${serverDomainName}/api/dashboard/page-based-on-name/get`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "ngrok-skip-browser-warning": "true",
+        },
+        body: JSON.stringify(bodyData),
+      }
+    );
+    if (!response.ok)
+      throw new Error(`Failed to fetch units-and-departments/data.`);
+
+    const { data }: { data: UnitsAndDepartmentsData } = await response.json();
+
+    return data;
+  } catch (error) {
+    throw new Error(`Failed to fetch units-and-departments/data.`);
   }
 }
