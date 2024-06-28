@@ -33,7 +33,7 @@ export default function NestedLink({
         )}
       </Link>
       {!!nestedLinks?.length && (
-        <ul className="absolute bg-slate-200 rounded drop-shadow-lg top-0 -left-full w-56 max-w-72 min-w-fit hidden peer-hover:block hover:block">
+        <ul className="absolute bg-slate-200 rounded drop-shadow-lg top-0 -left-56 w-56 min-w-fit hidden peer-hover:block hover:block">
           {nestedLinks.map(({ name, href = "" }) => (
             <li key={href}>
               <Link
