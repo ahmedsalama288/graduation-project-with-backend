@@ -9,7 +9,7 @@ export default function Page() {
     <section>
       <MainPageHeader text="الهيكل التنظيمي" />
       <PageContentContainer className=" flex justify-center items-center">
-        <ContentWrapper className=" max-w-[900px]">
+        <ContentWrapper className=" w-full max-w-[900px]">
           <div className="w-full">
             <Image
               className=" rounded object-cover"
@@ -18,13 +18,12 @@ export default function Page() {
               priority
               sizes="100vw"
               style={{
-                width: '100%',
-                height: 'auto',
+                width: "100%",
+                height: "auto",
               }}
-              placeholder='blur'
+              placeholder="blur"
             />
           </div>
-          
         </ContentWrapper>
       </PageContentContainer>
     </section>
