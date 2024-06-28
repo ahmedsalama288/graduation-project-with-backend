@@ -122,8 +122,8 @@ export const navbarLinks: NavbarLinks = [
     href: "/academic-life",
     nestedLinks: [
       {
-        name: "قسم نظم المعلومات الإدارية",
-        href: "/academic-life/department-of-management-information-systems",
+        name: "قسم نظم معلومات إدارة الأعمال",
+        href: "/academic-life/business-management-information-systems",
       },
       {
         name: "قسم المحاسبة ",
