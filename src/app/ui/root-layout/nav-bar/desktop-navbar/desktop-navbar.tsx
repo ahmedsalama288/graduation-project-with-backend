@@ -1,6 +1,6 @@
 import { usePathname } from "next/navigation";
-import NavLink from "./nav-link";
 import { navbarLinks } from "@/app/lib/constants";
+import MainNavbarSection from "./main-navbar-section";
 
 export default function DesktopNavbar() {
   const pathname = usePathname();
@@ -8,7 +8,7 @@ export default function DesktopNavbar() {
   return (
     <ul className="hidden xl:flex gap-1 text-white h-full max-h-full">
       {navbarLinks.map(({ name, nestedLinks, href }, index) => (
-        <NavLink
+        <MainNavbarSection
           key={index}
           href={href || ""}
           name={name}
