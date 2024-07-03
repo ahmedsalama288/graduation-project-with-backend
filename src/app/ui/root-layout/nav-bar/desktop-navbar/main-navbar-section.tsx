@@ -18,7 +18,7 @@ export default function MainNavbarSection({
   nestedLinks,
   pathname,
 }: props) {
-  const hrefAfterFilteringIgnoredLinks = ignoredLinks.includes(href)
+  const linkHref = ignoredLinks.includes(href)
     ? ""
     : href;
   const parentSegmentInUrl = getFirstSegment(pathname);
@@ -39,7 +39,7 @@ export default function MainNavbarSection({
     >
       {!hasNestedLinks && (
         <Link
-          href={hrefAfterFilteringIgnoredLinks}
+          href={linkHref}
           className=" flex items-center gap-[2px]"
         >
           {name}
