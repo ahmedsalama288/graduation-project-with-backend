@@ -26,7 +26,8 @@ export default function NestedLinkContainer({
 
   return (
     <div>
-      <span
+      <button
+        type="button"
         onClick={toggleNestedLinksHandler}
         className={cn(
           `transition-all cursor-pointer
@@ -37,7 +38,7 @@ export default function NestedLinkContainer({
         )}
       >
         {subLinksContainerName}
-        <>
+        <span>
           <ChevronDownIcon
             className={`
             ${isNestedLinksOpen ? " hidden" : " block"}
@@ -50,8 +51,8 @@ export default function NestedLinkContainer({
             h-3 w-3 mt-[2px] text-gray-500
           `}
           />
-        </>
-      </span>
+        </span>
+      </button>
 
       {nestedLinks && (
         <ul
