@@ -25,11 +25,10 @@ export default function MobileNavbar() {
 
   return (
     <>
-      <div>
-        <Bars3Icon
-          onClick={openMenuHandler}
-          className="h-8 w-8 xl:hidden cursor-pointer"
-        />
+      <div className="h-8">
+        <button type="button" onClick={openMenuHandler} aria-label="open-menu">
+          <Bars3Icon className="h-8 w-8 xl:hidden cursor-pointer" />
+        </button>
         <ul
           className={`
             ${isMenuOpen ? "flex" : "hidden"}
@@ -40,10 +39,13 @@ export default function MobileNavbar() {
         >
           {/* close Icon */}
           <li>
-            <XMarkIcon
-              className="h-8 w-8 text-gray-500 cursor-pointer mb-3"
+            <button
+              type="button"
               onClick={closeMenuHandler}
-            />
+              aria-label="close-menu"
+            >
+              <XMarkIcon className="h-8 w-8 text-gray-500 cursor-pointer mb-3" />
+            </button>
           </li>
 
           {/* nav-bar-links */}
