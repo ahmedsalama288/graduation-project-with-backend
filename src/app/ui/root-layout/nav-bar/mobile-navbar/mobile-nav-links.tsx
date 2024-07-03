@@ -16,16 +16,16 @@ export default function MobileNavLinks({
   nestedLinks,
   pathname,
 }: props) {
-  const hrefAfterFilteringIgnoredLinks = ignoredLinks.find(
+  const linkHref = ignoredLinks.find(
     (link) => link === href
   )
     ? ""
     : href;
 
-  const isTheLinkHaveNestedLinks = !!nestedLinks.length;
+  const hasNestedLinks = !!nestedLinks.length;
 
   const renderedNestedLinks =
-    isTheLinkHaveNestedLinks &&
+    hasNestedLinks &&
     nestedLinks.map(({ name, href, nestedLinks }, index) => (
       <li
         key={index}
@@ -63,20 +63,23 @@ export default function MobileNavLinks({
 
   return (
     <li>
-      {hrefAfterFilteringIgnoredLinks && (
+      {!hasNestedLinks && (
         <Link
-          href={hrefAfterFilteringIgnoredLinks}
+          href={linkHref}
           className=" text-black-gray font-bold mb-4 inline-block"
         >
           {name}
         </Link>
-      )}{" "}
-      {!hrefAfterFilteringIgnoredLinks && (
-        <span className=" text-black-gray font-bold mb-4 inline-block">
-          {name}
-        </span>
       )}
-      <ul className=" flex flex-col gap-0">{renderedNestedLinks}</ul>
+
+      {hasNestedLinks && (
+        <>
+          <span className=" text-black-gray font-bold mb-4 inline-block">
+            {name}
+          </span>
+          <ul className=" flex flex-col gap-0">{renderedNestedLinks}</ul>
+        </>
+      )}
     </li>
   );
 }
