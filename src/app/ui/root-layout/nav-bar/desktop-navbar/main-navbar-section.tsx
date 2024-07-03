@@ -63,11 +63,12 @@ export default function MainNavbarSection({
             drop-shadow-lg z-[1000]
           "
           >
-            {nestedLinks.map(({ name, href = "", nestedLinks }) => (
+            {nestedLinks.map(({ name, href = "", nestedLinks, prefetch = true }) => (
               <NestedLink
                 key={name}
                 name={name}
                 href={href}
+                prefetch={prefetch}
                 nestedLinks={nestedLinks}
               />
             ))}

@@ -3,7 +3,8 @@ import { StaticImageData } from "next/image";
 export type NavbarNestedLinks = {
   name: string;
   href?: string;
-  nestedLinks?: { name: string; href: string }[];
+  prefetch?: boolean;
+  nestedLinks?: { name: string; href: string; }[];
 }[];
 
 export type NavbarLinks = {

@@ -236,10 +236,15 @@ export const navbarLinks: NavbarLinks = [
     name: "البحث العلمي",
     href: "",
     nestedLinks: [
-      { name: "المجلة العلمية", href: "https://djicsi.journals.ekb.eg/" },
+      {
+        name: "المجلة العلمية",
+        href: "https://djicsi.journals.ekb.eg/",
+        prefetch: false,
+      },
       {
         name: "قاعدة بيانات البحث العلمي",
         href: "/pdf/scientific-research.pdf",
+        prefetch: false,
       },
     ],
   },

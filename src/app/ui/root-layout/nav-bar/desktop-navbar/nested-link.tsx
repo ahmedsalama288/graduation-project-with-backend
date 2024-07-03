@@ -7,12 +7,14 @@ import { usePathname } from "next/navigation";
 interface NestedLinkProps {
   name: string;
   href: string;
+  prefetch: boolean;
   nestedLinks?: NavbarNestedLinks;
 }
 
 export default function NestedLink({
   name,
   href,
+  prefetch,
   nestedLinks,
 }: NestedLinkProps) {
   const pathname = usePathname();
@@ -28,6 +30,7 @@ export default function NestedLink({
             transition-all py-3 px-4 rounded-md hover:pr-5 hover:bg-slate-300
             w-full flex justify-between items-center peer
           `}
+          prefetch={prefetch}
         >
           {name}
         </Link>
