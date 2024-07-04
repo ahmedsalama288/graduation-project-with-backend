@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   ],
   robots: "index",
   appleWebApp: { capable: true, title: "Delta Higher Institute" },
+  other: {
+    'google-site-verification': "VDuukQq_dvLy1lWB6xqwW4Ct7DN_KqWF48Y3kQYhQnk",
+  },
 };
 export const viewport: Viewport = {
   themeColor: "#f6f6f6",
@@ -34,11 +37,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl">
-      <body className={`${cairo.className} flex flex-col min-h-screen antialiased bg-slate-100`}>
+      <body
+        className={`${cairo.className} flex flex-col min-h-screen antialiased bg-slate-100`}
+      >
         <header className=" h-[70px] flex justify-center items-center relative xl:fixed top-0 w-full z-[100000] bg-light-blue drop-shadow-lg ">
           <Navbar />
         </header>
-        <main className="xl:mt-[70px] overflow-y-hidden flex-1">{children}</main>
+        <main className="xl:mt-[70px] overflow-y-hidden flex-1">
+          {children}
+        </main>
         <FooterSection />
       </body>
     </html>
