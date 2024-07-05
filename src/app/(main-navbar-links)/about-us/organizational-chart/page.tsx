@@ -3,6 +3,12 @@ import PageContentContainer from "@/app/ui/shared-ui/pages-components/page-conte
 import ContentWrapper from "@/app/ui/shared-ui/pages-components/content-wrapper";
 import organizationalChartImage from "@/../../public/about-us/organizational-chart/organizational-chart.jpeg";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "الهيكل التنظيمي",
+};
+
 
 export default function Page() {
   return (

@@ -5,6 +5,12 @@ import ContentWrapper from "@/app/ui/shared-ui/pages-components/content-wrapper"
 import MainPageHeader from "@/app/ui/shared-ui/pages-components/main-page-header";
 import MemberPhoto from "@/app/ui/shared-ui/pages-components/member-photo";
 import PageContentContainer from "@/app/ui/shared-ui/pages-components/page-content-container";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "لجنة متابعة الخريجين",
+};
+
 
 export default function Page() {
   return (

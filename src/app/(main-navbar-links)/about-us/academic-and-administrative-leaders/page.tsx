@@ -6,6 +6,11 @@ import deanOfTheInstituteImage from "@/../../public/dr-images/dr-ahmed-abu-al-fu
 import ContentHeader from "@/app/ui/shared-ui/pages-components/content-header";
 import ContentContainer from "@/app/ui/shared-ui/pages-components/content-container";
 import { academicLeadersInfo } from "@/app/lib/constants";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "القيادات الأكاديمية والإدارية",
+};
 
 export default function Page() {
   return (

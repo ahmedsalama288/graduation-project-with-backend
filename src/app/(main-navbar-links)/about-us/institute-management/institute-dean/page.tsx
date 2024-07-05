@@ -6,13 +6,19 @@ import ContentContainer from "@/app/ui/shared-ui/pages-components/content-contai
 import ContentWrapper from "@/app/ui/shared-ui/pages-components/content-wrapper";
 import ContentHeader from "@/app/ui/shared-ui/pages-components/content-header";
 import MemberName from "@/app/ui/shared-ui/pages-components/member-name";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "عميد المعهد",
+};
+
 
 export default function Page() {
   return (
     <section>
       <MainPageHeader text="عميد المعهد" />
       <PageContentContainer>
-        <MemberPhoto imageSrc={imageSrc} alt="رئيس مجلس الإدارة" />
+        <MemberPhoto imageSrc={imageSrc} alt="عميد المعهد" />
         <MemberName memberName="كلمة السيد الدكتور أحمد أبو الفتوح" />
         <ContentWrapper className=" mt-5">
           <ContentHeader text="أبنائي الطلاب" />

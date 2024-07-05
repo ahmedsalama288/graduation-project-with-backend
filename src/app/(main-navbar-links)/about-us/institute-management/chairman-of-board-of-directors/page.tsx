@@ -6,6 +6,11 @@ import ContentWrapper from "@/app/ui/shared-ui/pages-components/content-wrapper"
 import ContentHeader from "@/app/ui/shared-ui/pages-components/content-header";
 import ContentContainer from "@/app/ui/shared-ui/pages-components/content-container";
 import MemberName from "@/app/ui/shared-ui/pages-components/member-name";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "رئيس مجلس الإدارة",
+};
 
 export default function Page() {
   return (

@@ -7,6 +7,11 @@ import MemberPhoto from "@/app/ui/shared-ui/pages-components/member-photo";
 import MemberName from "@/app/ui/shared-ui/pages-components/member-name";
 import ContentContainer from "@/app/ui/shared-ui/pages-components/content-container";
 import DutiesOfDepartmentHead from "@/app/ui/academic-life/duties-of-department-head";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "قسم نظم معلومات إدارة الأعمال",
+};
 
 export default function Page() {
   return (
