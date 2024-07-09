@@ -87,11 +87,13 @@ export default function AmphitheaterImages({
           </div>
         </div>
       </div>
-      <Lightbox
-        isImageOpen={isImageOpen}
-        imageSrc={imageSrcValue}
-        onImageClose={handleCloseImage}
-      />
+      {isImageOpen && (
+        <Lightbox
+          isImageOpen={isImageOpen}
+          imageSrc={imageSrcValue}
+          onImageClose={handleCloseImage}
+        />
+      )}
     </ContentContainer>
   );
 }

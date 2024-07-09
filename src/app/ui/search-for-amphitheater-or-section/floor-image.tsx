@@ -33,11 +33,13 @@ export default function FloorImage({ floorName, floorImage }: Props) {
             priority={false}
           />
         </div>
-        <Lightbox
-          isImageOpen={isImageOpen}
-          imageSrc={floorImage}
-          onImageClose={handleCloseImage}
-        />
+        {isImageOpen && (
+          <Lightbox
+            isImageOpen={isImageOpen}
+            imageSrc={floorImage}
+            onImageClose={handleCloseImage}
+          />
+        )}
       </ContentContainer>
     </div>
   );
