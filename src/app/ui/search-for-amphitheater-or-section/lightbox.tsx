@@ -1,7 +1,8 @@
 "use client";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import Image, { StaticImageData } from "next/image";
+import { StaticImageData } from "next/image";
 import { useEffect } from "react";
+import LightBoxImage from "./light-box-image";
 
 interface Props {
   isImageOpen: boolean;
@@ -17,31 +18,14 @@ export default function Lightbox({
   useEffect(() => {
     if (isImageOpen) {
       document.documentElement.style.setProperty("--scroll-behavior", "hidden");
-    } else {
-      document.documentElement.style.setProperty("--scroll-behavior", "auto");
     }
+    return () =>
+      document.documentElement.style.setProperty("--scroll-behavior", "auto");
   }, [isImageOpen]);
 
   return (
-    <div
-      className={`${isImageOpen ? "" : " hidden"} 
-      fixed w-full inset-0
-      h-screen z-[110000] bg-black
-    `}
-    >
-      <div className=" flex justify-center items-center w-full mx-auto h-screen">
-        <div className="relative z-[111000]">
-          <Image
-            className=" object-contain w-full m-auto max-h-screen"
-            src={imageSrc}
-            alt="Image"
-            quality={80}
-            priority={false}
-            width={20000}
-            height={700}
-          />
-        </div>
-      </div>
+    <div className="fixed w-full inset-0 h-screen z-[110000] bg-black">
+      <LightBoxImage imageSrc={imageSrc} />
       <button
         onClick={onImageClose}
         className=" fixed top-0 right-0 p-2 z-[111000]"
