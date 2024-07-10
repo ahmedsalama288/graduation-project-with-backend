@@ -10,21 +10,21 @@ import DutiesOfDepartmentHead from "@/app/ui/academic-life/duties-of-department-
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "قسم نظم معلومات إدارة الأعمال",
+  title: "قسم نظم معلومات الأعمال",
 };
 
 export default function Page() {
   return (
     <section>
-      <MainPageHeader text="قسم نظم معلومات إدارة الأعمال" />
+      <MainPageHeader text="قسم نظم معلومات الأعمال" />
       <PageContentContainer>
         <MemberPhoto
           imageSrc={memberImage}
-          alt="رئيس قسم نظم معلومات إدارة الأعمال"
+          alt="رئيس قسم نظم معلومات الأعمال"
         />
         <MemberName memberName="أ.د / أحمد أبو الفتوح صالح" />
         <ContentWrapper className="mt-5">
-          <ContentHeader text="مهام رئيس قسم نظم معلومات إدارة الأعمال" />
+          <ContentHeader text="مهام رئيس قسم نظم معلومات الأعمال" />
           <ContentContainer>
             <DutiesOfDepartmentHead />
           </ContentContainer>
