@@ -1,46 +1,24 @@
 "use client";
 
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import MarkerIcon from "leaflet/dist/images/marker-icon.png";
-import MarkerShadow from "leaflet/dist/images/marker-shadow.png";
-import L from "leaflet";
-// import "leaflet/dist/leaflet.css";
-import { useEffect } from "react";
-
-const customIcon = new L.Icon({
-  iconUrl: MarkerIcon.src,
-  iconRetinaUrl: MarkerIcon.src,
-  iconSize: [25, 41],
-  iconAnchor: [12.5, 41],
-  popupAnchor: [0, -41],
-  shadowUrl: MarkerShadow.src,
-  shadowSize: [41, 41],
-});
+import MapLoadingSpinner from "../shared-ui/loading-spinner/map-loading-spinner";
+import { cn } from "@/app/lib/utils";
+import { useState } from "react";
 
 export default function InstituteMap() {
-  useEffect(() => {
-    // Ensure leaflet CSS is loaded dynamically if needed
-    import("leaflet/dist/leaflet.css");
-  }, []);
+  const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div className="overflow-hidden h-[400px] max-w-full rounded-lg">
-      <MapContainer
-        center={[31.06984, 31.388921]}
-        zoom={13}
-        style={{ height: "400px", width: "100%" }}
-      >
-        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-        <Marker position={[31.06984, 31.388921]} icon={customIcon}>
-          <Popup>
-            معهد الدلتا العالي
-            <br />
-            للنظم والمعلومات الإدارية والمحاسبيه
-          </Popup>
-        </Marker>
-      </MapContainer>
+    <div className=" h-[450px] relative overflow-y-hidden">
+      {isLoading && <MapLoadingSpinner />}
+      <iframe
+        className={cn(
+          "w-full h-[450px] rounded",
+          isLoading && "absolute top-0 left-0"
+        )}
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d854.3523513273756!2d31.388151!3d31.070537!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f77769f3f3218d%3A0x24c4c292c3fa4a!2z2YXYudmH2K8g2KfZhNit2KfYs9io2KfYqiDZiNmG2LjZhSDYp9mE2YXYudmE2YjZhdin2Ko!5e0!3m2!1sen!2seg!4v1721492855358!5m2!1sen!2seg"
+        loading="lazy"
+        onLoad={() => setIsLoading(false)}
+      ></iframe>
     </div>
   );
-};
-
-
+}

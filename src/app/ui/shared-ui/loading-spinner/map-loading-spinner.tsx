@@ -1,6 +1,6 @@
 export default function MapLoadingSpinner() {
   return (
-    <div className="flex justify-center items-center w-full min-h-[400px] h-[400px]">
+    <div className="flex justify-center items-center w-full h-[450px]">
       <div
         className="
           m-12 inline-block h-12 w-12 animate-spin

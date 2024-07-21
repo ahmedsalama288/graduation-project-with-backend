@@ -6,12 +6,11 @@ import MainPageHeader from "@/app/ui/shared-ui/pages-components/main-page-header
 import PageContentContainer from "@/app/ui/shared-ui/pages-components/page-content-container";
 import { Metadata } from "next";
 import MapLoadingSpinner from "@/app/ui/shared-ui/loading-spinner/map-loading-spinner";
+// import InstituteMap from "@/app/ui/contact-us/institute-map";
+
 const InstituteMap = dynamic(
   () => import("@/app/ui/contact-us/institute-map"),
-  {
-    loading: () => <MapLoadingSpinner />,
-    ssr: false,
-  }
+  { ssr: false, loading: () => <MapLoadingSpinner /> }
 );
 
 export const metadata: Metadata = {
