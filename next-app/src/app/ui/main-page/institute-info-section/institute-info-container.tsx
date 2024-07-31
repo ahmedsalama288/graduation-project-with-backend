@@ -1,4 +1,7 @@
-import { InstituteStatusInfo } from "@/app/lib/definitions";
+import {
+  InstituteStatusInfo,
+  StudentsNumbersSection,
+} from "@/app/lib/definitions";
 import InfoCard from "./info-card";
 import { UserGroupIcon } from "@heroicons/react/16/solid";
 import { AcademicCapIcon } from "@heroicons/react/16/solid";
@@ -7,22 +10,27 @@ import ContentWrapper from "../../shared-ui/pages-components/content-wrapper";
 import ContentHeader from "../../shared-ui/pages-components/content-header";
 import AnimatedSection from "../../shared-ui/pages-components/animated-section";
 
-const statusList: InstituteStatusInfo[] = [
-  {
-    statusName: "عدد الطلاب بالمعهد",
-    statusNumber: 5769,
-    icon: <UserGroupIcon className="h-16 w-16 sm:h-24 sm:w-24 text-white" />,
-    description: "طالب",
-  },
-  {
-    statusName: "عدد الطلاب الخريجين بالمعهد ",
-    statusNumber: 10609,
-    icon: <AcademicCapIcon className="h-16 w-16 sm:h-24 sm:w-24 text-white" />,
-    description: "طالب",
-  },
-];
+export default function InstituteInfoContainer({
+  currentStudents,
+  graduatedStudents,
+}: StudentsNumbersSection) {
+  const statusList: InstituteStatusInfo[] = [
+    {
+      statusName: "عدد الطلاب بالمعهد",
+      statusNumber: currentStudents,
+      icon: <UserGroupIcon className="h-16 w-16 sm:h-24 sm:w-24 text-white" />,
+      description: "طالب",
+    },
+    {
+      statusName: "عدد الطلاب الخريجين بالمعهد ",
+      statusNumber: graduatedStudents,
+      icon: (
+        <AcademicCapIcon className="h-16 w-16 sm:h-24 sm:w-24 text-white" />
+      ),
+      description: "طالب",
+    },
+  ];
 
-export default function InstituteInfoContainer() {
   return (
     <article>
       <AnimatedSection>
