@@ -8,7 +8,6 @@ export const metadata: Metadata = {
   title: "قواعد هامه للطلاب",
 };
 
-
 export default function Page() {
   return (
     <section>

@@ -8,24 +8,36 @@ import MemberName from "@/app/ui/shared-ui/pages-components/member-name";
 import memberImage from "@/../../public/dr-images/dr-mansour.jpeg";
 import DutiesOfDepartmentHead from "@/app/ui/academic-life/duties-of-department-head";
 import { Metadata } from "next";
+import { AcademicLifePagesData } from "@/app/lib/definitions";
+import { getPageByName } from "@/app/lib/data";
+import PageSections from "@/app/ui/academic-life/page-sections";
+import { revalidatePath } from "next/cache";
 
 export const metadata: Metadata = {
   title: "قسم العلوم الأساسيه",
 };
 
-export default function Page() {
+export default async function Page() {
+  const pageData: AcademicLifePagesData = await getPageByName(
+    "basic-sciences"
+  );
+
   return (
     <section>
-      <MainPageHeader text="قسم العلوم الأساسيه" />
+      <MainPageHeader text={pageData.departmentName} />
       <PageContentContainer>
-        <MemberPhoto imageSrc={memberImage} alt="رئيس قسم العلوم الأساسيه" />
-        <MemberName memberName="أ.م.د / منصور شطا" />
-        <ContentWrapper className=" mt-5">
-          <ContentHeader text="مهام رئيس قسم العلوم الأساسيه" />
-          <ContentContainer>
-            <DutiesOfDepartmentHead />
-          </ContentContainer>
-        </ContentWrapper>
+        <div>
+          <MemberPhoto
+            imageSrc={
+              pageData.departmentHeadImageSrc
+                ? pageData.departmentHeadImageSrc
+                : memberImage
+            }
+            alt={pageData.departmentHeadName}
+          />
+          <MemberName memberName={pageData.departmentHeadName} />
+        </div>
+        <PageSections sections={pageData.sections} />
       </PageContentContainer>
     </section>
   );
